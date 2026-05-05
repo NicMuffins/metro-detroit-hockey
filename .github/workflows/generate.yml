@@ -1,0 +1,38 @@
+name: Generate hockey iCal feed
+
+on:
+  schedule:
+    # Runs at 7:00 AM Eastern every day (11:00 UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Run scraper
+        run: python scraper.py --days 14 --output hockey_sessions.ics --headless true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          include_files: hockey_sessions.ics
+          keep_files: true
+          commit_message: "Update hockey_sessions.ics"
