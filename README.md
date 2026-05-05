@@ -6,7 +6,7 @@ Daily iCal feed for stick & puck and drop-in hockey sessions near Ann Arbor, MI.
 
 1. Open Apple Calendar
 2. File → New Calendar Subscription
-3. Paste this URL: `https://YOUR-USERNAME.github.io/metro-detroit-hockey/hockey_sessions.ics`
+3. Paste this URL: `https://NicMuffins.github.io/metro-detroit-hockey/hockey_sessions.ics`
 4. Set auto-refresh to **Every Day**
 
 ## Subscribe in Google Calendar
