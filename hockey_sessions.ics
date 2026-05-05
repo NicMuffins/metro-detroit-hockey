@@ -1,0 +1,649 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Metro Detroit Hockey v2//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Metro Detroit Hockey Sessions
+X-WR-TIMEZONE:America/Detroit
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-05-05 16:33 UTC.
+BEGIN:VEVENT
+UID:0d5bda766d1f070a8259ac907195c1e7@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260505T160000Z
+DTEND:20260505T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:587765005b32e87b5cdb78411d5d0843@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260505T140000Z
+DTEND:20260505T170000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:86c9c978e49073ce86c8899886fe68b4@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260505T171500Z
+DTEND:20260505T171500Z
+SUMMARY:🏒 Stick & Puck – Dearborn
+DESCRIPTION:Sticks and Pucks\nRink: Eddie Edgar Ice Arena – Dearborn\n~38 mi from Ann Arbor\nIce: Edgar B arena\nSource: Eddie Edgar calendar\nInfo: https://www.eddieedgar.org/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Eddie Edgar Ice Arena – Dearborn
+URL:https://www.eddieedgar.org/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:1b9be8711071f5447b413c8ee3d76694@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T160000Z
+DTEND:20260506T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:4504fffb4a10080523a5884894d27dd2@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T200000Z
+DTEND:20260506T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:b91bf9328f609a96e5908c0c8fbdf9f9@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T143000Z
+DTEND:20260506T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a7983278943d1a15be713efbe88549e5@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T153000Z
+DTEND:20260506T170000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicefarmingtonhills.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:e963ea3b44a473afa40e8c72c8144014@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T150000Z
+DTEND:20260506T164500Z
+SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
+DESCRIPTION:Pickup Hockey\nRink: Garden City Civic Arena\n~34 mi from Ann Arbor\nPrice: $12.00\nSource: ice-finder\nInfo: https://www.gardencitymi.org/calendar.aspx?CID=66\,14\nConfirm with rink — schedule subject to change.
+LOCATION:Garden City Civic Arena
+URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
+END:VEVENT
+BEGIN:VEVENT
+UID:cac667186838ff2d166f8696336817b2@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T143000Z
+DTEND:20260506T153000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:3f446ccc1531b63adaedfaade562e366@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T153000Z
+DTEND:20260506T165000Z
+SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
+DESCRIPTION:Pickup Hockey\nRink: Hazel Park Viking Arena\n~47 mi from Ann Arbor\nSource: ice-finder\nInfo: https://www.hazelpark.org/residents/ice_arena.php\nConfirm with rink — schedule subject to change.
+LOCATION:Hazel Park Viking Arena
+URL:https://www.hazelpark.org/residents/ice_arena.php
+END:VEVENT
+BEGIN:VEVENT
+UID:642d6987f8d329e87833443bc174a3f6@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T100000Z
+DTEND:20260506T113000Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:011e21ec27bf239f74f5e009e6a9a6a4@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T160000Z
+DTEND:20260506T173000Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:c013acc555b3c0e8a121f620c31da088@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T153000Z
+DTEND:20260506T165000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:9ef83fcff51b43e4c5dc5e2878a5dd06@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260506T160000Z
+DTEND:20260506T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:6f0fa8e713261e15092d304eccd87603@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T011500Z
+DTEND:20260507T023500Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:c33a5eeba39fe6d05677013890ca116c@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T143000Z
+DTEND:20260507T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:f222deb71ee8546d19f8dc1e1e05b0e0@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T201500Z
+DTEND:20260507T213500Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:84cec4b1e86f695870b180757b4ce016@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T153000Z
+DTEND:20260507T170000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicefarmingtonhills.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:5e74b103e6a500bb6c72e1508ba39b34@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T140000Z
+DTEND:20260507T170000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:16d618d71ef2da2aa51a57b9a3259c18@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T160000Z
+DTEND:20260507T173000Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:f8378dfb84a09c88f01e56374423f9e3@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T103000Z
+DTEND:20260507T115000Z
+SUMMARY:🏒 Drop-In/Pickup – Suburban Ice Rochester
+DESCRIPTION:Pickup Hockey\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:f9e25cdacd79443b55433a11ed3dc415@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T153000Z
+DTEND:20260507T165000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:509fdef0fa39ec8b9894edf6744c1fd1@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260507T160000Z
+DTEND:20260507T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:44ebdd9a80c24ad5bd5adc17620f987d@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T163000Z
+DTEND:20260508T175000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:350459dfedb539d106d4151b1486057b@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T143000Z
+DTEND:20260508T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:f631a32d433a795c1c27d09aad370866@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T153000Z
+DTEND:20260508T170000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicefarmingtonhills.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:aa0a0ee5fbff4d41163b915f2d7852bb@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T150000Z
+DTEND:20260508T164500Z
+SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
+DESCRIPTION:Pickup Hockey\nRink: Garden City Civic Arena\n~34 mi from Ann Arbor\nPrice: $12.00\nSource: ice-finder\nInfo: https://www.gardencitymi.org/calendar.aspx?CID=66\,14\nConfirm with rink — schedule subject to change.
+LOCATION:Garden City Civic Arena
+URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
+END:VEVENT
+BEGIN:VEVENT
+UID:73f6b59c5771f7cf1eede633a710ba94@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T140000Z
+DTEND:20260508T160000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:1ae4140d0700339fadbbfb16ce747c3a@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T153000Z
+DTEND:20260508T165000Z
+SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
+DESCRIPTION:Pickup Hockey\nRink: Hazel Park Viking Arena\n~47 mi from Ann Arbor\nSource: ice-finder\nInfo: https://www.hazelpark.org/residents/ice_arena.php\nConfirm with rink — schedule subject to change.
+LOCATION:Hazel Park Viking Arena
+URL:https://www.hazelpark.org/residents/ice_arena.php
+END:VEVENT
+BEGIN:VEVENT
+UID:6877acfc542ba6aaeae373b589441992@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T100000Z
+DTEND:20260508T113000Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:917049a9182ea250901bfec6c96ef200@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T201500Z
+DTEND:20260508T211500Z
+SUMMARY:🏒 Stick & Puck – Troy
+DESCRIPTION:Stick And Puck\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:8c1bf639b160c432fe050e0d415ae0d6@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T153000Z
+DTEND:20260508T165000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:b9a397e674084cf7f008a0a107d7adcc@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260508T160000Z
+DTEND:20260508T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:0245c3fbb6bb98ff74ed8e81b486b65a@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260509T110000Z
+DTEND:20260509T122000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:f695113d75cdde7d09d2de7e67c23563@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260509T143000Z
+DTEND:20260509T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:f20eb5ef20f91adbf433c2c51e503d18@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260509T223000Z
+DTEND:20260509T233000Z
+SUMMARY:🏒 Stick & Puck – Troy
+DESCRIPTION:Stick And Puck\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:928a65794c57a0e8ae983bd7fb9a86e4@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260509T184500Z
+DTEND:20260509T200500Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:149a6c3f42cfe0751e470b5052341d46@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260509T213000Z
+DTEND:20260509T225000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:a317ae61a02200691f663d886277aa2b@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260510T120000Z
+DTEND:20260510T132000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:b3d5d2afc7a06f6901f25896b845c8ea@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260510T143000Z
+DTEND:20260510T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:918b583a311ab4a56c66ccb68090e6c6@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260510T170000Z
+DTEND:20260510T182000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:0787747e6df89ca16754cd701624063d@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260510T201500Z
+DTEND:20260510T213500Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:34caf34d0f71bdddb782886d79ae2cfc@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T160000Z
+DTEND:20260511T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:80af5909bc7cd215b1a11c435e596348@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T200000Z
+DTEND:20260511T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:8dae20c75802525560f63574721b535b@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T143000Z
+DTEND:20260511T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:0c6c388975c870bbb94360caf42eae07@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T153000Z
+DTEND:20260511T170000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicefarmingtonhills.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:2bb6abc88875281a4a574e5595f97ce0@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T150000Z
+DTEND:20260511T164500Z
+SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
+DESCRIPTION:Pickup Hockey\nRink: Garden City Civic Arena\n~34 mi from Ann Arbor\nPrice: $12.00\nSource: ice-finder\nInfo: https://www.gardencitymi.org/calendar.aspx?CID=66\,14\nConfirm with rink — schedule subject to change.
+LOCATION:Garden City Civic Arena
+URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
+END:VEVENT
+BEGIN:VEVENT
+UID:9804efd9acf810dc7a9a91594ebbc3d8@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T153000Z
+DTEND:20260511T165000Z
+SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
+DESCRIPTION:Pickup Hockey\nRink: Hazel Park Viking Arena\n~47 mi from Ann Arbor\nSource: ice-finder\nInfo: https://www.hazelpark.org/residents/ice_arena.php\nConfirm with rink — schedule subject to change.
+LOCATION:Hazel Park Viking Arena
+URL:https://www.hazelpark.org/residents/ice_arena.php
+END:VEVENT
+BEGIN:VEVENT
+UID:333da760309ed5250f9a0ca5eba0b45a@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T160000Z
+DTEND:20260511T173000Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ae4f677e32d1d257156da705c6395a8@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T153000Z
+DTEND:20260511T165000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:ec0604761e225e7c4925182f3e2602de@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260511T160000Z
+DTEND:20260511T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:46b92f85cd251332c8b8ede0c8c622ce@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T160000Z
+DTEND:20260512T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:b1eebf08b95457d8924e54a07f9576c7@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T143000Z
+DTEND:20260512T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a97332c7b9299c1f09fc58ab02979364@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T153000Z
+DTEND:20260512T170000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicefarmingtonhills.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:d0e1d33d2c0f9ef7dba714b63f012869@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T171500Z
+DTEND:20260512T171500Z
+SUMMARY:🏒 Stick & Puck – Dearborn
+DESCRIPTION:Sticks and Pucks\nRink: Eddie Edgar Ice Arena – Dearborn\n~38 mi from Ann Arbor\nIce: Edgar B arena\nSource: Eddie Edgar calendar\nInfo: https://www.eddieedgar.org/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Eddie Edgar Ice Arena – Dearborn
+URL:https://www.eddieedgar.org/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:1dfda478a8310336712f2238f901b2fc@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T153000Z
+DTEND:20260512T170000Z
+SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
+DESCRIPTION:Pickup Hockey\nRink: Hazel Park Viking Arena\n~47 mi from Ann Arbor\nSource: ice-finder\nInfo: https://www.hazelpark.org/residents/ice_arena.php\nConfirm with rink — schedule subject to change.
+LOCATION:Hazel Park Viking Arena
+URL:https://www.hazelpark.org/residents/ice_arena.php
+END:VEVENT
+BEGIN:VEVENT
+UID:cdc6252b6be9631752687cc21c5747ee@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T161500Z
+DTEND:20260512T174500Z
+SUMMARY:🏒 Drop-In/Pickup – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:83dc0d4a1ef480f06867e13d89d1ce84@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T103000Z
+DTEND:20260512T115000Z
+SUMMARY:🏒 Drop-In/Pickup – Suburban Ice Rochester
+DESCRIPTION:Pickup Hockey\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:3249f57f771d7556037ec107e49d2cd4@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T153000Z
+DTEND:20260512T165000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:d62dc834268d4f54b02fadc1dc4aecab@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260512T160000Z
+DTEND:20260512T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:671ab07215b38f7fb0abc80534cd78d2@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260513T160000Z
+DTEND:20260513T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:e001a0e16e7b2c685759070195304552@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260513T200000Z
+DTEND:20260513T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a787478ac259694eeddeb147732af19d@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260518T160000Z
+DTEND:20260518T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:c949bf30a930f7a4295ea1433100eed0@mdh
+DTSTAMP:20260505T163355Z
+DTSTART:20260518T200000Z
+DTEND:20260518T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+END:VCALENDAR
