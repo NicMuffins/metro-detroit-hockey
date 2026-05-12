@@ -51,6 +51,38 @@ ICE_FINDER_RINKS = [
     {"name": "Suburban Ice Macomb",              "slug": "suburban-ice-macomb",             "dist": 65, "url": "https://www.suburbanicemacomb.com/public-skating"},
 ]
 
+# SportsEngine rinks — scraped via /event/show_month_list/ plain text
+SPORTNGIN_RINKS = [
+    {
+        "name": "Arctic Edge Ice Arena – Canton",
+        "dist": 27, "price": None,
+        "url":  "https://www.arcticarenas.com/page/show/3414762-calendar",
+        "month_list_url": "https://www.arcticarenas.com/event/show_month_list/3414762",
+        # Sticks & Pucks tag: 3517364, Open Skate tag: 3517362
+    },
+]
+
+
+# DaySmart Recreation (DASH) rinks — REST API, no auth needed
+DAYSMART_RINKS = [
+    {
+        "name": "Tam-O-Shanter Ice Rink – Sylvania, OH",
+        "company": "tamoshanter",
+        "dist": 58, "price": "$10",
+        "url": "https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration",
+    },
+]
+
+# Image-schedule rinks — schedule is a monthly JPEG; parsed via Claude vision
+IMAGE_SCHEDULE_RINKS = [
+    {
+        "name": "Jackson Optimist Ice Arena – Jackson, MI",
+        "dist": 38, "price": "$10",
+        "url": "https://www.optimisticearena.com/stick-and-puck/",
+        "type": "wordpress_image",
+    },
+]
+
 # Direct-scrape rinks — custom per-site scraper logic
 DIRECT_RINKS = [
     {
@@ -279,6 +311,361 @@ def to_ical(sessions):
     return "\r\n".join(out) + "\r\n"
 
 
+# ─── DaySmart Recreation (DASH) scraper ────────────────────────────────────────
+
+def scrape_daysmart(driver, dates: list) -> list[dict]:
+    """
+    DaySmart REST API — no auth required.
+    GET https://api.daysmartrecreation.com/v1/events
+    Required header: Accept: application/vnd.api+json
+    Key params: company, filter[start_date__gte], filter[start_date__lte],
+                filter[unconstrained]=1, page[size]=100
+    Event name lives in attributes.best_description.
+    """
+    from selenium.webdriver.common.by import By
+    import json as _json
+    HOCKEY_PAT = re.compile(r'hockey|drop.?in|stick.*puck', re.I)
+    all_sessions = []
+
+    if not dates:
+        return []
+
+    # Batch the full date range in one API call
+    start_str = min(dates).strftime('%Y-%m-%d')
+    end_str   = max(dates).strftime('%Y-%m-%d')
+
+    for rink in DAYSMART_RINKS:
+        print(f"  {rink['name']}: fetching {start_str} – {end_str}...", file=sys.stderr)
+        try:
+            # Use JavaScript fetch inside the browser (already on the domain)
+            # Navigate to the rink's page first to get same-origin context
+            driver.get(f"{rink['url']}?date={start_str}&")
+            time.sleep(5)
+
+            script = f"""
+return (async () => {{
+  const p = new URLSearchParams();
+  p.set('page[size]', '100');
+  p.set('sort', 'start');
+  p.set('company', '{rink["company"]}');
+  p.set('filter[unconstrained]', '1');
+  p.set('filter[start_date__gte]', '{start_str}');
+  p.set('filter[start_date__lte]', '{end_str}');
+  const r = await fetch('https://api.daysmartrecreation.com/v1/events?' + p.toString(), {{
+    headers: {{'Accept': 'application/vnd.api+json'}}
+  }});
+  const d = await r.json();
+  return JSON.stringify(d);
+}})();
+"""
+            result = driver.execute_async_script("""
+const callback = arguments[arguments.length - 1];
+(async () => {
+  const p = new URLSearchParams();
+  p.set('page[size]', '100');
+  p.set('sort', 'start');
+  p.set('company', '""" + rink["company"] + """');
+  p.set('filter[unconstrained]', '1');
+  p.set('filter[start_date__gte]', '""" + start_str + """');
+  p.set('filter[start_date__lte]', '""" + end_str + """');
+  try {
+    const r = await fetch('https://api.daysmartrecreation.com/v1/events?' + p.toString(), {
+      headers: {'Accept': 'application/vnd.api+json'}
+    });
+    const d = await r.json();
+    callback(JSON.stringify(d));
+  } catch(e) {
+    callback('ERROR:' + e.message);
+  }
+})();
+""")
+            if not result or result.startswith('ERROR'):
+                print(f"    API error: {result}", file=sys.stderr)
+                continue
+
+            data = _json.loads(result)
+            events = data.get('data', [])
+
+            for e in events:
+                attrs = e.get('attributes', {})
+                name = attrs.get('best_description', '') or ''
+                if not HOCKEY_PAT.search(name):
+                    continue
+                start_raw = attrs.get('start', '')  # ISO: "2026-05-12T12:00:00"
+                end_raw   = attrs.get('end', '')
+                if not start_raw:
+                    continue
+                try:
+                    dt_start = datetime.fromisoformat(start_raw)
+                    dt_end   = datetime.fromisoformat(end_raw) if end_raw else None
+                    event_date = dt_start.date()
+                except ValueError:
+                    continue
+                if event_date not in dates:
+                    continue
+
+                start_fmt = dt_start.strftime('%-I:%M %p')
+                end_fmt   = dt_end.strftime('%-I:%M %p') if dt_end else ''
+
+                all_sessions.append({
+                    "name":      name,
+                    "date":      event_date,
+                    "start_raw": start_fmt,
+                    "end_raw":   end_fmt,
+                    "location":  None,
+                    "rink":      rink["name"],
+                    "dist":      rink["dist"],
+                    "price":     rink.get("price"),
+                    "url":       rink["url"],
+                    "source":    "DaySmart",
+                })
+
+        except Exception as e:
+            print(f"    error: {e}", file=sys.stderr)
+
+    if all_sessions:
+        print(f"    → {len(all_sessions)} DaySmart session(s)", file=sys.stderr)
+    return all_sessions
+
+
+# ─── Jackson Optimist scraper (WordPress image calendar via Claude vision) ──────
+
+def scrape_jackson_optimist(driver, dates: list) -> list[dict]:
+    """
+    Jackson Optimist posts a monthly JPEG image of their schedule to WordPress.
+    Strategy:
+      1. Load the page, find the current month's calendar image URL
+      2. Download the image
+      3. Use the Anthropic API (claude vision) to OCR the schedule
+      4. Parse the returned sessions
+    Falls back gracefully if the image can't be found or parsed.
+    """
+    from selenium.webdriver.common.by import By
+    import base64
+    import json as _json
+    import urllib.request
+
+    rink = IMAGE_SCHEDULE_RINKS[0]
+    if not dates:
+        return []
+
+    print(f"  {rink['name']}: loading schedule image...", file=sys.stderr)
+    sessions = []
+
+    try:
+        driver.get(rink['url'])
+        time.sleep(4)
+
+        # Find the calendar image
+        imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="Calendar"]')
+        if not imgs:
+            imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="calendar"]')
+        if not imgs:
+            print("    no calendar image found", file=sys.stderr)
+            return []
+
+        img_url = imgs[0].get_attribute('src')
+        print(f"    image: {img_url.split('/')[-1]}", file=sys.stderr)
+
+        # Download the image
+        req = urllib.request.Request(img_url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            img_bytes = resp.read()
+        img_b64 = base64.b64encode(img_bytes).decode()
+
+        # Determine current month/year for context
+        target_month = min(dates).strftime('%B %Y')
+
+        # Call Claude vision via Anthropic API
+        import os as _os
+        import requests as _req
+        api_key = _os.environ.get('ANTHROPIC_API_KEY', '')
+        if not api_key:
+            print("    ANTHROPIC_API_KEY not set — skipping vision OCR", file=sys.stderr)
+            return []
+        resp = _req.post(
+            'https://api.anthropic.com/v1/messages',
+            headers={
+                'Content-Type': 'application/json',
+                'x-api-key': api_key,
+                'anthropic-version': '2023-06-01',
+            },
+            json={
+                'model': 'claude-opus-4-5',
+                'max_tokens': 1024,
+                'messages': [{
+                    'role': 'user',
+                    'content': [
+                        {
+                            'type': 'image',
+                            'source': {
+                                'type': 'base64',
+                                'media_type': 'image/jpeg',
+                                'data': img_b64,
+                            }
+                        },
+                        {
+                            'type': 'text',
+                            'text': f"""This is the {target_month} skating schedule for Jackson Optimist Ice Arena.
+Extract ONLY the Stick & Puck sessions (highlighted in yellow).
+Return a JSON array with objects: {{date_num: int, time_start: "H:MM AM/PM", time_end: "H:MM AM/PM"}}
+Only include Stick & Puck entries, not public skating.
+Return ONLY the JSON array, no other text."""
+                        }
+                    ]
+                }]
+            },
+            timeout=30
+        )
+
+        if resp.status_code != 200:
+            print(f"    Claude vision API error: {resp.status_code}", file=sys.stderr)
+            return []
+
+        raw = resp.json()['content'][0]['text'].strip()
+        # Strip markdown fences if present
+        raw = re.sub(r'```[a-z]*', '', raw).replace('```', '').strip()
+        parsed = _json.loads(raw)
+
+        # Map date numbers to actual dates
+        year  = min(dates).year
+        month = min(dates).month
+        date_set = set(dates)
+
+        for item in parsed:
+            try:
+                event_date = datetime(year, month, int(item['date_num'])).date()
+            except (ValueError, KeyError):
+                continue
+            if event_date not in date_set:
+                continue
+
+            start_raw = item.get('time_start', '').strip()
+            end_raw   = item.get('time_end', '').strip()
+            if not start_raw:
+                continue
+
+            sessions.append({
+                "name":      "Stick & Puck",
+                "date":      event_date,
+                "start_raw": start_raw,
+                "end_raw":   end_raw,
+                "location":  None,
+                "rink":      rink["name"],
+                "dist":      rink["dist"],
+                "price":     rink.get("price"),
+                "url":       rink["url"],
+                "source":    "Jackson Optimist (vision)",
+            })
+
+    except Exception as e:
+        print(f"    error: {e}", file=sys.stderr)
+
+    if sessions:
+        print(f"    → {len(sessions)} Jackson Optimist session(s)", file=sys.stderr)
+    return sessions
+
+
+# ─── SportsEngine scraper ────────────────────────────────────────────────────
+
+def scrape_sportngin(driver, dates: list) -> list[dict]:
+    """
+    SportsEngine month list view renders clean plain text.
+    URL: /event/show_month_list/{page_id}
+    Format per event block:
+      May 4
+      STICKS & PUCKS
+      Monday, 12:00pm EDT-12:50pm EDT
+      Tag(s): Sticks & Pucks
+    """
+    from selenium.webdriver.common.by import By
+    HOCKEY_PAT = re.compile(r'sticks?\s*[&and]+\s*pucks?|drop.?in hockey|pickup hockey|adult hockey', re.I)
+    DATE_PAT   = re.compile(r'^([A-Z][a-z]+ \d{1,2})$')
+    TIME_PAT   = re.compile(r'(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s*(\d{1,2}:\d{2}(?:am|pm))\s*EDT[\-–](\d{1,2}:\d{2}(?:am|pm))', re.I)
+    all_sessions = []
+
+    processed_months = set()
+    for rink in SPORTNGIN_RINKS:
+        rink_sessions = []
+        for date in dates:
+            mk = (date.year, date.month)
+            if mk in processed_months:
+                continue
+            processed_months.add(mk)
+
+            # Navigate to month list for this month
+            url = rink["month_list_url"]
+            # SportsEngine month list shows current month by default;
+            # for future months append ?month=YYYY-MM
+            if date.year != datetime.now().year or date.month != datetime.now().month:
+                from calendar import monthrange
+                url += f"?month={date.year}-{date.month:02d}-01"
+
+            print(f"  {rink['name']}: fetching {date.year}-{date.month:02d}...", file=sys.stderr)
+            try:
+                driver.get(url)
+                time.sleep(3)
+                body = driver.find_element(By.TAG_NAME, "body").text
+            except Exception as e:
+                print(f"    error: {e}", file=sys.stderr)
+                continue
+
+            # Parse the plain text
+            lines = [l.strip() for l in body.split("\n") if l.strip()]
+            i = 0
+            while i < len(lines):
+                dm = DATE_PAT.match(lines[i])
+                if dm:
+                    # Try to parse the date (e.g. "May 4")
+                    try:
+                        event_date = datetime.strptime(f"{dm.group(1)} {date.year}", "%B %d %Y").date()
+                        # Handle year boundary
+                        if abs((event_date - date).days) > 180:
+                            event_date = datetime.strptime(f"{dm.group(1)} {date.year+1}", "%B %d %Y").date()
+                    except ValueError:
+                        i += 1
+                        continue
+
+                    if event_date not in dates:
+                        i += 1
+                        continue
+
+                    # Look ahead for hockey event name and time
+                    j = i + 1
+                    while j < min(i + 6, len(lines)):
+                        if HOCKEY_PAT.search(lines[j]):
+                            event_name = lines[j].title()
+                            # Look for time on next line
+                            if j + 1 < len(lines):
+                                tm = TIME_PAT.search(lines[j+1])
+                                if tm:
+                                    start_raw = tm.group(1).upper()
+                                    end_raw   = tm.group(2).upper()
+                                    # Normalize: 12:00PM -> 12:00 PM
+                                    start_raw = re.sub(r'(\d)(AM|PM)', r'\1 \2', start_raw)
+                                    end_raw   = re.sub(r'(\d)(AM|PM)', r'\1 \2', end_raw)
+                                    rink_sessions.append({
+                                        "name":      event_name,
+                                        "date":      event_date,
+                                        "start_raw": start_raw,
+                                        "end_raw":   end_raw,
+                                        "location":  None,
+                                        "rink":      rink["name"],
+                                        "dist":      rink["dist"],
+                                        "price":     rink["price"],
+                                        "url":       rink["url"],
+                                        "source":    "SportsEngine",
+                                    })
+                        j += 1
+                i += 1
+
+        if rink_sessions:
+            print(f"    → {len(rink_sessions)} session(s)", file=sys.stderr)
+        all_sessions.extend(rink_sessions)
+
+    return all_sessions
+
+
 # ─── Allen Park scraper (CivicPlus/Revize list view) ─────────────────────────
 
 def scrape_allen_park(driver, dates: list) -> list[dict]:
@@ -487,6 +874,15 @@ def main():
 
         print("\n── Bond Sports ─────────────────────────────────────────────", file=sys.stderr)
         all_sessions += scrape_bond_all(driver, args.days, today)
+
+        print("\n── DaySmart (Tam-O-Shanter) ─────────────────────────────────", file=sys.stderr)
+        all_sessions += scrape_daysmart(driver, date_list)
+
+        print("\n── Jackson Optimist (vision OCR) ────────────────────────────", file=sys.stderr)
+        all_sessions += scrape_jackson_optimist(driver, date_list)
+
+        print("\n── SportsEngine (Arctic Edge Canton) ────────────────────────", file=sys.stderr)
+        all_sessions += scrape_sportngin(driver, date_list)
 
         print("\n── Direct scrapes (Allen Park, Eddie Edgar) ─────────────────", file=sys.stderr)
         date_list = [today + timedelta(days=i) for i in range(args.days)]
