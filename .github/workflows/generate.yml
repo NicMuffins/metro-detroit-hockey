@@ -31,6 +31,8 @@ jobs:
         uses: browser-actions/setup-chrome@v1
 
       - name: Run scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scraper.py --days 14 --output hockey_sessions.ics --headless true
 
       - name: Commit and push ics file
