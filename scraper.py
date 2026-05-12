@@ -875,6 +875,8 @@ def main():
         print("\n── Bond Sports ─────────────────────────────────────────────", file=sys.stderr)
         all_sessions += scrape_bond_all(driver, args.days, today)
 
+        date_list = [today + timedelta(days=i) for i in range(args.days)]
+
         print("\n── DaySmart (Tam-O-Shanter) ─────────────────────────────────", file=sys.stderr)
         all_sessions += scrape_daysmart(driver, date_list)
 
@@ -885,7 +887,6 @@ def main():
         all_sessions += scrape_sportngin(driver, date_list)
 
         print("\n── Direct scrapes (Allen Park, Eddie Edgar) ─────────────────", file=sys.stderr)
-        date_list = [today + timedelta(days=i) for i in range(args.days)]
         all_sessions += scrape_allen_park(driver, date_list)
         all_sessions += scrape_eddie_edgar(driver, date_list)
     finally:
