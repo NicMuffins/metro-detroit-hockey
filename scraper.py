@@ -83,6 +83,19 @@ IMAGE_SCHEDULE_RINKS = [
     },
 ]
 
+
+# CivicPlus PDF calendar rinks
+PDF_CALENDAR_RINKS = [
+    {
+        "name": "St Clair Shores Civic Arena",
+        "dist": 50, "price": "$10",
+        "url":  "https://www.scsmi.net/324/Civic-Ice-Arena",
+        "type": "civicplus_pdf",
+        # PDF link text pattern: "MAY 2026 PUBLIC SKATE CALENDAR"
+        # Drop In Hockey $10, Adult Stick & Puck $10, Youth Stick & Puck $10
+    },
+]
+
 # Direct-scrape rinks — custom per-site scraper logic
 DIRECT_RINKS = [
     {
@@ -566,6 +579,235 @@ Return ONLY the JSON array, no other text."""
     return sessions
 
 
+# ─── St Clair Shores PDF scraper ─────────────────────────────────────────────
+
+def scrape_pdf_calendars(driver, dates: list) -> list[dict]:
+    """
+    St Clair Shores posts monthly PDF calendars at scsmi.net/324/Civic-Ice-Arena.
+    Strategy:
+      1. Load the page, find the PDF link matching the current month/year
+      2. Download PDF bytes using requests with the Selenium session cookies
+      3. Parse with pdfplumber — extract words, reconstruct calendar grid
+      4. Match hockey sessions to dates
+    Hockey session types: Drop In Hockey, Adult Stick & Puck, Youth Stick & Puck
+    """
+    import io
+    import re as _re
+    import requests as _req
+    import pdfplumber
+
+    HOCKEY_PAT = _re.compile(r'drop.?in hockey|adult stick|youth stick|stick.*puck', _re.I)
+    TIME_PAT   = _re.compile(r'(\d{1,2}:\d{2})\s*([AP])', _re.I)
+    all_sessions = []
+
+    if not dates:
+        return []
+
+    # Group dates by month — we only need one PDF per month
+    months = {}
+    for d in dates:
+        key = (d.year, d.month)
+        months.setdefault(key, []).append(d)
+
+    for (year, month), month_dates in months.items():
+        rink = PDF_CALENDAR_RINKS[0]
+        month_name = ['', 'JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE',
+                      'JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'][month]
+        print(f"  St Clair Shores: finding {month_name} {year} PDF...", file=sys.stderr)
+
+        try:
+            # Load the page and find the PDF link
+            driver.get(rink['url'])
+            time.sleep(3)
+
+            from selenium.webdriver.common.by import By
+            links = driver.find_elements(By.TAG_NAME, 'a')
+            pdf_url = None
+            for link in links:
+                text = (link.text or '').upper()
+                href = link.get_attribute('href') or ''
+                if month_name in text and str(year) in text and 'DocumentCenter' in href:
+                    pdf_url = href
+                    break
+
+            if not pdf_url:
+                print(f"    no PDF link found for {month_name} {year}", file=sys.stderr)
+                continue
+
+            print(f"    downloading {pdf_url.split('/')[-1]}...", file=sys.stderr)
+
+            # Download PDF using session cookies from Selenium
+            cookies = {c['name']: c['value'] for c in driver.get_cookies()}
+            headers = {'User-Agent': driver.execute_script('return navigator.userAgent')}
+            resp = _req.get(pdf_url, cookies=cookies, headers=headers, timeout=20)
+            if resp.status_code != 200:
+                print(f"    PDF download failed: {resp.status_code}", file=sys.stderr)
+                continue
+
+            # Parse PDF
+            sessions = _parse_scs_pdf(resp.content, year, month, month_dates, rink)
+            all_sessions.extend(sessions)
+            if sessions:
+                print(f"    → {len(sessions)} session(s)", file=sys.stderr)
+
+        except Exception as e:
+            print(f"    error: {e}", file=sys.stderr)
+
+    return all_sessions
+
+
+def _parse_scs_pdf(pdf_bytes: bytes, year: int, month: int, dates: list, rink: dict) -> list:
+    """
+    Parse the St Clair Shores calendar PDF.
+    The PDF is a visual calendar grid. pdfplumber extracts words with x/y coords.
+    Strategy: group words by approximate x column (day of week) and y row (week).
+    Each cell contains session names and times stacked vertically.
+    """
+    import io
+    import pdfplumber
+    from datetime import date as _date
+
+    HOCKEY_PAT = re.compile(r'drop.?in hockey|adult stick|youth stick', re.I)
+    # Time pattern: "9:30-10:30" or "9:30" "A" (AM) on next word
+    TIME_RANGE_PAT = re.compile(r'(\d{1,2}:\d{2})\s*[AP\.]*\s*[-–]\s*(\d{1,2}:\d{2})\s*([AP])', re.I)
+
+    sessions = []
+    date_set = set(dates)
+
+    try:
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            page = pdf.pages[0]
+            words = page.extract_words(x_tolerance=3, y_tolerance=3)
+
+            if not words:
+                return []
+
+            # Find day-of-week headers to establish column boundaries
+            # Headers: Sun, Mon, Tue, Wed, Thu, Fri, Sat
+            DOW = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+            col_centers = {}
+            for w in words:
+                text_up = w['text'].upper()
+                for i, day in enumerate(DOW):
+                    if text_up == day or text_up == day[:2]:
+                        col_centers[i] = (w['x0'] + w['x1']) / 2
+                        break
+
+            if len(col_centers) < 6:
+                # Fallback: divide page width into 7 equal columns
+                pw = page.width
+                col_centers = {i: pw * (i + 0.5) / 7 for i in range(7)}
+
+            # Find date numbers in the grid to anchor rows
+            # Date numbers are typically standalone 1-2 digit numbers
+            date_positions = {}
+            for w in words:
+                try:
+                    day_num = int(w['text'].strip())
+                    if 1 <= day_num <= 31:
+                        date_positions[day_num] = {
+                            'x': (w['x0'] + w['x1']) / 2,
+                            'y': w['top'],
+                            'col': _nearest_col(col_centers, (w['x0'] + w['x1']) / 2)
+                        }
+                except ValueError:
+                    pass
+
+            # For each date in our range, find the cell contents
+            for target_date in dates:
+                if target_date.month != month or target_date.year != year:
+                    continue
+                day_num = target_date.day
+                if day_num not in date_positions:
+                    continue
+
+                cell = date_positions[day_num]
+                cell_x = cell['x']
+                cell_y = cell['y']
+
+                # Collect words in this cell: same column, below the date number,
+                # above the next row's date numbers
+                next_row_y = min(
+                    (p['y'] for d, p in date_positions.items()
+                     if p['y'] > cell_y + 5 and abs(p['x'] - cell_x) < 50),
+                    default=cell_y + 200
+                )
+
+                cell_col = cell['col']
+                col_x = col_centers.get(cell_col, cell_x)
+                col_width = page.width / 7
+
+                cell_words = [
+                    w for w in words
+                    if w['top'] > cell_y + 2
+                    and w['top'] < next_row_y - 2
+                    and abs((w['x0'] + w['x1']) / 2 - col_x) < col_width * 0.6
+                ]
+
+                if not cell_words:
+                    continue
+
+                # Reconstruct cell text line by line
+                cell_lines = _words_to_lines(cell_words)
+                cell_text = ' '.join(cell_lines)
+
+                # Find hockey sessions in this cell
+                for i, line in enumerate(cell_lines):
+                    if not HOCKEY_PAT.search(line):
+                        continue
+                    # Find time in adjacent lines
+                    start_raw = end_raw = None
+                    search_range = cell_lines[max(0,i-2):i+3]
+                    for nearby in search_range:
+                        m = TIME_RANGE_PAT.search(nearby)
+                        if m:
+                            am_pm = m.group(3).upper()
+                            start_raw = m.group(1) + ' ' + am_pm
+                            end_raw   = m.group(2) + ' ' + am_pm
+                            break
+                    if not start_raw:
+                        continue
+
+                    sessions.append({
+                        "name":      line.strip().title(),
+                        "date":      target_date,
+                        "start_raw": start_raw,
+                        "end_raw":   end_raw,
+                        "location":  None,
+                        "rink":      rink["name"],
+                        "dist":      rink["dist"],
+                        "price":     rink.get("price"),
+                        "url":       rink["url"],
+                        "source":    "St Clair Shores PDF",
+                    })
+
+    except Exception as e:
+        print(f"    PDF parse error: {e}", file=sys.stderr)
+
+    return sessions
+
+
+def _nearest_col(col_centers: dict, x: float) -> int:
+    return min(col_centers.keys(), key=lambda c: abs(col_centers[c] - x))
+
+
+def _words_to_lines(words: list) -> list:
+    """Group words into lines based on vertical position."""
+    if not words:
+        return []
+    lines = []
+    current_line = [words[0]]
+    for w in words[1:]:
+        if abs(w['top'] - current_line[-1]['top']) < 4:
+            current_line.append(w)
+        else:
+            lines.append(' '.join(ww['text'] for ww in sorted(current_line, key=lambda x: x['x0'])))
+            current_line = [w]
+    if current_line:
+        lines.append(' '.join(ww['text'] for ww in sorted(current_line, key=lambda x: x['x0'])))
+    return lines
+
+
 # ─── SportsEngine scraper ────────────────────────────────────────────────────
 
 def scrape_sportngin(driver, dates: list) -> list[dict]:
@@ -885,6 +1127,9 @@ def main():
 
         print("\n── SportsEngine (Arctic Edge Canton) ────────────────────────", file=sys.stderr)
         all_sessions += scrape_sportngin(driver, date_list)
+
+        print("\n── St Clair Shores (PDF calendar) ──────────────────────────", file=sys.stderr)
+        all_sessions += scrape_pdf_calendars(driver, date_list)
 
         print("\n── Direct scrapes (Allen Park, Eddie Edgar) ─────────────────", file=sys.stderr)
         all_sessions += scrape_allen_park(driver, date_list)
