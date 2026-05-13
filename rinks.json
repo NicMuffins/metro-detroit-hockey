@@ -1,0 +1,200 @@
+{
+  "last_updated": "2026-05-13",
+  "home_zip": "48108",
+  "rinks": [
+    {
+      "name": "Biggby Ice Cube – Ann Arbor",
+      "dist_mi": 3,
+      "price": "$15",
+      "source": "bond_sports",
+      "url": "https://bondsports.co/org/246/262/schedule",
+      "org": 246,
+      "fac": 262,
+      "session_types": ["Stick & Puck"],
+      "active": true
+    },
+    {
+      "name": "Biggby Ice Cube – Chelsea",
+      "dist_mi": 16,
+      "price": "$15",
+      "source": "bond_sports",
+      "url": "https://bondsports.co/org/474/529/schedule",
+      "org": 474,
+      "fac": 529,
+      "session_types": ["Sticks and Pucks"],
+      "active": true
+    },
+    {
+      "name": "Biggby Ice Cube – Brighton",
+      "dist_mi": 22,
+      "price": "$15",
+      "source": "bond_sports",
+      "url": "https://bondsports.co/org/353/386/schedule",
+      "org": 353,
+      "fac": 386,
+      "session_types": ["Sticks & Pucks"],
+      "active": true
+    },
+    {
+      "name": "Novi Ice Arena",
+      "dist_mi": 26,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "novi-ice-arena",
+      "url": "https://www.noviicearena.com/public-schedule",
+      "session_types": ["Stick And Puck"],
+      "active": true
+    },
+    {
+      "name": "Arctic Edge Ice Arena – Canton",
+      "dist_mi": 27,
+      "price": null,
+      "source": "ice_finder",
+      "slug": "arctic-edge-ice-arena-of-canton",
+      "url": "https://www.arcticarenas.com/page/show/3414762-calendar",
+      "sportngin_page_id": "3414762",
+      "sportngin_tag_snp": "3517364",
+      "sportngin_tag_skate": "3517362",
+      "session_types": ["Sticks & Pucks"],
+      "notes": "Saturdays 12:00–12:50pm",
+      "active": true
+    },
+    {
+      "name": "Suburban Ice – Farmington Hills",
+      "dist_mi": 32,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "suburban-ice-farmington-hills",
+      "url": "https://www.suburbanicefarmingtonhills.com/public-skating",
+      "session_types": ["Stick And Puck"],
+      "notes": "Mon–Fri 11:30am–1:00pm",
+      "active": true
+    },
+    {
+      "name": "Garden City Civic Arena",
+      "dist_mi": 34,
+      "price": "$12",
+      "source": "ice_finder",
+      "slug": "garden-city-civic-arena",
+      "url": "https://www.gardencitymi.org/calendar.aspx?CID=66,14",
+      "session_types": ["Pickup Hockey"],
+      "active": true
+    },
+    {
+      "name": "Frank J. Lada Civic Arena – Allen Park",
+      "dist_mi": 37,
+      "price": null,
+      "source": "civicplus_revize",
+      "url": "https://cityofallenpark.org/calendar.php",
+      "calendar_url_template": "https://cityofallenpark.org/calendar.php?view=list&month={month}&day=1&year={year}&display=31",
+      "session_types": ["Sticks and Pucks"],
+      "notes": "Mon/Wed/Fri 12:30–3:30pm, Tue/Thu 1:30–3:30pm. Ice closes after May 9 each year.",
+      "active": true
+    },
+    {
+      "name": "Eddie Edgar Ice Arena – Dearborn",
+      "dist_mi": 38,
+      "price": null,
+      "source": "fullcalendar_drupal",
+      "url": "https://www.eddieedgar.org/schedule",
+      "session_types": ["Sticks and Pucks"],
+      "notes": "Tuesdays only, 11:45am–1:15pm, Edgar B arena",
+      "active": true
+    },
+    {
+      "name": "Jackson Optimist Ice Arena – Jackson",
+      "dist_mi": 38,
+      "price": "$10",
+      "source": "wordpress_image_ocr",
+      "url": "https://www.optimisticearena.com/stick-and-puck/",
+      "session_types": ["Stick & Puck"],
+      "notes": "Schedule posted as monthly JPEG image. Parsed via Claude vision API.",
+      "active": true
+    },
+    {
+      "name": "Hazel Park Viking Arena",
+      "dist_mi": 47,
+      "price": null,
+      "source": "ice_finder",
+      "slug": "hazel-park-ice-arena",
+      "url": "https://www.hazelpark.org/residents/ice_arena.php",
+      "session_types": ["Pickup Hockey"],
+      "active": true
+    },
+    {
+      "name": "St Clair Shores Civic Arena",
+      "dist_mi": 50,
+      "price": "$10",
+      "source": "civicplus_pdf",
+      "url": "https://www.scsmi.net/324/Civic-Ice-Arena",
+      "session_types": ["Drop In Hockey", "Adult Stick & Puck", "Youth Stick & Puck"],
+      "notes": "Monthly PDF calendar. Drop In Hockey $10, Adult Stick & Puck $10.",
+      "active": true
+    },
+    {
+      "name": "John Lindell Ice Arena – Royal Oak",
+      "dist_mi": 54,
+      "price": null,
+      "source": "ice_finder",
+      "slug": "john-lindell-ice-arena-royal-oak",
+      "url": "https://www.royaloakicearena.com/public-skating",
+      "session_types": ["Stick And Puck", "Adult Drop"],
+      "active": true
+    },
+    {
+      "name": "Tam-O-Shanter Ice Rink – Sylvania, OH",
+      "dist_mi": 58,
+      "price": "$10",
+      "source": "daysmart_api",
+      "company": "tamoshanter",
+      "url": "https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration",
+      "session_types": ["Adult Drop In Hockey"],
+      "notes": "Tuesdays 12:00–1:50pm",
+      "active": true
+    },
+    {
+      "name": "Buffalo Wild Wings Arena – Troy",
+      "dist_mi": 58,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "buffalo-wild-wings-arena",
+      "url": "https://troy.frontline-connect.com/",
+      "session_types": ["Pickup Hockey"],
+      "active": true
+    },
+    {
+      "name": "Suburban Ice Rochester",
+      "dist_mi": 60,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "suburban-ice-rochester",
+      "url": "https://www.suburbanicerochester.com/public-skating",
+      "session_types": ["Stick And Puck"],
+      "active": true
+    },
+    {
+      "name": "Suburban Ice Macomb",
+      "dist_mi": 65,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "suburban-ice-macomb",
+      "url": "https://www.suburbanicemacomb.com/public-skating",
+      "session_types": ["Stick And Puck"],
+      "active": true
+    }
+  ],
+  "not_scraping": [
+    {"name": "Mike Modano Ice Arena – Westland", "reason": "CivicPlus calendar exists but no hockey sessions posted online"},
+    {"name": "Taylor Sportsplex", "reason": "CivicPlus calendar completely empty"},
+    {"name": "Trenton Kennedy Ice Arena", "reason": "CivicPlus Parks & Rec calendar empty"},
+    {"name": "Brownstown Sports Center", "reason": "Google Calendar embed empty"},
+    {"name": "Birmingham Ice Arena", "reason": "Only Adult Skate (figure skating), no stick & puck"},
+    {"name": "Yak Arena – Wyandotte", "reason": "CivicPlus, no events posted"},
+    {"name": "Beech Tot Lot – Redford", "reason": "FullCalendar API returns empty"},
+    {"name": "Big Boy Arena – Fraser", "reason": "EZFacility requires location session cookie — not yet cracked"},
+    {"name": "Oak Park Arena", "reason": "Ice rental booking only, no public S&P"},
+    {"name": "Plymouth Cultural Center", "reason": "Seasonal — closes May 9 each year"},
+    {"name": "Clark Park – Detroit", "reason": "Outdoor, seasonal, empty in May+"},
+    {"name": "USA Hockey Arena – Plymouth", "reason": "Under renovation since March 2026"}
+  ]
+}
