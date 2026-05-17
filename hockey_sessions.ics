@@ -5,60 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-05-16 14:46 UTC.
-BEGIN:VEVENT
-UID:f83b00d3e504755823a22275fafe4ebd@mdh
-DTSTAMP:20260516T144613Z
-DTSTART:20260516T130000Z
-DTEND:20260516T135000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Basic Skills teaches the FUNdamentals of ice skating and provides the best foundation for figure skating\, hockey\, and speedskating.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Six progressive levels introduce forward and backward skating\, stops\, edges\, crossovers\, and turns:</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 1 and 2 &ndash\; Discover\, Learn and Play: These introductory levels allow new skaters with no prior skating experience to build confidence while learning to skate.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 3-6 &ndash\; FUNdamentals: These levels develop all of the fundamental skating skills on the ice. Focus is on learning the ABCs of basic athleticism: agility\, balance\, coordination and speed. </span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Upon completion of these levels\, skaters will be able to confidently advance to more specialized areas of skating. It is recommended that you complete two sessions of Snowplow Sam\, Pre-Hockey\, and/or Basic Skills (or masters gliding and stopping) prior to registering for Learn 2 Play Hockey.</span></p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:1a7dba6ff485701df46f551023b6398a@mdh
-DTSTAMP:20260516T144613Z
-DTSTART:20260516T140000Z
-DTEND:20260516T145000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:<p>The first stage of skills forms a strong foundation for your skaters to explore the world of skating. All will progress at their own pace working toward mastering each skill. Basic Skills will harness those skills as agility\, balance\, coordination and speed become the main focus of this curriculum. Basic Skills teaches the fundamentals of ice skating and provides the best foundation for figure skating\, hockey\, speedskating\, or recreation.</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:0bd8de5246ab3836a472851b0b2cf7ee@mdh
-DTSTAMP:20260516T144613Z
-DTSTART:20260516T140000Z
-DTEND:20260516T145000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Basic Skills teaches the FUNdamentals of ice skating and provides the best foundation for figure skating\, hockey\, and speedskating.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Six progressive levels introduce forward and backward skating\, stops\, edges\, crossovers\, and turns:</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 1 and 2 &ndash\; Discover\, Learn and Play: These introductory levels allow new skaters with no prior skating experience to build confidence while learning to skate.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 3-6 &ndash\; FUNdamentals: These levels develop all of the fundamental skating skills on the ice. Focus is on learning the ABCs of basic athleticism: agility\, balance\, coordination and speed. </span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Upon completion of these levels\, skaters will be able to confidently advance to more specialized areas of skating. It is recommended that you complete two sessions of Snowplow Sam\, Pre-Hockey\, and/or Basic Skills (or masters gliding and stopping) prior to registering for Learn 2 Play Hockey.</span></p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:21a4f658443aa71f40db4fca1c9d8341@mdh
-DTSTAMP:20260516T144613Z
-DTSTART:20260516T150000Z
-DTEND:20260516T153000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">The Snowplow Sam levels are introductory classes divided into four progressive levels allowing children with no prior skating experience to build confidence while learning the basic skills of skating. These classes are designed to help children seven and younger develop the ABCs of movement &ndash\; Agility\, Balance\, Coordination and speed. The ABCs are essential for developing fundamental movement skills and physical literacy. All classes will be taught in a safe and positive environment\, incorporating fun and games making class time an enjoyable experience for all. It is recommended that you complete two sessions of Snowplow Sam\, Pre-Hockey\, and/or Basic Skills (or masters gliding and stopping) prior to registering for Learn 2 Play Hockey.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Off-ice orientation prior to the first skating class:</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Equipment check &ndash\; Proper fit and lacing of skates\, appropriate attire\, and safety helmets.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Practice falling and recovery\, marching in place\, dips and one-foot balances.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Students must pre-register online and each class is limited to 8 skaters. Classes may be combined or cancelled if enrollment numbers are below 3 skaters. Rental Skates included. BIKE OR HOCKEY HELMET REQUIRED. </span></p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:6494ec5b41835fe1f45286cedd653e97@mdh
-DTSTAMP:20260516T144613Z
-DTSTART:20260517T143000Z
-DTEND:20260517T155000Z
-SUMMARY:🏒 Stick & Puck – Novi Ice Arena
-DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Novi Ice Arena
-URL:https://www.noviicearena.com/public-schedule
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-05-17 14:48 UTC.
 BEGIN:VEVENT
 UID:b54d8d8d8a43f2aa3c2abe86b714e69d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260517T153000Z
 DTEND:20260517T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -68,7 +18,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3892103d45df6098fdbf91215d56cea7@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260517T223000Z
 DTEND:20260517T232000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -78,7 +28,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a787478ac259694eeddeb147732af19d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T160000Z
 DTEND:20260518T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -88,7 +38,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c949bf30a930f7a4295ea1433100eed0@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T200000Z
 DTEND:20260518T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -98,7 +48,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:40f075617abdc2b68517dca383e10945@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T143000Z
 DTEND:20260518T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -108,7 +58,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:47235696daa31742a0ec9b921fb72f98@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T201500Z
 DTEND:20260518T213500Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -118,7 +68,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:eec6f964a5d13258979c01d2ce71b733@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T153000Z
 DTEND:20260518T170000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -128,7 +78,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:89feb3661bffb4439f01388abc46cfc1@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T150000Z
 DTEND:20260518T164500Z
 SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
@@ -138,7 +88,7 @@ URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
 END:VEVENT
 BEGIN:VEVENT
 UID:9cf46c705952ed797cd0e6ede84c0d29@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T153000Z
 DTEND:20260518T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -148,7 +98,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:e2e88a1d0a8495bd07a16a6f4c7f68fa@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T160000Z
 DTEND:20260518T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -158,7 +108,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:c6695a2a975d85e95334be9c14588097@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T160000Z
 DTEND:20260518T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -168,7 +118,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:d7c1f3cfec15e035ff8ffccf0fbcdff7@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T170000Z
 DTEND:20260518T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -178,7 +128,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:974144f8ccd0435ebd249dd6bc778c46@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T230000Z
 DTEND:20260519T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -188,7 +138,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a53368f43559d0f9d9dad1b4d097b3f4@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T000000Z
 DTEND:20260519T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -198,7 +148,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:11fd4403b6c52223faccf8aae1e412bd@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T010000Z
 DTEND:20260519T015000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -208,7 +158,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:b0254472e153bb67a53dd7aa9edcf27e@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T153000Z
 DTEND:20260518T165000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -218,7 +168,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:78161fc823e9095c6d1c8d265d7858e7@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260518T160000Z
 DTEND:20260518T172000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -228,7 +178,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:b3ff77417e42692744090e26e78504f8@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T160000Z
 DTEND:20260519T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -238,7 +188,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:60374198b7f621982ae2a41f17a62286@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T143000Z
 DTEND:20260519T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -248,7 +198,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:5bf77015db587ce2ddffa93ddb3bdb06@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T153000Z
 DTEND:20260519T170000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -258,7 +208,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:5cce7a1411c9da5c1e1c183575e4f3e4@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T171500Z
 DTEND:20260519T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -268,7 +218,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f702a032c517ee8a3f57013497f6370d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T153000Z
 DTEND:20260519T170000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -278,7 +228,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:b1c04b931492be2f70e3bf96a501388a@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T161500Z
 DTEND:20260519T174500Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -288,7 +238,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:c394ab8053804be6ca8bd008c3598c7c@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T203000Z
 DTEND:20260519T210000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -298,7 +248,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:ae2521dbf555963c814bdfc64494e85c@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T210000Z
 DTEND:20260519T213000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -308,7 +258,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:4b66fc2665fc0c11ddb9cb4d88746185@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T103000Z
 DTEND:20260519T115000Z
 SUMMARY:🏒 Drop-In/Pickup – Suburban Ice Rochester
@@ -318,7 +268,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:0b44299b84121fd666583de4b3865c5e@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T153000Z
 DTEND:20260519T165000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -328,7 +278,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:26bc4c9ae76eecaf2ca477d3235caaca@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260519T160000Z
 DTEND:20260519T172000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -338,7 +288,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:252a18e92ab42f0364a0d139694fab4d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T160000Z
 DTEND:20260520T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -348,7 +298,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:16137af06df55848dca42141d61aec33@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T200000Z
 DTEND:20260520T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -358,7 +308,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a06fc4f84729b4a57864df0008597c5b@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T143000Z
 DTEND:20260520T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -368,7 +318,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:485839bab8831fa22b0b038d045e93a2@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T153000Z
 DTEND:20260520T170000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -378,7 +328,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:12f0ca5d24e4fb846797b07ac68eeb9d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T150000Z
 DTEND:20260520T164500Z
 SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
@@ -388,7 +338,7 @@ URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
 END:VEVENT
 BEGIN:VEVENT
 UID:5c39d8dc8addffedf6fac874748ddb97@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T153000Z
 DTEND:20260520T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -398,7 +348,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:5ffbd85e4356b8a32efcbeafdc7edf04@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T160000Z
 DTEND:20260520T172000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -408,7 +358,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:8d08036db0751e21cf8a14817bf85b08@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T100000Z
 DTEND:20260520T113000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -418,7 +368,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:b6d5e6a76e4053c6e65d9c703370bd33@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T160000Z
 DTEND:20260520T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -428,7 +378,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:89dc89e71baabf55ff276a6ee6e9eb4b@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T230000Z
 DTEND:20260521T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -438,7 +388,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a33e52760c23c3850ff6dbffc6f91c28@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T153000Z
 DTEND:20260520T165000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -448,7 +398,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:4b1b8aa3a98f248582346c71329cf0c4@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260520T160000Z
 DTEND:20260520T172000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -458,7 +408,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:de294f83e75c218abba540dee6bdf97d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T160000Z
 DTEND:20260521T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -468,7 +418,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e5030ce05cd53452505bfb06674f2f59@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T143000Z
 DTEND:20260521T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -478,7 +428,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:881548e306cf202329e236174b4f866b@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T153000Z
 DTEND:20260521T170000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -488,7 +438,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:3e79c286b0a973d3e7fd232db1b851b3@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T160000Z
 DTEND:20260521T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -498,7 +448,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:99b9977da20b650e59e9f44e48e1f8ac@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T103000Z
 DTEND:20260521T115000Z
 SUMMARY:🏒 Drop-In/Pickup – Suburban Ice Rochester
@@ -508,7 +458,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:4a013254dd6d1bc63aed7079bb271e2c@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T153000Z
 DTEND:20260521T165000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -518,7 +468,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:1993fe724e11014d1e53e2611c43c7f0@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260521T160000Z
 DTEND:20260521T172000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -528,7 +478,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:7ef8b26a3bf0b25c7fb57b9bd3961cb9@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T160000Z
 DTEND:20260522T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -538,7 +488,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:113a19ca44b40f66965d7097059ed426@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T200000Z
 DTEND:20260522T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -548,7 +498,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:1b0ff414408dc55a96023363e66b8d2c@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T143000Z
 DTEND:20260522T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -558,7 +508,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3358f4994ec57f5d23ebe0466fc4c8ad@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T140000Z
 DTEND:20260522T153000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -568,7 +518,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:c1f733ff557f59856412de1b388088c0@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T153000Z
 DTEND:20260522T170000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -578,7 +528,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:3a049fd12aef3afed800a52e0830ac1a@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T150000Z
 DTEND:20260522T164500Z
 SUMMARY:🏒 Drop-In/Pickup – Garden City Civic Arena
@@ -588,7 +538,7 @@ URL:https://www.gardencitymi.org/calendar.aspx?CID=66,14
 END:VEVENT
 BEGIN:VEVENT
 UID:e412f4c05b664ef5d28dcf455b57b4fa@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T153000Z
 DTEND:20260522T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -598,7 +548,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:ce18eb60ed1dd0e23952935cf3398d42@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T160000Z
 DTEND:20260522T172000Z
 SUMMARY:🏒 Drop-In/Pickup – Hazel Park Viking Arena
@@ -608,7 +558,7 @@ URL:https://www.hazelpark.org/residents/ice_arena.php
 END:VEVENT
 BEGIN:VEVENT
 UID:05e304f86ca5cd38932cacbbaa59b891@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T100000Z
 DTEND:20260522T113000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -618,7 +568,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:6cbc3d93478c3f165f172d170167fe46@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T160000Z
 DTEND:20260522T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Troy
@@ -628,7 +578,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:340fff5bd47b1c256bd89474deccc44a@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T223000Z
 DTEND:20260522T233000Z
 SUMMARY:🏒 Stick & Puck – Troy
@@ -638,7 +588,7 @@ URL:https://troy.frontline-connect.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:391e84efdff665ad11e66bef1c95b24d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T153000Z
 DTEND:20260522T165000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -648,7 +598,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:55ac01ecaef96c5cb19d6770f7d67291@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T224500Z
 DTEND:20260523T000500Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -658,7 +608,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:ce8963040cd99395b7be3615a837e1ec@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260522T160000Z
 DTEND:20260522T172000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -668,7 +618,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:03a8cef79cd7f6133fb719d0cd2d4856@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260523T143000Z
 DTEND:20260523T155000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -677,8 +627,58 @@ LOCATION:Novi Ice Arena
 URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:c6802ab2b8f8e2cb176112efabe067b0@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260523T224500Z
+DTEND:20260523T234500Z
+SUMMARY:🏒 Stick & Puck – Troy
+DESCRIPTION:Stick And Puck\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://troy.frontline-connect.com/\nConfirm with rink — schedule subject to change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://troy.frontline-connect.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:3d297ecae873f52a54fae4f2d2c50c0d@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260523T160000Z
+DTEND:20260523T172000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicerochester.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:ec44009b450ed8e4a08be6af6f5d30ae@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260523T180000Z
+DTEND:20260523T192000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.suburbanicemacomb.com/public-skating\nConfirm with rink — schedule subject to change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:395df954a0ac346672cacc1b5d79b3b5@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260524T133000Z
+DTEND:20260524T145000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a80011a825b1b5084595df47c8d70cfa@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260524T143000Z
+DTEND:20260524T155000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPrice: $15.00\nSource: ice-finder\nInfo: https://www.noviicearena.com/public-schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:2ba68271ecea758098e6b420d94551ee@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260526T160000Z
 DTEND:20260526T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -688,7 +688,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d3c42247992009c516be190587ed9803@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260526T171500Z
 DTEND:20260526T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -698,7 +698,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7f95664c6af47cca319f897526e1de49@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260527T160000Z
 DTEND:20260527T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -708,7 +708,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f9f0ab80793a9d62979878bf86258e9e@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260527T200000Z
 DTEND:20260527T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -718,7 +718,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:54c231ef4abd8048027405e86e30915a@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260528T160000Z
 DTEND:20260528T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -728,7 +728,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:4a9418d437b9b502342a5a39dfd91672@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260528T200000Z
 DTEND:20260528T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -738,7 +738,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:2ee355937221db49b9d1bde23a6e416d@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260529T160000Z
 DTEND:20260529T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -748,9 +748,29 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a109410df1c0e588248eff2c45979671@mdh
-DTSTAMP:20260516T144613Z
+DTSTAMP:20260517T144853Z
 DTSTART:20260529T200000Z
 DTEND:20260529T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:54f6de0906dd77ee94ffe092a48c91f4@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260530T160000Z
+DTEND:20260530T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:1dfb11a8a8417addd3e16f401116253a@mdh
+DTSTAMP:20260517T144853Z
+DTSTART:20260530T200000Z
+DTEND:20260530T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
