@@ -5,30 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-06-23 13:47 UTC.
-BEGIN:VEVENT
-UID:db542f09f3fb1c1eae59437531668ea4@mdh
-DTSTAMP:20260623T134706Z
-DTSTART:20260623T200000Z
-DTEND:20260623T205000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:f424892caf8ce7ee360f198a82c7eb37@mdh
-DTSTAMP:20260623T134706Z
-DTSTART:20260623T202000Z
-DTEND:20260623T205000Z
-SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
-DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-06-24 13:26 UTC.
 BEGIN:VEVENT
 UID:ed9fd9347018f24eab68fe8a7b31e59a@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260624T170000Z
 DTEND:20260624T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -38,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:6c590c39c52735ac4e606bfe5b61db4e@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260624T210000Z
 DTEND:20260624T214500Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -48,7 +28,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a96bec2429aa1824a5db49bbc0e41683@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260624T214500Z
 DTEND:20260624T223000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -58,7 +38,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a2ebf21fd689b44153f37dfa449ef1ef@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260624T223000Z
 DTEND:20260625T002000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -68,7 +48,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:7147b77fb1e993dc77d48897bc5e7a56@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260624T235000Z
 DTEND:20260625T005000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -78,7 +58,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:4bd512a824d48efc6bd1ceb3ea5c210b@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260625T183000Z
 DTEND:20260625T195000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -88,7 +68,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7f35d3f93921fa18b335d89dd01092ee@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260625T230000Z
 DTEND:20260625T235000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -98,7 +78,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:f3c7b6cef7399b0a88552ca1daee1a40@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260626T160000Z
 DTEND:20260626T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -108,7 +88,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9bd3f9850e2aba1982a84ff76d260382@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260626T210000Z
 DTEND:20260626T222000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -117,8 +97,18 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:172501b18628d4f367f041ad51d02b76@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260626T230000Z
+DTEND:20260626T235000Z
+SUMMARY:🏒 Stick & Puck – Sylvania\, OH
+DESCRIPTION:<p>Dialed In Goaltending is focused on extending goaltenders opportunity to further life and hockey.</p>\n<p>Instructors with over a decade of instructing and coaching experience\, Dialed In Goaltending is taking charge of this forgotten position and teaching the valuable craft needed to succeed on and off the ice. The approach is aimed at developing technical and physical aspects needed to be a top-tier goaltender today. Continued learning of top puck-stoppers in today&rsquo\;s game accelerates our teaching. Properly conveying and implementing techniques develops the confidence of a Dialed In Goaltender.</p>\nThe clinics offered will supplement the engagement and reinforce the repetitions needed in developing technique and the effective base to continue succeeding.<br /><br />*NO REFUNDS/CREDITS\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:073def8fa1a007e3046ffc7304c05991@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260627T160000Z
 DTEND:20260627T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -128,7 +118,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:ba90ab202a46fe374e13ad216fbb8966@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260627T213000Z
 DTEND:20260627T225000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -137,8 +127,28 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:f0174c434527cfce24db1f94df381858@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260627T130000Z
+DTEND:20260627T135000Z
+SUMMARY:🏒 Stick & Puck – Sylvania\, OH
+DESCRIPTION:<p>Learn 2 Play Hockey is a well organized step-by-step program that enables children ages 4-14 years to have fun while learning the basics of the great game of hockey from USA Hockey trained instructors. No experience required Affordable ice fee 8-week sessions offered year-round On-ice two days per week (Wednesdays &amp\; Saturdays) Affordable starter equipment packages available This program will prepare players for game play. Players must complete two 8-week sessions of Learn to Play Hockey AND be able to hockey stop in order to join the Buckeye Broadband (Rec) Hockey League. The weekly lesson plans follow the USA Hockey American Development Model (ADM) with emphasis on skating\, puck control\, stopping\, passing\, turning and shooting. Each player receives a jersey and hockey socks. Full equipment is required including stick. Fee: Fee includes 16 ice touches\, jersey &amp\; hockey socks. (Fee does NOT include annual $15-75 USA Hockey membership.) Schedule (choose one): Wednesday at 5:00pm AND Saturday at 10:00am &ndash\; Group A Wednesday at 5:45pm AND Saturday at 9:00am &ndash\; Group B Class: Twice per Week &ndash\; 45-50 minutes Session: 8 weeks</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:0fa07fbbf971e5442df708aa8286e9f6@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260627T140000Z
+DTEND:20260627T145000Z
+SUMMARY:🏒 Stick & Puck – Sylvania\, OH
+DESCRIPTION:<p>Learn 2 Play Hockey is a well organized step-by-step program that enables children ages 4-14 years to have fun while learning the basics of the great game of hockey from USA Hockey trained instructors. No experience required Affordable ice fee 8-week sessions offered year-round On-ice two days per week (Wednesdays &amp\; Saturdays) Affordable starter equipment packages available This program will prepare players for game play. Players must complete two 8-week sessions of Learn to Play Hockey AND be able to hockey stop in order to join the Buckeye Broadband (Rec) Hockey League. The weekly lesson plans follow the USA Hockey American Development Model (ADM) with emphasis on skating\, puck control\, stopping\, passing\, turning and shooting. Each player receives a jersey and hockey socks. Full equipment is required including stick. Fee: Fee includes 16 ice touches\, jersey &amp\; hockey socks. (Fee does NOT include annual $15-75 USA Hockey membership.) Schedule (choose one): Wednesday at 5:00pm AND Saturday at 10:00am &ndash\; Group A Wednesday at 5:45pm AND Saturday at 9:00am &ndash\; Group B Class: Twice per Week &ndash\; 45-50 minutes Session: 8 weeks</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:39f5779cb51124408c04ea8c9caa159a@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260628T140000Z
 DTEND:20260628T152000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -148,7 +158,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:87aaa9cf7edcf1b587d8d5191ca68d9d@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260628T183000Z
 DTEND:20260628T195000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -158,7 +168,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d7dd7c6a64482d6f1e61dd1ccd907ba5@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260628T153000Z
 DTEND:20260628T165000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -167,8 +177,68 @@ LOCATION:Biggby Ice Cube – Brighton
 URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:60522cf4473dcedd36718adfd8a50389@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T131500Z
+DTEND:20260628T140000Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:35e2002c6fef98ca0b13d9b34bd58308@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T140000Z
+DTEND:20260628T144500Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Basic Skills teaches the FUNdamentals of ice skating and provides the best foundation for figure skating\, hockey\, and speedskating.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Six progressive levels introduce forward and backward skating\, stops\, edges\, crossovers\, and turns:</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 1 and 2 &ndash\; Discover\, Learn and Play: These introductory levels allow new skaters with no prior skating experience to build confidence while learning to skate.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">&middot\; Basic 3-6 &ndash\; FUNdamentals: These levels develop all of the fundamental skating skills on the ice. Focus is on learning the ABCs of basic athleticism: agility\, balance\, coordination and speed.</span></p>\n<p><span class="x-el x-el-span c1-7b c1-7c c1-b c1-c c1-d c1-e c1-f c1-g">Upon completion of these levels\, skaters will be able to confidently advance to more specialized areas of skating. It is recommended that you complete two sessions of Snowplow Sam\, Pre-Hockey\, and/or Basic Skills (or masters gliding and stopping) prior to registering for Learn 2 Play Hockey.</span></p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:975df74a9ced97528cfd75140950b725@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T140000Z
+DTEND:20260628T144500Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:eb89b67828ab3fea62b5ecaac85e07ff@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T144500Z
+DTEND:20260628T151500Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:eb89b67828ab3fea62b5ecaac85e07ff@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T144500Z
+DTEND:20260628T151500Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:eb89b67828ab3fea62b5ecaac85e07ff@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260628T144500Z
+DTEND:20260628T151500Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:e4f10402b5b224656df04ca3ef361a69@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260629T170000Z
 DTEND:20260629T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -178,7 +248,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b2eca1c10b0be3d342504e2005f73075@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260701T160000Z
 DTEND:20260701T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -188,7 +258,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a03c366f74dd25c78af1a7ba7e2b95c7@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260701T200000Z
 DTEND:20260701T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -198,7 +268,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f20232b669041b80bd851422ecdccda3@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260702T160000Z
 DTEND:20260702T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -208,7 +278,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7ed1f455b9244bbb369cd109fc6794d0@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260703T160000Z
 DTEND:20260703T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -218,7 +288,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:cf4150dbd37ca673bcd8e699f03b3956@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260703T200000Z
 DTEND:20260703T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -228,7 +298,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9e3f574598188508e5035fec6d0843cf@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260704T160000Z
 DTEND:20260704T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -238,7 +308,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:4148594138e3a465916f2ec4fd4f4d1e@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260705T200000Z
 DTEND:20260705T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -248,7 +318,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:0a9ccd0200685cb581aff9eab0f73169@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260706T120000Z
 DTEND:20260706T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -258,7 +328,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7346c7f1f5a1bfd7d0ead95b7408ab67@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260706T160000Z
 DTEND:20260706T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -268,11 +338,31 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:dd9a27b6089261e41c5ef62b18f33dab@mdh
-DTSTAMP:20260623T134706Z
+DTSTAMP:20260624T132644Z
 DTSTART:20260706T193000Z
 DTEND:20260706T205000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:680f45e57a92dd4dc4c300f6b73a893c@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260707T160000Z
+DTEND:20260707T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:10670849785ac0ba1ec68b07072b0e6c@mdh
+DTSTAMP:20260624T132644Z
+DTSTART:20260707T173000Z
+DTEND:20260707T185000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
