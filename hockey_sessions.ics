@@ -5,50 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-07-25 12:06 UTC.
-BEGIN:VEVENT
-UID:c75426461478fb045b68b38e674777c3@mdh
-DTSTAMP:20260725T120638Z
-DTSTART:20260725T190000Z
-DTEND:20260725T202000Z
-SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
-DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:d4cd97b7b99ed7963094ce849310cbc5@mdh
-DTSTAMP:20260725T120638Z
-DTSTART:20260725T220000Z
-DTEND:20260725T232000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:3b0f980ac9237642058ed4457b1c2a9a@mdh
-DTSTAMP:20260725T120638Z
-DTSTART:20260725T130000Z
-DTEND:20260725T135000Z
-SUMMARY:🏒 Stick & Puck – Sylvania\, OH
-DESCRIPTION:<p>Learn 2 Play Hockey is a well organized step-by-step program that enables children ages 4-14 years to have fun while learning the basics of the great game of hockey from USA Hockey trained instructors. No experience required Affordable ice fee 8-week sessions offered year-round On-ice two days per week (Wednesdays &amp\; Saturdays) Affordable starter equipment packages available This program will prepare players for game play. Players must complete two 8-week sessions of Learn to Play Hockey AND be able to hockey stop in order to join the Buckeye Broadband (Rec) Hockey League. The weekly lesson plans follow the USA Hockey American Development Model (ADM) with emphasis on skating\, puck control\, stopping\, passing\, turning and shooting. Each player receives a jersey and hockey socks. Full equipment is required including stick. Fee: Fee includes 16 ice touches\, jersey &amp\; hockey socks. (Fee does NOT include annual $15-75 USA Hockey membership.) Schedule (choose one): Wednesday at 5:00pm AND Saturday at 10:00am &ndash\; Group A Wednesday at 5:45pm AND Saturday at 9:00am &ndash\; Group B Class: Twice per Week &ndash\; 45-50 minutes Session: 8 weeks</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:290bd883392a771ce24ac301a612cdf6@mdh
-DTSTAMP:20260725T120638Z
-DTSTART:20260725T140000Z
-DTEND:20260725T145000Z
-SUMMARY:🏒 Stick & Puck – Sylvania\, OH
-DESCRIPTION:<p>Learn 2 Play Hockey is a well organized step-by-step program that enables children ages 4-14 years to have fun while learning the basics of the great game of hockey from USA Hockey trained instructors. No experience required Affordable ice fee 8-week sessions offered year-round On-ice two days per week (Wednesdays &amp\; Saturdays) Affordable starter equipment packages available This program will prepare players for game play. Players must complete two 8-week sessions of Learn to Play Hockey AND be able to hockey stop in order to join the Buckeye Broadband (Rec) Hockey League. The weekly lesson plans follow the USA Hockey American Development Model (ADM) with emphasis on skating\, puck control\, stopping\, passing\, turning and shooting. Each player receives a jersey and hockey socks. Full equipment is required including stick. Fee: Fee includes 16 ice touches\, jersey &amp\; hockey socks. (Fee does NOT include annual $15-75 USA Hockey membership.) Schedule (choose one): Wednesday at 5:00pm AND Saturday at 10:00am &ndash\; Group A Wednesday at 5:45pm AND Saturday at 9:00am &ndash\; Group B Class: Twice per Week &ndash\; 45-50 minutes Session: 8 weeks</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-07-26 12:07 UTC.
 BEGIN:VEVENT
 UID:28a267e027c3d6f27c448b398ea2f9c0@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T153000Z
 DTEND:20260726T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -58,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:51a190aaaafb155cadd08eae8372b09e@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T131500Z
 DTEND:20260726T140000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -68,7 +28,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:8fae284ba40e4a07da4881949c6d7362@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T140000Z
 DTEND:20260726T144500Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -78,7 +38,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:44e0b0242175eff90bd60e168781139d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T140000Z
 DTEND:20260726T144500Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -88,7 +48,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:d720de786cee032cc2fa202eff66d6b2@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T144500Z
 DTEND:20260726T151500Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -98,7 +58,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:d720de786cee032cc2fa202eff66d6b2@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T144500Z
 DTEND:20260726T151500Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -108,7 +68,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:d720de786cee032cc2fa202eff66d6b2@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T144500Z
 DTEND:20260726T151500Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -118,7 +78,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:cb2f01085c54bfba6f65971f1032905d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T153000Z
 DTEND:20260726T160000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -128,7 +88,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:cb2f01085c54bfba6f65971f1032905d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T153000Z
 DTEND:20260726T160000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -138,7 +98,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:cb2f01085c54bfba6f65971f1032905d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260726T153000Z
 DTEND:20260726T160000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -148,7 +108,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:4b0a906aa5b5bdbb527d72752e6c3fc8@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260727T230000Z
 DTEND:20260728T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -158,7 +118,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:543d5cca048a7ea8651d37759768dcc6@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260727T230000Z
 DTEND:20260727T235000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -168,7 +128,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:6cfc729db2621a767c6599e7f6c3ea66@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260727T233000Z
 DTEND:20260728T005000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -178,7 +138,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0676e67861bb88a01f1d97277ec5da7f@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260728T181500Z
 DTEND:20260728T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -188,7 +148,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:95175f0937050d91ae9cf7a9f1986b94@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260728T200000Z
 DTEND:20260728T205000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -198,7 +158,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:c89c4a9eb9f83434c8bf2daba1853e5d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260728T202000Z
 DTEND:20260728T205000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -208,7 +168,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:d6789b9ffa4704510a058b6564dae408@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260729T170000Z
 DTEND:20260729T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -218,7 +178,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7ffe5ad11495567123a1d232accc50fb@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260729T223000Z
 DTEND:20260730T002000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -228,7 +188,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:da8f55a86cba80eb2886cbd2e8a142d6@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260729T235000Z
 DTEND:20260730T005000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -238,7 +198,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:a63c7f40064e290c2febab7e38c7f9d7@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260730T181500Z
 DTEND:20260730T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -247,8 +207,18 @@ LOCATION:Eddie Edgar Ice Arena – Dearborn
 URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:a4916df642eb892494a0a76e989678f0@mdh
+DTSTAMP:20260726T120716Z
+DTSTART:20260730T230000Z
+DTEND:20260730T235000Z
+SUMMARY:🏒 Stick & Puck – Sylvania\, OH
+DESCRIPTION:<p>This clinic is designed for ages 12 and up. There is a Travel or Highschool level requirement for this clinic. This clinic is similar to Overspeed 2 in some of the content. However\, advanced game concepts using small area games will be more of an emphasis than in Overspeed 2.&nbsp\; Also\, game concepts like breakouts\, angling\, boardplay in defensive zone\, creating and taking away time and space will all be covered.&nbsp\; This clinic will also have a more technical approach to stickhandling and shooting concepts than other clinics. Learning how to protect and transfer the puck in traffic and learning various shooting techniques will be reinforced. There is also a dryland session that precedes each ice time.Mondays:</p>\n<p>Dryland 6:30pm/Ice 7:30-8:50pm<br />Thursdays: Dryland 6pm/Ice 7-7:50pm&nbsp\;</p>\n<p>*NO REFUNDS/CREDITS</p>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:e63e50410faced612d9a9ae2f09e32b1@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260801T160000Z
 DTEND:20260801T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -258,7 +228,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:82a9ec687757e87311bddf5258d51c69@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260801T200000Z
 DTEND:20260801T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -268,7 +238,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:5b06d5181273abd9817c1c7a338f102d@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260802T160000Z
 DTEND:20260802T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -278,7 +248,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a0d977cb68111c56d462b24e255edf47@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260803T160000Z
 DTEND:20260803T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -288,7 +258,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:5ea5c26c2938c6fe7beb849c396e8dd3@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260803T200000Z
 DTEND:20260803T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -298,7 +268,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:28997e4cce82d8706566f25c122028d5@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260804T160000Z
 DTEND:20260804T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -308,7 +278,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:0edfaca0a5494741866e25b617844a5f@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260804T181500Z
 DTEND:20260804T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -318,7 +288,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7af9cbb33a4547e866c7aea813f245b7@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260805T200000Z
 DTEND:20260805T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -328,7 +298,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:16eaead6f615ffff691e5fd49472f99b@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260806T120000Z
 DTEND:20260806T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -338,7 +308,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:2b1303eb8f55b6bbe0b2b193fb996251@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260806T160000Z
 DTEND:20260806T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -348,7 +318,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:acfc3545166dff2ba506ef10152eac2c@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260806T193000Z
 DTEND:20260806T205000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -358,7 +328,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e920098d493557fcdacd2a3fa3edbf75@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260806T181500Z
 DTEND:20260806T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -368,7 +338,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:59e66a3aed1ee3e2dddef3328c0b4a7e@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260807T160000Z
 DTEND:20260807T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -378,11 +348,31 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:31069fdca60a87adad67faea3170b328@mdh
-DTSTAMP:20260725T120638Z
+DTSTAMP:20260726T120716Z
 DTSTART:20260807T173000Z
 DTEND:20260807T185000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
 DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:acd09d9b52feb28400ff018bf52e352a@mdh
+DTSTAMP:20260726T120716Z
+DTSTART:20260808T160000Z
+DTEND:20260808T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a1b80bc0d3c2b26712d7e341a0e39e17@mdh
+DTSTAMP:20260726T120716Z
+DTSTART:20260808T200000Z
+DTEND:20260808T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
