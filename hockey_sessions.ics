@@ -5,50 +5,40 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-07-31 13:00 UTC.
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-01 12:06 UTC.
 BEGIN:VEVENT
-UID:069403e9bc3bb90308dbef903d2e906b@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260731T160000Z
-DTEND:20260731T172000Z
+UID:e63e50410faced612d9a9ae2f09e32b1@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260801T160000Z
+DTEND:20260801T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:65e40fe322b8223aee0e15da71c6d2d8@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260731T200000Z
-DTEND:20260731T212000Z
+UID:5b06d5181273abd9817c1c7a338f102d@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260802T160000Z
+DTEND:20260802T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:78e7d1feba0470f2918a8f2457ed8487@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260731T230000Z
-DTEND:20260731T235000Z
-SUMMARY:🏒 Stick & Puck – Sylvania\, OH
-DESCRIPTION:<p>Dialed In Goaltending is focused on extending goaltenders opportunity to further life and hockey.</p>\n<p>Instructors with over a decade of instructing and coaching experience\, Dialed In Goaltending is taking charge of this forgotten position and teaching the valuable craft needed to succeed on and off the ice. The approach is aimed at developing technical and physical aspects needed to be a top-tier goaltender today. Continued learning of top puck-stoppers in today&rsquo\;s game accelerates our teaching. Properly conveying and implementing techniques develops the confidence of a Dialed In Goaltender.</p>\nThe clinics offered will supplement the engagement and reinforce the repetitions needed in developing technique and the effective base to continue succeeding.<br /><br />*NO REFUNDS/CREDITS\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
-BEGIN:VEVENT
-UID:a0d977cb68111c56d462b24e255edf47@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260803T160000Z
-DTEND:20260803T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+UID:1e56b2da02662e55a26d2c0cbbeec9cb@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260802T180000Z
+DTEND:20260802T192000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:2ebc14391202113fa725801e185cfd7d@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260803T230000Z
 DTEND:20260804T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -58,7 +48,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:b6606ed2fd3ace662b7044ea7bfba4c0@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260803T233000Z
 DTEND:20260804T005000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -68,7 +58,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0edfaca0a5494741866e25b617844a5f@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260804T181500Z
 DTEND:20260804T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -78,7 +68,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8942aced988251c9a04ad116b6314eb4@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260804T200000Z
 DTEND:20260804T205000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -88,7 +78,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:8b7d260a956c645b4e859a1fc2aed37b@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260804T202000Z
 DTEND:20260804T205000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -98,7 +88,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:00580f2c41a3b2930a235b73e8f2e6f8@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260805T230000Z
 DTEND:20260806T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -108,7 +98,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:01b22701a9655c511dc88391d75c205f@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260805T235000Z
 DTEND:20260806T005000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -117,8 +107,18 @@ LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
 URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
 END:VEVENT
 BEGIN:VEVENT
+UID:2b1303eb8f55b6bbe0b2b193fb996251@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260806T160000Z
+DTEND:20260806T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:e920098d493557fcdacd2a3fa3edbf75@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260806T181500Z
 DTEND:20260806T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -128,7 +128,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:88c2968e18ba75ebbe120c514bb0ab3a@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260806T230000Z
 DTEND:20260806T235000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -137,83 +137,123 @@ LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
 URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
 END:VEVENT
 BEGIN:VEVENT
+UID:59e66a3aed1ee3e2dddef3328c0b4a7e@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260807T160000Z
+DTEND:20260807T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:2ece068755012ebadb5f64798a47af88@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260807T200000Z
+DTEND:20260807T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:b7abf96785a62990d13816f043d31975@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260807T230000Z
+DTEND:20260807T235000Z
+SUMMARY:🏒 Stick & Puck – Sylvania\, OH
+DESCRIPTION:<p>Dialed In Goaltending is focused on extending goaltenders opportunity to further life and hockey.</p>\n<p>Instructors with over a decade of instructing and coaching experience\, Dialed In Goaltending is taking charge of this forgotten position and teaching the valuable craft needed to succeed on and off the ice. The approach is aimed at developing technical and physical aspects needed to be a top-tier goaltender today. Continued learning of top puck-stoppers in today&rsquo\;s game accelerates our teaching. Properly conveying and implementing techniques develops the confidence of a Dialed In Goaltender.</p>\nThe clinics offered will supplement the engagement and reinforce the repetitions needed in developing technique and the effective base to continue succeeding.<br /><br />*NO REFUNDS/CREDITS\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:1330134eaf24783328873298038af25c@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260808T150000Z
+DTEND:20260808T162000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:87ec85f78f44e98dd70f4954bef19274@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260809T160000Z
+DTEND:20260809T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:5dc96aea8ca528d51017567d8e37668c@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260809T180000Z
+DTEND:20260809T192000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:eb63ec55c60fbe8cab4bf7fbb95b723e@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260810T160000Z
 DTEND:20260810T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:14912cdefe36eb2cfcb63af67c74f60b@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260810T200000Z
-DTEND:20260810T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:9712d5808d326871ee572d3820cb59dc@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260811T140000Z
-DTEND:20260811T152000Z
-SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
-DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: STA Ann Arbor Ice Cube Stadium Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:918063e3dd97cca6fe6d25ae825485b3@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260811T153000Z
 DTEND:20260811T165000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: STA Ann Arbor Ice Cube Stadium Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:5ef4712ac0a27346e06e8d13857a3a4d@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260813T200000Z
+DTEND:20260813T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:b94be788b2c0a33df4c772ac945de320@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260812T183000Z
-DTEND:20260812T195000Z
-SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
-DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:f849a92b9d62350a02280b5856920cf6@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260812T184500Z
-DTEND:20260812T200500Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: OLY Ann Arbor Ice Cube Olympic Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:765a7cfba1e2b37b804cc6455d8ae82c@mdh
-DTSTAMP:20260731T130035Z
-DTSTART:20260812T191500Z
-DTEND:20260812T202000Z
-SUMMARY:🏒 Stick & Puck – Brighton
-DESCRIPTION:stick & puck\nRink: Biggby Ice Cube – Brighton\n~22 mi from Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/353/386/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Brighton
-URL:https://bondsports.co/org/353/386/schedule
-END:VEVENT
-BEGIN:VEVENT
 UID:564bd622f9c8e9ab291d8cf45736d249@mdh
-DTSTAMP:20260731T130035Z
+DTSTAMP:20260801T120613Z
 DTSTART:20260813T181500Z
 DTEND:20260813T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
 DESCRIPTION:Sticks and Pucks\nRink: Eddie Edgar Ice Arena – Dearborn\n~38 mi from Ann Arbor\nIce: Edgar B arena\nSource: Eddie Edgar calendar\nInfo: https://www.eddieedgar.org/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Eddie Edgar Ice Arena – Dearborn
 URL:https://www.eddieedgar.org/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:e50109059e2c07266d753a7f11a772eb@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260814T163000Z
+DTEND:20260814T175000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: STA Ann Arbor Ice Cube Stadium Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:185cff2d2c4d229175d0596a0ebb502f@mdh
+DTSTAMP:20260801T120613Z
+DTSTART:20260814T213000Z
+DTEND:20260814T225000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 END:VCALENDAR
