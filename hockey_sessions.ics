@@ -5,40 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-14 11:48 UTC.
-BEGIN:VEVENT
-UID:e50109059e2c07266d753a7f11a772eb@mdh
-DTSTAMP:20260814T114825Z
-DTSTART:20260814T163000Z
-DTEND:20260814T175000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: STA Ann Arbor Ice Cube Stadium Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:185cff2d2c4d229175d0596a0ebb502f@mdh
-DTSTAMP:20260814T114825Z
-DTSTART:20260814T213000Z
-DTEND:20260814T225000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:b3ad4cca5bdf5ee60b488abbd9963c6d@mdh
-DTSTAMP:20260814T114825Z
-DTSTART:20260814T230000Z
-DTEND:20260814T235000Z
-SUMMARY:🏒 Stick & Puck – Sylvania\, OH
-DESCRIPTION:<p>Dialed In Goaltending is focused on extending goaltenders opportunity to further life and hockey.</p>\n<p>Instructors with over a decade of instructing and coaching experience\, Dialed In Goaltending is taking charge of this forgotten position and teaching the valuable craft needed to succeed on and off the ice. The approach is aimed at developing technical and physical aspects needed to be a top-tier goaltender today. Continued learning of top puck-stoppers in today&rsquo\;s game accelerates our teaching. Properly conveying and implementing techniques develops the confidence of a Dialed In Goaltender.</p>\nThe clinics offered will supplement the engagement and reinforce the repetitions needed in developing technique and the effective base to continue succeeding.<br /><br />*NO REFUNDS/CREDITS\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-15 11:24 UTC.
 BEGIN:VEVENT
 UID:1988e3cc1d5e8711bc1eb92ea729033a@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260815T160000Z
 DTEND:20260815T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -48,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b49a9a480b84f645fcad6d61fe204cd5@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260815T200000Z
 DTEND:20260815T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -58,7 +28,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:04a3a9beea2205a3fa8054a2cb22de28@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260816T160000Z
 DTEND:20260816T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -68,7 +38,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:364d7f09b26b98d8704aceee6ebbdf2e@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260816T180000Z
 DTEND:20260816T192000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -78,7 +48,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a685ad292d6c10cba50ba0936b95af91@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260817T163000Z
 DTEND:20260817T175000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -88,7 +58,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:17286bbf20d4b31c728c53ff6460879e@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260817T230000Z
 DTEND:20260818T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -98,7 +68,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:6c395f06b8eb4f855482d70dad51406b@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260818T181500Z
 DTEND:20260818T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -108,7 +78,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:6dda98e9a2bfe4bf69adf936249f837f@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260819T160000Z
 DTEND:20260819T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -118,7 +88,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:bff79fa016f98115b95dcda2231aff06@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260819T230000Z
 DTEND:20260820T005000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -128,7 +98,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:df48425480ed2c09aee1c194bc321e49@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260820T160000Z
 DTEND:20260820T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -138,7 +108,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:be19fd332e21e941bf601a4cfd3633c3@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260820T181500Z
 DTEND:20260820T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -148,7 +118,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f6aa411841b4588722502474359f320a@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260821T160000Z
 DTEND:20260821T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -158,7 +128,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:5b38dbed3702579cca0dd387f93d900e@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260821T200000Z
 DTEND:20260821T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -168,7 +138,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c31ccb41cb1b68cf4f16f0e118214181@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260822T210000Z
 DTEND:20260822T222000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -178,7 +148,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:64af33c4ff6e2b2c2a6db2cf4273c32c@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260823T040100Z
 DTEND:20260823T040500Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -188,7 +158,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:093d083d6c53ff457ff327d38eb0a1c5@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260823T120000Z
 DTEND:20260823T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -198,7 +168,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:532af10b37bcc92a28aeb724c4417d5c@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260823T154500Z
 DTEND:20260823T170500Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -208,7 +178,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d2becb5006e954085a170a6c55c1314b@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260824T163000Z
 DTEND:20260824T175000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -218,7 +188,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:4a44a6bfb0e55f3488ba8ae7f969e686@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260825T160000Z
 DTEND:20260825T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -228,7 +198,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b118a8c0f377803bc40aa1e9180ed64f@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260825T171500Z
 DTEND:20260825T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -238,7 +208,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c9938a936377645d19e82664b883758e@mdh
-DTSTAMP:20260814T114825Z
+DTSTAMP:20260815T112432Z
 DTSTART:20260826T160000Z
 DTEND:20260826T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
