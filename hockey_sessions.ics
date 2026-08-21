@@ -5,30 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-20 11:31 UTC.
-BEGIN:VEVENT
-UID:df48425480ed2c09aee1c194bc321e49@mdh
-DTSTAMP:20260820T113106Z
-DTSTART:20260820T160000Z
-DTEND:20260820T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:be19fd332e21e941bf601a4cfd3633c3@mdh
-DTSTAMP:20260820T113106Z
-DTSTART:20260820T181500Z
-DTEND:20260820T171500Z
-SUMMARY:🏒 Stick & Puck – Dearborn
-DESCRIPTION:Sticks and Pucks\nRink: Eddie Edgar Ice Arena – Dearborn\n~38 mi from Ann Arbor\nIce: Edgar B arena\nSource: Eddie Edgar calendar\nInfo: https://www.eddieedgar.org/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Eddie Edgar Ice Arena – Dearborn
-URL:https://www.eddieedgar.org/schedule
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-21 11:30 UTC.
 BEGIN:VEVENT
 UID:f6aa411841b4588722502474359f320a@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260821T160000Z
 DTEND:20260821T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -38,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:5b38dbed3702579cca0dd387f93d900e@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260821T200000Z
 DTEND:20260821T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -48,7 +28,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:64af33c4ff6e2b2c2a6db2cf4273c32c@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260823T040100Z
 DTEND:20260823T040500Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -58,7 +38,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:093d083d6c53ff457ff327d38eb0a1c5@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260823T120000Z
 DTEND:20260823T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -68,7 +48,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d2becb5006e954085a170a6c55c1314b@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260824T163000Z
 DTEND:20260824T175000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -78,7 +58,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:4a44a6bfb0e55f3488ba8ae7f969e686@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260825T160000Z
 DTEND:20260825T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -88,7 +68,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b118a8c0f377803bc40aa1e9180ed64f@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260825T171500Z
 DTEND:20260825T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -98,7 +78,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c9938a936377645d19e82664b883758e@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260826T160000Z
 DTEND:20260826T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -108,7 +88,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d054de028383b3562dd74e1ce91d73d4@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260829T170000Z
 DTEND:20260829T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -118,7 +98,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7a54a135b1c9f7898f1bbce0dff8faa3@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260901T160000Z
 DTEND:20260901T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -128,7 +108,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:67e95499b34bef11d90fed0f65b6599c@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260901T200000Z
 DTEND:20260901T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -138,9 +118,29 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:63c874f671a5cc40002e73b421d457bc@mdh
-DTSTAMP:20260820T113106Z
+DTSTAMP:20260821T113052Z
 DTSTART:20260902T160000Z
 DTEND:20260902T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:834e5a3175171f3f73223fdcc1eb8c0a@mdh
+DTSTAMP:20260821T113052Z
+DTSTART:20260903T160000Z
+DTEND:20260903T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:48c35c1f6d3000fcecf4adc713813364@mdh
+DTSTAMP:20260821T113052Z
+DTSTART:20260903T200000Z
+DTEND:20260903T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
