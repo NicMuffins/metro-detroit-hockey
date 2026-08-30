@@ -5,32 +5,22 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-29 15:34 UTC.
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-08-30 15:15 UTC.
 BEGIN:VEVENT
-UID:7a54a135b1c9f7898f1bbce0dff8faa3@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260901T160000Z
-DTEND:20260901T172000Z
+UID:8dd84692bffc9ab1468a11f384b6d57d@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260831T160000Z
+DTEND:20260831T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:67e95499b34bef11d90fed0f65b6599c@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260901T200000Z
-DTEND:20260901T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:63c874f671a5cc40002e73b421d457bc@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260902T160000Z
-DTEND:20260902T172000Z
+UID:99b9495e6de3eb1c8421f1c97359f68d@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260831T200000Z
+DTEND:20260831T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
@@ -38,7 +28,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:834e5a3175171f3f73223fdcc1eb8c0a@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260903T160000Z
 DTEND:20260903T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -47,38 +37,8 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:48c35c1f6d3000fcecf4adc713813364@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260903T200000Z
-DTEND:20260903T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:fff379c650971345f44d59a55adf66fb@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260904T160000Z
-DTEND:20260904T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:80dad5767faefbb978f8f6d704e535bd@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260905T200000Z
-DTEND:20260905T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
 UID:f8144dc64d507c00059397bda2ff5690@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260905T170000Z
 DTEND:20260905T190000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -87,78 +47,8 @@ LOCATION:Frank J. Lada Civic Arena – Allen Park
 URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
-UID:962969ae03cc372b47235085a1f6a28d@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260906T120000Z
-DTEND:20260906T132000Z
-SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
-DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: STA Ann Arbor Ice Cube Stadium Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:d15a1d605b74f6d7d84800d76e07dda7@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260906T160000Z
-DTEND:20260906T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:d78c87c50dbed095ba1e1b977e73f8eb@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260906T193000Z
-DTEND:20260906T205000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:7218fea74d17642c0ed6f1df190034bb@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260907T160000Z
-DTEND:20260907T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:8920c1fe8b3a6b27ae4cbd6a28df3ae1@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260907T173000Z
-DTEND:20260907T185000Z
-SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
-DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:64fd0c36f415c60ec231575e925610b7@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260908T160000Z
-DTEND:20260908T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:b799fab531d1c8fcebeb5069ce47c449@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260908T200000Z
-DTEND:20260908T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
 UID:703ec1fe6a0ee797ebf98ee70e296c4b@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260908T140000Z
 DTEND:20260908T173000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -168,7 +58,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:811c5562ac8307e8f31b58588d2b1926@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260908T171500Z
 DTEND:20260908T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -177,18 +67,8 @@ LOCATION:Eddie Edgar Ice Arena – Dearborn
 URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:d49a59fef523ae96c074572b76290936@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260909T160000Z
-DTEND:20260909T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
 UID:dbb89ad23ed87109f66ec56ed9b3ef1c@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260909T140000Z
 DTEND:20260909T150000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -198,7 +78,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:b5e7ca774b406e1579c1586091e7872b@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260910T160000Z
 DTEND:20260910T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -207,10 +87,10 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
-UID:c53af2947935cbee7209fdb733040449@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260910T193000Z
-DTEND:20260910T205000Z
+UID:af0abab8fad8115c491166b400f53e2c@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260910T200000Z
+DTEND:20260910T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
@@ -218,7 +98,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3acf17d48d0eaa872d3dae67296fafe2@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260910T140000Z
 DTEND:20260910T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -227,10 +107,20 @@ LOCATION:Frank J. Lada Civic Arena – Allen Park
 URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
-UID:bf45fa5a497e59431a06c970eb283f4a@mdh
-DTSTAMP:20260829T153445Z
-DTSTART:20260911T160000Z
-DTEND:20260911T172000Z
+UID:3d5b89d5633109c37a4033cf335decc7@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260911T140000Z
+DTEND:20260911T152000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:98ec25445ba05de5d3c3ef95b41cd038@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260911T153000Z
+DTEND:20260911T165000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
@@ -238,9 +128,49 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:809d2092f5f676875283c9522282ef84@mdh
-DTSTAMP:20260829T153445Z
+DTSTAMP:20260830T151532Z
 DTSTART:20260911T140000Z
 DTEND:20260911T160000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:abcbe7788db850e38f9faf4e2414acd4@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260912T183000Z
+DTEND:20260912T195000Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:4d9d2d28c6213f036db8479eed4b4a94@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260912T184500Z
+DTEND:20260912T200500Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: OLY Ann Arbor Ice Cube Olympic Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:9d45afae9eae541b3392091d7e9422eb@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260912T191500Z
+DTEND:20260912T202000Z
+SUMMARY:🏒 Stick & Puck – Brighton
+DESCRIPTION:stick & puck\nRink: Biggby Ice Cube – Brighton\n~22 mi from Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/353/386/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Brighton
+URL:https://bondsports.co/org/353/386/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:8a40d111d392c248f1d1692b73cd6a45@mdh
+DTSTAMP:20260830T151532Z
+DTSTART:20260912T180000Z
+DTEND:20260912T190000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
 DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
 LOCATION:Frank J. Lada Civic Arena – Allen Park
