@@ -5,40 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-09-11 14:55 UTC.
-BEGIN:VEVENT
-UID:bf45fa5a497e59431a06c970eb283f4a@mdh
-DTSTAMP:20260911T145519Z
-DTSTART:20260911T160000Z
-DTEND:20260911T172000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:cf144dbb17e856aeee4576ce00399708@mdh
-DTSTAMP:20260911T145519Z
-DTSTART:20260911T200000Z
-DTEND:20260911T212000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:809d2092f5f676875283c9522282ef84@mdh
-DTSTAMP:20260911T145519Z
-DTSTART:20260911T140000Z
-DTEND:20260911T160000Z
-SUMMARY:🏒 Stick & Puck – Allen Park
-DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
-LOCATION:Frank J. Lada Civic Arena – Allen Park
-URL:https://cityofallenpark.org/calendar.php
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-09-12 13:57 UTC.
 BEGIN:VEVENT
 UID:80ea8794c81596642ca17542d8c61c42@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260912T114500Z
 DTEND:20260912T130500Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -48,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8a40d111d392c248f1d1692b73cd6a45@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260912T180000Z
 DTEND:20260912T190000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -57,8 +27,18 @@ LOCATION:Frank J. Lada Civic Arena – Allen Park
 URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
+UID:114c7aa0cb94b10e37606f058b256f8e@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260913T040100Z
+DTEND:20260913T040500Z
+SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
+DESCRIPTION:35+ Drop-In Hockey\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:790e2a2791a649391ad1e3951f4a68cf@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260913T120000Z
 DTEND:20260913T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -68,7 +48,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:afae8567d1086733430ed7e3a33510ef@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260914T160000Z
 DTEND:20260914T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -78,7 +58,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8fdfa9b741231edc2b71dae7606949c3@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260914T140000Z
 DTEND:20260914T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -88,7 +68,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:0dd355108a2d6c11881b56df98201a1e@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260914T160000Z
 DTEND:20260914T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -98,7 +78,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:300a874379ee9af97f4fddb04f16c7d3@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260914T170000Z
 DTEND:20260914T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -108,7 +88,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:6095faa4508386f2a6c013b3dd1533de@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260914T173000Z
 DTEND:20260914T180000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -118,7 +98,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:941d00d1eaa2587ab79bd706c1465003@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260915T160000Z
 DTEND:20260915T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -128,7 +108,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a1cc3b294b050ff0f06f2ff8b85cc4ed@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260915T140000Z
 DTEND:20260915T173000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -138,7 +118,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:d501e1b57850b6afbe47e1c6cea5e250@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260915T171500Z
 DTEND:20260915T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -148,7 +128,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3ad2d019c094655f48fdd9a2bbf70d30@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260915T200000Z
 DTEND:20260915T203000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -157,8 +137,28 @@ LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
 URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
 END:VEVENT
 BEGIN:VEVENT
+UID:2d3333d416fef6f65928a47bb5b48a3e@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260915T203000Z
+DTEND:20260915T210000Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
+UID:2d3333d416fef6f65928a47bb5b48a3e@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260915T203000Z
+DTEND:20260915T210000Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:Sylvania Tam-O-Shanter Learn to Skate programs are committed to providing skaters\, ages 3 through adult with the basic ice skating skills that are necessary to skate safely and competently\, whether for figure skating\, ice hockey or recreation. The Learn to Skate program follows the Learn to Skate USA curriculum.\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:b435bcc5904d1935863869a234c25b80@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260916T160000Z
 DTEND:20260916T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -168,7 +168,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:291904dbe2d13e38ace165195cf4ac89@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260916T143000Z
 DTEND:20260916T153000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -178,7 +178,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:0e110d267d436116f59c11008b1cd254@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260917T160000Z
 DTEND:20260917T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -188,7 +188,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3e1e0fe24f280a159d1b9ce6bd8310da@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260917T140000Z
 DTEND:20260917T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -198,7 +198,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:7feb38aa7239ad1aafcd9959e1337462@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260918T160000Z
 DTEND:20260918T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -208,7 +208,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:11354fe2a3658df04b61fb2d84ef67bd@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260918T200000Z
 DTEND:20260918T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -218,7 +218,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e30d7fdf098bae30e7fadfb94684c703@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260919T114500Z
 DTEND:20260919T130500Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -228,7 +228,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:166e9497f3b87aec50c5bee02a1b48b3@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260920T040100Z
 DTEND:20260920T040500Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -238,7 +238,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3308587084937086c311c376bb085684@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260920T120000Z
 DTEND:20260920T132000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -248,7 +248,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:1eea2d238deec1a100b71acc86b4a7c4@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260921T160000Z
 DTEND:20260921T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -258,7 +258,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:6222bad5e2cea712ee80551b886b6751@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260921T140000Z
 DTEND:20260921T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -268,7 +268,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:7f9b9b838793ffac712046f6a30b1999@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260922T160000Z
 DTEND:20260922T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -278,7 +278,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:bca6a3f7d86e7ad213278043c7e8efe5@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260922T140000Z
 DTEND:20260922T173000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -288,7 +288,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:fdabbd7e4fcc2c4f6802eacfdebb3770@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260922T171500Z
 DTEND:20260922T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -298,7 +298,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:59c341898fffaeae37b543d5fe479126@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260923T160000Z
 DTEND:20260923T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -308,7 +308,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:901d0455b39eb7a863943631373dddce@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260923T143000Z
 DTEND:20260923T153000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -318,7 +318,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:f11e04656ed0c23c0a2cc7fe2fe632e3@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260924T160000Z
 DTEND:20260924T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -328,9 +328,39 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a883b44bd829ae270ddc9c5de2084fb9@mdh
-DTSTAMP:20260911T145519Z
+DTSTAMP:20260912T135748Z
 DTSTART:20260924T140000Z
 DTEND:20260924T160000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:cb19ae925d4318218e0806d3066e8c24@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260925T160000Z
+DTEND:20260925T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:94728346ce71e7ff1c87b3baa9f7bc62@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260925T200000Z
+DTEND:20260925T212000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:e170fbb842e43cb234512ac8539821ea@mdh
+DTSTAMP:20260912T135748Z
+DTSTART:20260925T140000Z
+DTEND:20260925T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
 DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Park\n~37 mi from Ann Arbor\nSource: Allen Park calendar\nInfo: https://cityofallenpark.org/calendar.php\nConfirm with rink — schedule subject to change.
 LOCATION:Frank J. Lada Civic Arena – Allen Park
