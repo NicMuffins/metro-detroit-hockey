@@ -5,10 +5,10 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-09-27 15:36 UTC.
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-09-28 18:34 UTC.
 BEGIN:VEVENT
 UID:fe53b8ea0a32fbc38ed9aa8502dc9a2b@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260928T160000Z
 DTEND:20260928T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -18,7 +18,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:79fad210b6aae81e9b92a4259bd92d05@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260928T140000Z
 DTEND:20260928T160000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -28,7 +28,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:fda030fea1148b1d3b0b418e9a07ee27@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260928T160000Z
 DTEND:20260928T165000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -38,7 +38,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0abbae43048876a20c70d78921b6d2d3@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260928T170000Z
 DTEND:20260928T173000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -48,7 +48,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:e69457ae2613d196c6ee77696d8d0acc@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260928T173000Z
 DTEND:20260928T180000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -58,7 +58,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:cda3d9be207ad2d5a284b23dee768866@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T160000Z
 DTEND:20260929T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -68,7 +68,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f70f8aa7e94514c9cec51343d2b51b38@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T140000Z
 DTEND:20260929T173000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -78,7 +78,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:58e358832087da1746a443915fa63588@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T171500Z
 DTEND:20260929T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -88,7 +88,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b9251d38900b5eeab5016b2ba42dadb5@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T200000Z
 DTEND:20260929T203000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -98,7 +98,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:49666b9c7e7ea0f9d8b3098c02a9ceab@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T203000Z
 DTEND:20260929T210000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -108,7 +108,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:49666b9c7e7ea0f9d8b3098c02a9ceab@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T203000Z
 DTEND:20260929T210000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -118,7 +118,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0fda2fbfa79a0b569292e569e8411126@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T210000Z
 DTEND:20260929T215000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -128,7 +128,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0fda2fbfa79a0b569292e569e8411126@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260929T210000Z
 DTEND:20260929T215000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -138,7 +138,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:fa80433b5726fb4e583ae700612364f4@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T160000Z
 DTEND:20260930T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -148,7 +148,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d52db7806c9f83b6428830b967907f22@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T173000Z
 DTEND:20260930T193000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -158,7 +158,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:c61172f8a06c766ecac8ed2d6020c577@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T200000Z
 DTEND:20260930T203000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -168,7 +168,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:c61172f8a06c766ecac8ed2d6020c577@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T200000Z
 DTEND:20260930T203000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -178,7 +178,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:45077e5202796dc395da769d5bdbae0c@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T203000Z
 DTEND:20260930T210000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -188,7 +188,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:957a68a3c27aa1ae0d6e020aee39d9f6@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T210000Z
 DTEND:20260930T214500Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -198,7 +198,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:0c4f92e4e2c3c1f82196434ce0c2b6b9@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T214500Z
 DTEND:20260930T223000Z
 SUMMARY:🏒 Stick & Puck – Sylvania\, OH
@@ -208,7 +208,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:830c8a72c32e5471837cacc76206fbba@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T220000Z
 DTEND:20260930T225000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -218,7 +218,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:830c8a72c32e5471837cacc76206fbba@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T220000Z
 DTEND:20260930T225000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -228,7 +228,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:990085b32cdec1fe926f5c8c6b2bcf0e@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T225000Z
 DTEND:20260930T234000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -238,7 +238,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:990085b32cdec1fe926f5c8c6b2bcf0e@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20260930T225000Z
 DTEND:20260930T234000Z
 SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
@@ -248,7 +248,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-regist
 END:VEVENT
 BEGIN:VEVENT
 UID:52732bcecdb64874bd9f6f23f6506c40@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261001T160000Z
 DTEND:20261001T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -257,8 +257,18 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:bc02b72948b047b99c963115dbaad739@mdh
+DTSTAMP:20260928T183448Z
+DTSTART:20261001T210000Z
+DTEND:20261001T215000Z
+SUMMARY:🏒 Drop-In/Pickup – Sylvania\, OH
+DESCRIPTION:<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">Get ready for a season filled with camaraderie\, skill development\, and memorable experiences on and off the ice! The Buckeye Broadband Hockey League (BBHL) is sponsored by Buckeye Broadband. Players receive a Buckeye Broadband game jersey\, and game sox. Regular season runs late September thru mid March. The majority of the ice touches will be at Sylvania Tam-O-Shanter. There will be a few ice touches at Ottawa Park.&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">RATE SKATE:</span> All players are required to attend a rate skate in September. The rate skate is NOT a tryout for the BBHL. All registered players will be placed on a team.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">ICE TIMES:</span> Teams will skate 1-3 times per week (practices and games). The weekly schedule will vary. Each team will receive approximately 35-38 ice times. The schedule will be available online once the season begins.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">ROSTERS &amp\; SCHEDULES: </span>Rosters will be assembled until after ALL the rate skates are completed. Schedules will be available in late September right before the season starts.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">MAPLE LEAFS (ALL-STARS) PROGRAM:</span>&nbsp\;&nbsp\;From the BBHL\, one all-star team will be formed at each the 10U\, 12U\, &amp\; 14U levels. Maple Leaf teams are for those looking for more ice time and a more competitive environment than their regular BBHL schedule. PLEASE NOTE THERE ARE NO TRYOUTS TO PLAY IN THE BBHL. EVERY PLAYER REGISTERED WILL BE PLACED ON A TEAM. Tryouts for the Maple Leafs All-Star teams are held in August. Players must be playing in the BBHL in order to be considered for the Maple Leafs program. In addition to the normal BBHL practice and game schedule... Maple Leaf teams will participate in approximately 12-15 additional practices and 3-4 additional tournaments. Please refer to tamohockey.com for more information regarding the Maple Leafs program.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">GIRLS:</span> Girls hockey is a priority for the club. The BBHL assembles a girls only team at the 8U level each season. Girls ages 6-9 years may be considered to assemble this girls only team. The team is placed in the BBHL for practice and game purposes.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">PLAYING FORMAT:</span> 6U/8U will practice in a station based format following the USA Hockey American Development Model. 6U games will be played cross-ice. 8U games will be played half-ice. 10U\, 12U\, &amp\; 14U will practice half-ice and play full-ice games.&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">USA HOCKEY MEMBERSHIP:</span> All players are required to register annually with USA Hockey for the existing playing season. Online registration can be completed at usahockey.com.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">TOLEDO WALLEYE VOUCHER FUNDRAISER:</span> Each registered player will receive five (5) Toledo Walleye game vouchers. The cost of the vouchers is included in the BBHL player fee. Families may use their vouchers or re-sell them at face value.&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">COACHES:</span> Head and assistant coaches are wanted. Please indicate your interest level during the online registration process.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">CARPOOLS:</span> The BBHL cannot guarantee carpool requests will be granted in the fall/winter session. There is more flexibility with carpool requests in the spring session.</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;">&nbsp\;</span></p>\n<p style="box-sizing: inherit\; margin: 0px\; color: #5e5e5e\; font-family: Roboto\, arial\, sans-serif\; font-size: 16px\;"><span style="box-sizing: inherit\;"><span class="x-el x-el-span c1-2c c1-2d c1-b c1-9e c1-3m c1-5n c1-9f" style="box-sizing: inherit\; letter-spacing: inherit\; text-transform: inherit\; color: inherit\; font-weight: bold\; line-height: inherit\; font-size: inherit !important\;">BBHL DIRECTOR:</span> Questions and concerns may be directed to <a class="x-el x-el-a c1-2c c1-2d c1-9i c1-1c c1-1d c1-2e c1-z c1-7f c1-b c1-77 c1-2l c1-9j c1-9k" style="box-sizing: inherit\; background-color: transparent\; color: #b21f26\; cursor: pointer\; overflow-wrap: break-word\; letter-spacing: inherit\; text-transform: inherit\; display: inline\; font-weight: inherit\; font-size: unset\;" href="mailto:grant@sylvaniatamoshanter.com" target="_blank" rel="noopener">grant@sylvaniatamoshanter.com</a>.</span></p>\n<div><span style="box-sizing: inherit\;">&nbsp\;</span></div>\nRink: Tam-O-Shanter Ice Rink – Sylvania\, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration\nConfirm with rink — schedule subject to change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+END:VEVENT
+BEGIN:VEVENT
 UID:77a3bf4cb53aeb69b795e3138b43e37d@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261002T160000Z
 DTEND:20261002T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -268,7 +278,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:093b8f51621eef6c00b9016d7e347b34@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261003T160000Z
 DTEND:20261003T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -278,7 +288,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:ea4fcaa6ff2d5aa50c0affdac9336216@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261004T160000Z
 DTEND:20261004T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -288,7 +298,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:2dac5820ca0aa21caa780cafe83a2705@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261004T200000Z
 DTEND:20261004T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -298,7 +308,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:ce8c02ea947781fe6e9f7ad20fcf2a1f@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261005T130000Z
 DTEND:20261005T142000Z
 SUMMARY:🏒 Drop-In/Pickup – Ann Arbor
@@ -308,7 +318,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f6117ae9ffabed4f1eb29a3bc7b06313@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261005T154500Z
 DTEND:20261005T170500Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -318,7 +328,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:67d0e42806406c645286642615d0baef@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261006T154500Z
 DTEND:20261006T170500Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -328,7 +338,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:fd01f2ce4dce2585f633a3bcd9782d64@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261006T171500Z
 DTEND:20261006T171500Z
 SUMMARY:🏒 Stick & Puck – Dearborn
@@ -338,7 +348,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e255a811a09fa7470e07e4a8eb5b5b47@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261008T160000Z
 DTEND:20261008T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -348,7 +358,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:76c320c4909605d6f84add65dfd52342@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261009T160000Z
 DTEND:20261009T172000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -358,9 +368,29 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d303ea09025b79a9e5be5503857f6ea7@mdh
-DTSTAMP:20260927T153645Z
+DTSTAMP:20260928T183448Z
 DTSTART:20261010T160000Z
 DTEND:20261010T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:8c822e6d466bf5cd4705c62bf73b6098@mdh
+DTSTAMP:20260928T183448Z
+DTSTART:20261011T160000Z
+DTEND:20261011T172000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:d7338ba8e68bb94a3846dd3c913df4d3@mdh
+DTSTAMP:20260928T183448Z
+DTSTART:20261011T200000Z
+DTEND:20261011T212000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
 DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 mi from Ann Arbor\nPrice: $15\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSource: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfirm with rink — schedule subject to change.
 LOCATION:Biggby Ice Cube – Ann Arbor
