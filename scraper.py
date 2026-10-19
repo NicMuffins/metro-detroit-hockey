@@ -289,6 +289,11 @@ def html_to_lines(html: str) -> str:
     for t in soup(["script", "style", "noscript"]):
         t.decompose()
     root = soup.find("main") or soup.body or soup
+    # React splits one visible line into several text nodes ("Tue, October 20<!-- --> <!-- -->• ..."),
+    # so read each paragraph/heading as one line instead of every text node separately.
+    blocks = root.find_all(["p", "h1", "h2", "h3", "h4", "h5", "h6", "li"])
+    if blocks:
+        return "\n".join(b.get_text("", strip=False).strip() for b in blocks if b.get_text(strip=True))
     return root.get_text("\n")
 
 
@@ -477,11 +482,10 @@ def scrape_ezfacility(f: Fetcher, rink, m, win) -> list[Session]:
 # ─── Source: FinnlyConnect ────────────────────────────────────────────────────
 
 def parse_finnly(html: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
-    i = html.find("_onlineScheduleList")
-    if i < 0:
+    mm = re.search(r"_onlineScheduleList\s*=\s*\[", html)     # the assignment, not the `let` declaration
+    if not mm:
         raise RuntimeError("schedule data not found on page")
-    i = html.find("[", i)
-    items, _ = json.JSONDecoder().raw_decode(html[i:])
+    items, _ = json.JSONDecoder().raw_decode(html[mm.end() - 1:])
     out, seen = [], set()
     for e in items:
         acct, desc = clean(e.get("AccountName")), clean(e.get("Description"))
@@ -597,7 +601,8 @@ def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
                                                  "data": base64.b64encode(img).decode()}},
                     {"type": "text", "text": prompt}]}]})
             if r.status_code == 200:
-                items = parse_vision_json(r.json()["content"][0]["text"])
+                blocks = r.json().get("content", [])
+                items = parse_vision_json("".join(b.get("text", "") for b in blocks if b.get("type") == "text"))
                 break
             log(f"    {model}: HTTP {r.status_code}")
             if r.status_code not in (400, 404):

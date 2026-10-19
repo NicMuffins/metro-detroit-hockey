@@ -79,8 +79,12 @@ def test_ice_finder_full_month_names_and_junk_filtered():
 
 
 def test_ice_finder_html_to_lines():
-    html = ("<html><body><main><div><p>Stick And Puck</p><p>Tue, October 20 • 10:30 AM – 11:50 AM</p>"
-            "<p>NOVI ICE ARENA</p><p>$15.00</p></div></main></body></html>")
+    # Real markup: React comment nodes split the date line into pieces
+    html = ('<html><body><main><div class="MuiListItemText-root"><span><p class="MuiTypography-root">Stick And Puck</p>'
+            '<div class="MuiStack-root"><p class="MuiTypography-root">Tue, October 20<!-- --> <!-- -->• <!-- -->'
+            '10:30 AM<!-- --> <!-- -->– <!-- -->11:50 AM</p></div><div class="MuiStack-root"><p>NOVI ICE ARENA</p>'
+            '</div><div><svg><path d="M12 2"></path></svg><p>42400 Nick Lidstrom Dr, Novi, MI 48375</p></div></span>'
+            '</div><div><p>$15.00</p></div></main></body></html>')
     got = S.parse_ice_finder(S.html_to_lines(html), RINKS["novi"], M("novi"), WIN)
     assert [hm(s) for s in got] == ["Tue 10/20 10:30-11:50"]
 
@@ -243,7 +247,9 @@ def test_finnly_hartland():
         {"EventStartTime": "2026-11-09T13:15:00", "EventEndTime": "2026-11-09T14:35:00", "AccountName": "Sticks & Pucks",
          "Description": "Activity: Sticks & Pucks", "EventTypeName": "Public Session", "FacilityName": "Pond", "Closed": False},
     ]
-    html = ("<script>\n let _x;\n $(window).load(function () {\n _onlineScheduleList = "
+    html = ("<script>\n let _onlineScheduleList;\n var facilityDataSource = new kendo.data.DataSource({\n"
+            " data: [{ FacilityName: \"View All\", FacilityId: -1 }, ..._facilityList]\n });\n"
+            " $(window).load(function () {\n _onlineScheduleList = "
             + json.dumps(items) + ";\n _eventTypeResourceList = [];\n});</script>")
     got = S.parse_finnly(html, RINKS["hartland"], M("hartland"), WIN)
     assert [(hm(s), s.name, s.location) for s in got] == [("Mon 10/19 12:30-13:50", "Sticks & Pucks", "Pond")]
