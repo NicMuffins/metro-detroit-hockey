@@ -580,7 +580,7 @@ def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
         raise RuntimeError("ANTHROPIC_API_KEY not set — can't read the image schedule")
     html = f.html(rink["url"], must_contain=r"wp-content/uploads")
     imgs = find_month_images(html, rink["url"])
-    out = []
+    out, seen_any = [], []
     for (yr, mo) in win.months():
         src = imgs.get((yr, mo))
         if not src:
@@ -609,17 +609,40 @@ def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
                 break
         if items is None:
             raise RuntimeError("Claude API call failed")
+        log(f"    {MONTHS[mo-1].title()}: model listed {len(items)} session(s)")
         for it in items:
             try:
-                d = date(yr, mo, int(it["day"]))
-                s, e = local(d, it["start"]), local(d, it["end"])
+                d = date(yr, mo, int(it.get("day") or it.get("date_num")))
+                s, e = vision_times(d, str(it.get("start") or it.get("time_start")),
+                                    str(it.get("end") or it.get("time_end") or ""))
             except (KeyError, ValueError, TypeError):
+                log(f"    couldn't read {it}")
                 continue
             name = it.get("type") or "Stick & Puck"
             if win.contains(d) and sane(s, e) and m.ok(name):
                 out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
                                    rink["url"], "monthly schedule image", rink.get("price")))
+        seen_any += items
+    if not out:
+        raise RuntimeError("no usable sessions from schedule image(s); found images for "
+                           f"{sorted(imgs)}; model returned {json.dumps(seen_any[:3])[:200]}")
     return out
+
+
+def vision_times(d: date, start: str, end: str) -> tuple[datetime, datetime]:
+    """Forgiving time reader: '3:30 PM', '3:30pm', '3:30' + '4:50 PM', or a whole '3:30 – 4:50 PM' range."""
+    if not end:
+        m = TIME_RANGE.search(start.replace("–", "-")) or re.search(
+            r"(\d{1,2}:\d{2})\s*([AP])?M?\s*-\s*(\d{1,2}:\d{2})\s*([AP])M?", start, re.I)
+        if not m:
+            raise ValueError(start)
+        start, end = _range_to_times(m) if m.re is TIME_RANGE else (m.group(1), m.group(3) + " " + (m.group(4) or "P") + "M")
+    if not re.search(r"[ap]\.?m", start, re.I):
+        ap = re.search(r"([ap])\.?m", end, re.I)
+        sh, eh = int(start.split(":")[0]) % 12, int(end.split(":")[0]) % 12
+        e_ap = ap.group(1).upper() if ap else "P"
+        start += " " + (e_ap if sh <= eh else ("A" if e_ap == "P" else "P")) + "M"
+    return local(d, start), local(d, end)
 
 
 # ─── Source: St Clair Shores monthly PDF ──────────────────────────────────────

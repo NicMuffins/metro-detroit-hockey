@@ -376,6 +376,12 @@ def test_jackson_image_detection_and_json():
     assert imgs[(2026, 11)].endswith("November-Calendar-2026-scaled.jpg")
     assert S.parse_vision_json('Here you go:\n```json\n[{"day": 5, "type": "Stick & Puck", "start": "3:30 PM", "end": "4:50 PM"}]\n```') \
         == [{"day": 5, "type": "Stick & Puck", "start": "3:30 PM", "end": "4:50 PM"}]
+    d = date(2026, 10, 20)
+    for start, end in [("3:30 PM", "4:50 PM"), ("3:30pm", "4:50pm"), ("3:30", "4:50 PM"), ("3:30 – 4:50 PM", "")]:
+        s, e = S.vision_times(d, start, end)
+        assert (s.strftime("%H:%M"), e.strftime("%H:%M")) == ("15:30", "16:50"), (start, end)
+    s, e = S.vision_times(d, "8:30", "9:50 AM")
+    assert (s.strftime("%H:%M"), e.strftime("%H:%M")) == ("08:30", "09:50")
 
 
 # ── iCal output ──────────────────────────────────────────────────────────────
