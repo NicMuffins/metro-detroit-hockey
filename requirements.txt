@@ -2,3 +2,7 @@ selenium
 webdriver-manager
 requests
 pdfplumber
+beautifulsoup4
+icalendar
+recurring-ical-events
+pytest

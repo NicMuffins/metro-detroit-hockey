@@ -1,1148 +1,999 @@
 #!/usr/bin/env python3
 """
-Metro Detroit Hockey Session iCal Generator v2
-===============================================
-Uses Selenium (Chrome) to scrape three sources:
+Metro Detroit Hockey — Stick & Puck / Drop-In iCal feed (v3)
+=============================================================
 
-1. Bond Sports (3 rinks) — Biggby Ann Arbor, Chelsea, Brighton
-   bondsports.co/org/{org}/{fac}/schedule — click dates, read text
+Reads every rink from rinks.json, pulls the next N days of sessions from each
+rink's own scheduling system, keeps only stick & puck / drop-in style sessions,
+and writes one .ics file plus a per-rink health report (rink_status.json).
 
-2. ice-finder.com (9 rinks) — Novi, Canton, Farmington Hills,
-   Garden City, Troy, Hazel Park, Royal Oak, Rochester, Macomb
+Sources (the "source" field in rinks.json):
+  ice_finder      ice-finder.com rink pages (next ~7 days)
+  bond            Bond Sports public JSON API (Biggby rinks, Hazel Park)
+  daysmart        DaySmart Recreation public JSON API (Taylor, Trenton, Southgate, Tam-O-Shanter)
+  ics             Any public iCal feed (Google Calendar, CivicPlus, SportsEngine)
+  ezfacility      EZFacility session calendar (Big Boy Arena)
+  finnly          FinnlyConnect schedule page (Hartland Ice House)
+  static_weekly   A fixed weekly schedule from the rink's site, optionally checked against that page
+  jackson_vision  Monthly JPEG schedule read with the Claude API
+  scs_pdf         St Clair Shores monthly PDF calendar
+  allen_park      Allen Park city calendar (browser)
+  eddie_edgar     Eddie Edgar FullCalendar (browser)
 
-3. Direct city calendar scrapes (2 rinks):
-   - Allen Park (Frank J. Lada) — CivicPlus/Revize list view
-     cityofallenpark.org/calendar.php?view=list&...
-   - Eddie Edgar Ice Arena — Drupal FullCalendar list view
-     eddieedgar.org/schedule (click List, read text)
-
-Total: 14 rinks automated.
-
-Setup:  pip install selenium webdriver-manager
-Usage:  python hockey_ical_v2.py [--days 14] [--output hockey.ics] [--headless false]
+Usage:
+  python scraper.py [--days 14] [--output hockey_sessions.ics] [--headless true]
+                    [--status rink_status.json] [--only id1,id2]
 """
 
-import sys, re, time, hashlib, argparse
-from datetime import datetime, timedelta, timezone
+from __future__ import annotations
+
+import argparse
+import base64
+import hashlib
+import io
+import json
+import os
+import re
+import sys
+import time
+from dataclasses import dataclass
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
-HOCKEY_RE = re.compile(
-    r'stick\s*[&and]+\s*pucks?|drop.?in hockey|adult sticks|adult drop|open hockey|35\+\s*drop|pickup hockey',
-    re.IGNORECASE
-)
+TZ = ZoneInfo("America/Detroit")
+HERE = Path(__file__).resolve().parent
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
 
-# ─── Rink definitions ─────────────────────────────────────────────────────────
-
-BOND_RINKS = [
-    {"name": "Biggby Ice Cube – Ann Arbor", "org": 246, "fac": 262, "dist": 3,  "price": "$15"},
-    {"name": "Biggby Ice Cube – Chelsea",   "org": 474, "fac": 529, "dist": 16, "price": "$15"},
-    {"name": "Biggby Ice Cube – Brighton",  "org": 353, "fac": 386, "dist": 22, "price": "$15"},
-]
-
-ICE_FINDER_RINKS = [
-    {"name": "Novi Ice Arena",                   "slug": "novi-ice-arena",                  "dist": 26, "url": "https://www.noviicearena.com/public-schedule"},
-    {"name": "Arctic Edge Ice Arena – Canton",   "slug": "arctic-edge-ice-arena-of-canton", "dist": 27, "url": "https://www.arcticarenas.com/page/show/3414762-calendar"},
-    {"name": "Suburban Ice – Farmington Hills",  "slug": "suburban-ice-farmington-hills",   "dist": 32, "url": "https://www.suburbanicefarmingtonhills.com/public-skating"},
-    {"name": "Garden City Civic Arena",          "slug": "garden-city-civic-arena",         "dist": 34, "url": "https://www.gardencitymi.org/calendar.aspx?CID=66,14"},
-    {"name": "Buffalo Wild Wings Arena – Troy",  "slug": "buffalo-wild-wings-arena",        "dist": 58, "url": "https://troy.frontline-connect.com/"},
-    {"name": "Hazel Park Viking Arena",          "slug": "hazel-park-ice-arena",            "dist": 47, "url": "https://www.hazelpark.org/residents/ice_arena.php"},
-    {"name": "John Lindell – Royal Oak",         "slug": "john-lindell-ice-arena-royal-oak","dist": 54, "url": "https://www.royaloakicearena.com/public-skating"},
-    {"name": "Suburban Ice Rochester",           "slug": "suburban-ice-rochester",          "dist": 60, "url": "https://www.suburbanicerochester.com/public-skating"},
-    {"name": "Suburban Ice Macomb",              "slug": "suburban-ice-macomb",             "dist": 65, "url": "https://www.suburbanicemacomb.com/public-skating"},
-]
-
-# SportsEngine rinks — scraped via /event/show_month_list/ plain text
-SPORTNGIN_RINKS = [
-    {
-        "name": "Arctic Edge Ice Arena – Canton",
-        "dist": 27, "price": None,
-        "url":  "https://www.arcticarenas.com/page/show/3414762-calendar",
-        "month_list_url": "https://www.arcticarenas.com/event/show_month_list/3414762",
-        # Sticks & Pucks tag: 3517364, Open Skate tag: 3517362
-    },
-]
+# Sessions longer than this are placeholders ("12:00 AM – 11:59 PM"), not real ice times.
+# (Allen Park's Wednesday S&P really is 4.5 hours.)
+MAX_SESSION_HOURS = 6
 
 
-# DaySmart Recreation (DASH) rinks — REST API, no auth needed
-DAYSMART_RINKS = [
-    {
-        "name": "Tam-O-Shanter Ice Rink – Sylvania, OH",
-        "company": "tamoshanter",
-        "dist": 58, "price": "$10",
-        "url": "https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration",
-    },
-]
-
-# Image-schedule rinks — schedule is a monthly JPEG; parsed via Claude vision
-IMAGE_SCHEDULE_RINKS = [
-    {
-        "name": "Jackson Optimist Ice Arena – Jackson, MI",
-        "dist": 38, "price": "$10",
-        "url": "https://www.optimisticearena.com/stick-and-puck/",
-        "type": "wordpress_image",
-    },
-]
+def log(*a):
+    print(*a, file=sys.stderr, flush=True)
 
 
-# CivicPlus PDF calendar rinks
-PDF_CALENDAR_RINKS = [
-    {
-        "name": "St Clair Shores Civic Arena",
-        "dist": 50, "price": "$10",
-        "url":  "https://www.scsmi.net/324/Civic-Ice-Arena",
-        "type": "civicplus_pdf",
-        # PDF link text pattern: "MAY 2026 PUBLIC SKATE CALENDAR"
-        # Drop In Hockey $10, Adult Stick & Puck $10, Youth Stick & Puck $10
-    },
-]
+# ─── Session model ────────────────────────────────────────────────────────────
 
-# Direct-scrape rinks — custom per-site scraper logic
-DIRECT_RINKS = [
-    {
-        "name": "Frank J. Lada Civic Arena – Allen Park",
-        "dist": 37, "price": None,
-        "url":  "https://cityofallenpark.org/calendar.php",
-        "type": "civicplus_revize",
-        # Note: ice closed for season after May 9 each year
-    },
-    {
-        "name": "Eddie Edgar Ice Arena – Dearborn",
-        "dist": 38, "price": None,
-        "url":  "https://www.eddieedgar.org/schedule",
-        "type": "fullcalendar_list",
-        # Sticks & Pucks Tuesdays only, 11:45am-1:15pm, Edgar B arena
-    },
-]
+@dataclass
+class Session:
+    rink_id: str
+    rink: str
+    name: str
+    start: datetime          # timezone-aware
+    end: datetime            # timezone-aware
+    dist: int
+    url: str
+    source: str
+    price: str | None = None
+    location: str | None = None
+    extra: str | None = None
+
+    @property
+    def kind(self) -> str:
+        return "Stick & Puck" if re.search(r"stick|puck", self.name, re.I) else "Drop-In"
 
 
-# ─── Selenium setup ───────────────────────────────────────────────────────────
+@dataclass
+class Window:
+    start: date               # first day (inclusive)
+    end: date                 # last day (inclusive)
 
-def make_driver(headless=True):
-    from selenium import webdriver
-    from selenium.webdriver.chrome.options import Options
-    from selenium.webdriver.chrome.service import Service
-    from webdriver_manager.chrome import ChromeDriverManager
-    opts = Options()
-    if headless:
-        opts.add_argument("--headless=new")
-    opts.add_argument("--no-sandbox")
-    opts.add_argument("--disable-dev-shm-usage")
-    opts.add_argument("--window-size=1400,900")
-    opts.add_argument("--disable-blink-features=AutomationControlled")
-    opts.add_experimental_option("excludeSwitches", ["enable-automation"])
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+    def contains(self, d: date) -> bool:
+        return self.start <= d <= self.end
 
+    @property
+    def start_dt(self) -> datetime:
+        return datetime.combine(self.start, datetime.min.time(), TZ)
 
-# ─── ice-finder scraper ───────────────────────────────────────────────────────
+    @property
+    def end_dt(self) -> datetime:
+        return datetime.combine(self.end + timedelta(days=1), datetime.min.time(), TZ)
 
-def parse_ice_finder_page(body_text: str, rink: dict, today, cutoff) -> list[dict]:
-    """Parse sessions from ice-finder rink page text."""
-    TIME_RE = re.compile(
-        r'(\w+,\s+\w+\s+\d+)\s*[•·]\s*(\d+:\d+\s*[AP]M)\s*[–\-]\s*(\d+:\d+\s*[AP]M)',
-        re.IGNORECASE
-    )
-    sessions = []
-    # Split into event blocks by looking for event-type lines followed by date lines
-    lines = body_text.split('\n')
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        # Detect hockey session types
-        if re.search(r'stick\s*[&and]+\s*puck|pickup hockey|adult drop|drop.?in hockey', line, re.I):
-            event_type = line
-            # Look ahead for the date/time line
-            for j in range(i+1, min(i+5, len(lines))):
-                m = TIME_RE.search(lines[j])
-                if m:
-                    date_str, start_str, end_str = m.group(1), m.group(2), m.group(3)
-                    try:
-                        year = today.year
-                        event_date = datetime.strptime(f"{date_str} {year}", "%a, %b %d %Y").date()
-                        if event_date < today - timedelta(days=30):
-                            event_date = datetime.strptime(f"{date_str} {year+1}", "%a, %b %d %Y").date()
-                    except ValueError:
-                        break
-                    if not (today <= event_date <= cutoff):
-                        break
-                    # Get price
-                    price = None
-                    for k in range(j+1, min(j+4, len(lines))):
-                        if '$' in lines[k]:
-                            price = lines[k].strip()
-                            break
-                    sessions.append({
-                        "name": event_type,
-                        "date": event_date,
-                        "start_raw": start_str.strip(),
-                        "end_raw": end_str.strip(),
-                        "location": None,
-                        "rink": rink["name"],
-                        "dist": rink["dist"],
-                        "price": price,
-                        "url": rink["url"],
-                        "source": "ice-finder",
-                    })
-                    break
-        i += 1
-
-    # Deduplicate
-    seen, unique = set(), []
-    for s in sessions:
-        key = (s["date"], s["start_raw"], s["rink"])
-        if key not in seen:
-            seen.add(key)
-            unique.append(s)
-    return unique
+    def months(self) -> list[tuple[int, int]]:
+        out, d = [], self.start.replace(day=1)
+        while d <= self.end:
+            out.append((d.year, d.month))
+            d = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
+        return out
 
 
-def scrape_ice_finder_all(driver, days: int, today, cutoff) -> list[dict]:
-    """Scrape all ice-finder rinks using the Selenium driver."""
-    from selenium.webdriver.common.by import By
-    all_sessions = []
-    for rink in ICE_FINDER_RINKS:
-        url = f"https://ice-finder.com/rinks/michigan/rink/{rink['slug']}"
-        print(f"  Fetching {rink['name']}...", file=sys.stderr)
+# ─── Filtering ────────────────────────────────────────────────────────────────
+
+class Matcher:
+    def __init__(self, include: str, exclude: str):
+        self.inc = re.compile(include, re.I)
+        self.exc = re.compile(exclude, re.I) if exclude else None
+
+    def ok(self, *texts: str) -> bool:
+        blob = " | ".join(t for t in texts if t)
+        if not self.inc.search(blob):
+            return False
+        return not (self.exc and self.exc.search(blob))
+
+
+def matcher_for(rink: dict, defaults: dict) -> Matcher:
+    return Matcher(rink.get("include", defaults["include"]),
+                   rink.get("exclude", defaults["exclude"]))
+
+
+# ─── Time helpers ─────────────────────────────────────────────────────────────
+
+def local(d: date, hhmm: str) -> datetime:
+    """'10:30 AM' / '10:30am' / '22:10' / '10:30:00' on date d → aware Detroit datetime."""
+    s = hhmm.strip().upper().replace(".", "")
+    s = re.sub(r"(\d)(AM|PM)$", r"\1 \2", s)
+    for fmt in ("%I:%M %p", "%I %p", "%H:%M:%S", "%H:%M"):
         try:
-            driver.get(url)
-            time.sleep(3)
-            body = driver.find_element(By.TAG_NAME, "body").text
-            sessions = parse_ice_finder_page(body, rink, today, cutoff)
-            if sessions:
-                print(f"    → {len(sessions)} session(s)", file=sys.stderr)
-            all_sessions.extend(sessions)
-        except Exception as e:
-            print(f"    ✗ Error: {e}", file=sys.stderr)
-    return all_sessions
+            t = datetime.strptime(s, fmt).time()
+            return datetime.combine(d, t, TZ)
+        except ValueError:
+            pass
+    raise ValueError(f"bad time {hhmm!r}")
 
 
-# ─── Bond Sports scraper ──────────────────────────────────────────────────────
+def from_naive_local(s: str) -> datetime:
+    """'2026-10-19T12:00:00' (rink local time) → aware."""
+    return datetime.fromisoformat(s[:19]).replace(tzinfo=TZ)
 
-def scrape_bond_all(driver, days: int, today) -> list[dict]:
-    """Scrape all Bond Sports rinks."""
-    from selenium.webdriver.common.by import By
-    TIME_RE = re.compile(r'(\d{1,2}:\d{2}\s*(?:am|pm))\s*[–\-]\s*(\d{1,2}:\d{2}\s*(?:am|pm))', re.I)
-    BOND_HOCKEY_RE = re.compile(r'stick\s*[&and]+\s*pucks?|adult sticks|35\+\s*drop', re.I)
-    dates = [today + timedelta(days=i) for i in range(days)]
-    all_sessions = []
 
-    for rink in BOND_RINKS:
-        print(f"  Fetching {rink['name']}...", file=sys.stderr)
-        url = f"https://bondsports.co/org/{rink['org']}/{rink['fac']}/schedule"
-        driver.get(url)
-        time.sleep(6)
+def sane(start: datetime, end: datetime) -> bool:
+    return end > start and (end - start) <= timedelta(hours=MAX_SESSION_HOURS)
 
-        for date in dates:
-            # Click date in calendar
-            day_str = str(date.day)
+
+def clean(s: str | None) -> str:
+    if not s:
+        return ""
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = s.replace("&amp;", "&").replace("&nbsp;", " ")
+    return re.sub(r"\s+", " ", s).strip()
+
+
+# ─── HTTP helpers (requests first, browser fallback) ──────────────────────────
+
+class Fetcher:
+    """Plain HTTP when it works; a headless Chrome page when a site needs JS or blocks bots."""
+
+    def __init__(self, headless: bool = True):
+        import requests
+        self.http = requests.Session()
+        self.http.headers.update({"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
+        self.headless = headless
+        self._driver = None
+
+    @property
+    def driver(self):
+        if self._driver is None:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            opts = Options()
+            if self.headless:
+                opts.add_argument("--headless=new")
+            for a in ("--no-sandbox", "--disable-dev-shm-usage", "--window-size=1400,900",
+                      "--disable-blink-features=AutomationControlled", f"--user-agent={UA}"):
+                opts.add_argument(a)
+            opts.add_experimental_option("excludeSwitches", ["enable-automation"])
             try:
-                els = driver.find_elements(By.XPATH,
-                    f"//*[normalize-space(text())='{day_str}']"
-                    f"[not(contains(@class,'other')) and not(@disabled)]"
-                )
-                for el in els:
-                    if el.is_displayed():
-                        el.click()
-                        time.sleep(2)
-                        break
+                self._driver = webdriver.Chrome(options=opts)  # Selenium Manager finds a driver
+            except Exception:
+                from selenium.webdriver.chrome.service import Service
+                from webdriver_manager.chrome import ChromeDriverManager
+                self._driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+            self._driver.set_page_load_timeout(45)
+        return self._driver
+
+    def close(self):
+        if self._driver is not None:
+            try:
+                self._driver.quit()
             except Exception:
                 pass
 
-            lines = [l.strip() for l in driver.find_element(By.TAG_NAME, "body").text.split('\n') if l.strip()]
-            seen_times = set()
-            for i, line in enumerate(lines):
-                if not BOND_HOCKEY_RE.search(line):
-                    continue
-                start_raw = end_raw = None
-                for j in range(max(0, i-5), i):
-                    m = TIME_RE.search(lines[j])
-                    if m:
-                        start_raw, end_raw = m.group(1).strip(), m.group(2).strip()
-                        break
-                if not start_raw or start_raw in seen_times:
-                    continue
-                seen_times.add(start_raw)
-                loc = next((lines[k] for k in range(i+1, min(i+4, len(lines)))
-                           if re.search(r'rink|ice|room', lines[k], re.I) and len(lines[k]) < 60), None)
-                all_sessions.append({
-                    "name": line, "date": date,
-                    "start_raw": start_raw, "end_raw": end_raw, "location": loc,
-                    "rink": rink["name"], "dist": rink["dist"],
-                    "price": rink["price"], "url": url, "source": "Bond Sports",
-                })
-
-        count = sum(1 for s in all_sessions if s["rink"] == rink["name"])
-        if count:
-            print(f"    → {count} session(s) over {days} days", file=sys.stderr)
-
-    return all_sessions
-
-
-# ─── iCal ─────────────────────────────────────────────────────────────────────
-
-def parse_dt(date, time_str):
-    time_str = re.sub(r'(\d)(AM|PM)', r'\1 \2', time_str.strip().upper())
-    dt = datetime.strptime(f"{date} {time_str}", "%Y-%m-%d %I:%M %p")
-    m = date.month
-    return dt.replace(tzinfo=timezone(timedelta(hours=-5 if m in (11,12,1,2,3) else -4)))
-
-def ical_dt(dt): return dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-def esc(s): return s.replace("\\","\\\\").replace(";","\\;").replace(",","\\,").replace("\n","\\n")
-def uid(s): return hashlib.md5(f"{s['rink']}-{s['date']}-{s['start_raw']}-{s['name']}".encode()).hexdigest() + "@mdh"
-
-def to_ical(sessions):
-    now = datetime.now(timezone.utc)
-    out = [
-        "BEGIN:VCALENDAR","VERSION:2.0",
-        "PRODID:-//Metro Detroit Hockey v2//EN",
-        "CALSCALE:GREGORIAN","METHOD:PUBLISH",
-        "X-WR-CALNAME:Metro Detroit Hockey Sessions",
-        "X-WR-TIMEZONE:America/Detroit",
-        f"X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated {now.strftime('%Y-%m-%d %H:%M UTC')}.",
-    ]
-    for s in sorted(sessions, key=lambda x: (x["date"], x["dist"])):
+    # -- text/HTML --
+    def html(self, url: str, must_contain: str | None = None, wait: float = 4) -> str:
         try:
-            ds, de = parse_dt(s["date"], s["start_raw"]), parse_dt(s["date"], s["end_raw"])
-        except:
-            continue
-        short = re.split(r'[–—]', s["rink"])[-1].strip()
-        stype = "Stick & Puck" if re.search(r'stick|puck', s["name"], re.I) else "Drop-In/Pickup"
-        desc = esc("\n".join(filter(None,[
-            s["name"],"",f"Rink: {s['rink']}",f"~{s['dist']} mi from Ann Arbor",
-            f"Price: {s['price']}" if s.get("price") else None,
-            f"Ice: {s['location']}" if s.get("location") else None,
-            f"Source: {s.get('source','')}","",
-            f"Info: {s['url']}","Confirm with rink — schedule subject to change.",
-        ])))
-        out += [
-            "BEGIN:VEVENT", f"UID:{uid(s)}", f"DTSTAMP:{ical_dt(now)}",
-            f"DTSTART:{ical_dt(ds)}", f"DTEND:{ical_dt(de)}",
-            f"SUMMARY:{esc(f'🏒 {stype} – {short}')}",
-            f"DESCRIPTION:{desc}", f"LOCATION:{esc(s['rink'])}",
-            f"URL:{s.get('url','')}", "END:VEVENT",
-        ]
-    out.append("END:VCALENDAR")
-    return "\r\n".join(out) + "\r\n"
-
-
-# ─── DaySmart Recreation (DASH) scraper ────────────────────────────────────────
-
-def scrape_daysmart(driver, dates: list) -> list[dict]:
-    """
-    DaySmart REST API — no auth required.
-    GET https://api.daysmartrecreation.com/v1/events
-    Required header: Accept: application/vnd.api+json
-    Key params: company, filter[start_date__gte], filter[start_date__lte],
-                filter[unconstrained]=1, page[size]=100
-    Event name lives in attributes.best_description.
-    """
-    from selenium.webdriver.common.by import By
-    import json as _json
-    HOCKEY_PAT = re.compile(r'hockey|drop.?in|stick.*puck', re.I)
-    all_sessions = []
-
-    if not dates:
-        return []
-
-    # Batch the full date range in one API call
-    start_str = min(dates).strftime('%Y-%m-%d')
-    end_str   = max(dates).strftime('%Y-%m-%d')
-
-    for rink in DAYSMART_RINKS:
-        print(f"  {rink['name']}: fetching {start_str} – {end_str}...", file=sys.stderr)
-        try:
-            # Use JavaScript fetch inside the browser (already on the domain)
-            # Navigate to the rink's page first to get same-origin context
-            driver.get(f"{rink['url']}?date={start_str}&")
-            time.sleep(5)
-
-            script = f"""
-return (async () => {{
-  const p = new URLSearchParams();
-  p.set('page[size]', '100');
-  p.set('sort', 'start');
-  p.set('company', '{rink["company"]}');
-  p.set('filter[unconstrained]', '1');
-  p.set('filter[start_date__gte]', '{start_str}');
-  p.set('filter[start_date__lte]', '{end_str}');
-  const r = await fetch('https://api.daysmartrecreation.com/v1/events?' + p.toString(), {{
-    headers: {{'Accept': 'application/vnd.api+json'}}
-  }});
-  const d = await r.json();
-  return JSON.stringify(d);
-}})();
-"""
-            result = driver.execute_async_script("""
-const callback = arguments[arguments.length - 1];
-(async () => {
-  const p = new URLSearchParams();
-  p.set('page[size]', '100');
-  p.set('sort', 'start');
-  p.set('company', '""" + rink["company"] + """');
-  p.set('filter[unconstrained]', '1');
-  p.set('filter[start_date__gte]', '""" + start_str + """');
-  p.set('filter[start_date__lte]', '""" + end_str + """');
-  try {
-    const r = await fetch('https://api.daysmartrecreation.com/v1/events?' + p.toString(), {
-      headers: {'Accept': 'application/vnd.api+json'}
-    });
-    const d = await r.json();
-    callback(JSON.stringify(d));
-  } catch(e) {
-    callback('ERROR:' + e.message);
-  }
-})();
-""")
-            if not result or result.startswith('ERROR'):
-                print(f"    API error: {result}", file=sys.stderr)
-                continue
-
-            data = _json.loads(result)
-            events = data.get('data', [])
-
-            for e in events:
-                attrs = e.get('attributes', {})
-                name = attrs.get('best_description', '') or ''
-                if not HOCKEY_PAT.search(name):
-                    continue
-                start_raw = attrs.get('start', '')  # ISO: "2026-05-12T12:00:00"
-                end_raw   = attrs.get('end', '')
-                if not start_raw:
-                    continue
-                try:
-                    dt_start = datetime.fromisoformat(start_raw)
-                    dt_end   = datetime.fromisoformat(end_raw) if end_raw else None
-                    event_date = dt_start.date()
-                except ValueError:
-                    continue
-                if event_date not in dates:
-                    continue
-
-                start_fmt = dt_start.strftime('%-I:%M %p')
-                end_fmt   = dt_end.strftime('%-I:%M %p') if dt_end else ''
-
-                all_sessions.append({
-                    "name":      name,
-                    "date":      event_date,
-                    "start_raw": start_fmt,
-                    "end_raw":   end_fmt,
-                    "location":  None,
-                    "rink":      rink["name"],
-                    "dist":      rink["dist"],
-                    "price":     rink.get("price"),
-                    "url":       rink["url"],
-                    "source":    "DaySmart",
-                })
-
+            r = self.http.get(url, timeout=30)
+            if r.status_code == 200 and (not must_contain or re.search(must_contain, r.text, re.I)):
+                return r.text
+            log(f"    http {r.status_code} for {url} — trying browser")
         except Exception as e:
-            print(f"    error: {e}", file=sys.stderr)
+            log(f"    http error {e.__class__.__name__} for {url} — trying browser")
+        self.driver.get(url)
+        time.sleep(wait)
+        return self.driver.page_source
 
-    if all_sessions:
-        print(f"    → {len(all_sessions)} DaySmart session(s)", file=sys.stderr)
-    return all_sessions
+    def bytes(self, url: str, referer: str | None = None) -> bytes:
+        h = {"Referer": referer} if referer else {}
+        r = self.http.get(url, timeout=45, headers=h)
+        r.raise_for_status()
+        return r.content
 
-
-# ─── Jackson Optimist scraper (WordPress image calendar via Claude vision) ──────
-
-def scrape_jackson_optimist(driver, dates: list) -> list[dict]:
-    """
-    Jackson Optimist posts a monthly JPEG image of their schedule to WordPress.
-    Strategy:
-      1. Load the page, find the current month's calendar image URL
-      2. Download the image
-      3. Use the Anthropic API (claude vision) to OCR the schedule
-      4. Parse the returned sessions
-    Falls back gracefully if the image can't be found or parsed.
-    """
-    from selenium.webdriver.common.by import By
-    import base64
-    import json as _json
-    import urllib.request
-
-    rink = IMAGE_SCHEDULE_RINKS[0]
-    if not dates:
-        return []
-
-    print(f"  {rink['name']}: loading schedule image...", file=sys.stderr)
-    sessions = []
-
-    try:
-        driver.get(rink['url'])
+    # -- JSON APIs --
+    def json(self, url: str, params: dict | None = None, headers: dict | None = None,
+             method: str = "GET", data: str | None = None, browser_origin: str | None = None):
+        try:
+            if method == "GET":
+                r = self.http.get(url, params=params, headers=headers or {}, timeout=30)
+            else:
+                r = self.http.post(url, params=params, headers=headers or {}, data=data, timeout=30)
+            if r.status_code == 200:
+                return r.json()
+            log(f"    api {r.status_code} for {url}")
+        except Exception as e:
+            log(f"    api error {e.__class__.__name__}: {e}")
+        if not browser_origin:
+            raise RuntimeError(f"API request failed: {url}")
+        # Fallback: run fetch() from inside a page on the site's own origin.
+        import urllib.parse
+        full = url + ("?" + urllib.parse.urlencode(params, doseq=True) if params else "")
+        self.driver.get(browser_origin)
         time.sleep(4)
-
-        # Find the calendar image
-        imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="Calendar"]')
-        if not imgs:
-            imgs = driver.find_elements(By.CSS_SELECTOR, 'img[src*="calendar"]')
-        if not imgs:
-            print("    no calendar image found", file=sys.stderr)
-            return []
-
-        img_url = imgs[0].get_attribute('src')
-        print(f"    image: {img_url.split('/')[-1]}", file=sys.stderr)
-
-        # Download the image
-        req = urllib.request.Request(img_url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            img_bytes = resp.read()
-        img_b64 = base64.b64encode(img_bytes).decode()
-
-        # Determine current month/year for context
-        target_month = min(dates).strftime('%B %Y')
-
-        # Call Claude vision via Anthropic API
-        import os as _os
-        import requests as _req
-        api_key = _os.environ.get('ANTHROPIC_API_KEY', '')
-        if not api_key:
-            print("    ANTHROPIC_API_KEY not set — skipping vision OCR", file=sys.stderr)
-            return []
-        resp = _req.post(
-            'https://api.anthropic.com/v1/messages',
-            headers={
-                'Content-Type': 'application/json',
-                'x-api-key': api_key,
-                'anthropic-version': '2023-06-01',
-            },
-            json={
-                'model': 'claude-opus-4-5',
-                'max_tokens': 1024,
-                'messages': [{
-                    'role': 'user',
-                    'content': [
-                        {
-                            'type': 'image',
-                            'source': {
-                                'type': 'base64',
-                                'media_type': 'image/jpeg',
-                                'data': img_b64,
-                            }
-                        },
-                        {
-                            'type': 'text',
-                            'text': f"""This is the {target_month} skating schedule for Jackson Optimist Ice Arena.
-Extract ONLY the Stick & Puck sessions (highlighted in yellow).
-Return a JSON array with objects: {{date_num: int, time_start: "H:MM AM/PM", time_end: "H:MM AM/PM"}}
-Only include Stick & Puck entries, not public skating.
-Return ONLY the JSON array, no other text."""
-                        }
-                    ]
-                }]
-            },
-            timeout=30
-        )
-
-        if resp.status_code != 200:
-            print(f"    Claude vision API error: {resp.status_code}", file=sys.stderr)
-            return []
-
-        raw = resp.json()['content'][0]['text'].strip()
-        # Strip markdown fences if present
-        raw = re.sub(r'```[a-z]*', '', raw).replace('```', '').strip()
-        parsed = _json.loads(raw)
-
-        # Map date numbers to actual dates
-        year  = min(dates).year
-        month = min(dates).month
-        date_set = set(dates)
-
-        for item in parsed:
-            try:
-                event_date = datetime(year, month, int(item['date_num'])).date()
-            except (ValueError, KeyError):
-                continue
-            if event_date not in date_set:
-                continue
-
-            start_raw = item.get('time_start', '').strip()
-            end_raw   = item.get('time_end', '').strip()
-            if not start_raw:
-                continue
-
-            sessions.append({
-                "name":      "Stick & Puck",
-                "date":      event_date,
-                "start_raw": start_raw,
-                "end_raw":   end_raw,
-                "location":  None,
-                "rink":      rink["name"],
-                "dist":      rink["dist"],
-                "price":     rink.get("price"),
-                "url":       rink["url"],
-                "source":    "Jackson Optimist (vision)",
-            })
-
-    except Exception as e:
-        print(f"    error: {e}", file=sys.stderr)
-
-    if sessions:
-        print(f"    → {len(sessions)} Jackson Optimist session(s)", file=sys.stderr)
-    return sessions
+        js = """
+const cb = arguments[arguments.length - 1];
+fetch(arguments[0], {method: arguments[1], headers: arguments[2], body: arguments[3]})
+  .then(r => r.text()).then(t => cb(t)).catch(e => cb('ERROR:' + e));
+"""
+        self.driver.set_script_timeout(45)
+        txt = self.driver.execute_async_script(js, full, method, headers or {}, data)
+        if not txt or txt.startswith("ERROR:"):
+            raise RuntimeError(f"browser fetch failed: {txt}")
+        return json.loads(txt)
 
 
-# ─── St Clair Shores PDF scraper ─────────────────────────────────────────────
+# ─── Source: ice-finder.com ───────────────────────────────────────────────────
 
-def scrape_pdf_calendars(driver, dates: list) -> list[dict]:
-    """
-    St Clair Shores posts monthly PDF calendars at scsmi.net/324/Civic-Ice-Arena.
-    Strategy:
-      1. Load the page, find the PDF link matching the current month/year
-      2. Download PDF bytes using requests with the Selenium session cookies
-      3. Parse with pdfplumber — extract words, reconstruct calendar grid
-      4. Match hockey sessions to dates
-    Hockey session types: Drop In Hockey, Adult Stick & Puck, Youth Stick & Puck
-    """
-    import io
-    import re as _re
-    import requests as _req
-    import pdfplumber
+ICE_FINDER_LINE = re.compile(
+    r"^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,\s+([A-Za-z]+\s+\d{1,2})\s*[•·]\s*"
+    r"(\d{1,2}:\d{2}\s*[AP]M)\s*[–\-]\s*(\d{1,2}:\d{2}\s*[AP]M)", re.I)
 
-    HOCKEY_PAT = _re.compile(r'drop.?in hockey|adult stick|youth stick|stick.*puck', _re.I)
-    TIME_PAT   = _re.compile(r'(\d{1,2}:\d{2})\s*([AP])', _re.I)
-    all_sessions = []
 
-    if not dates:
-        return []
-
-    # Group dates by month — we only need one PDF per month
-    months = {}
-    for d in dates:
-        key = (d.year, d.month)
-        months.setdefault(key, []).append(d)
-
-    for (year, month), month_dates in months.items():
-        rink = PDF_CALENDAR_RINKS[0]
-        month_name = ['', 'JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE',
-                      'JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'][month]
-        print(f"  St Clair Shores: finding {month_name} {year} PDF...", file=sys.stderr)
-
+def _parse_month_day(md: str, today: date) -> date | None:
+    for fmt in ("%B %d %Y", "%b %d %Y"):          # "October 20" (site today) or "Oct 20"
         try:
-            # Load the page and find the PDF link
-            driver.get(rink['url'])
-            time.sleep(3)
+            d = datetime.strptime(f"{md} {today.year}", fmt).date()
+            if d < today - timedelta(days=60):    # Dec → Jan rollover
+                d = d.replace(year=today.year + 1)
+            return d
+        except ValueError:
+            continue
+    return None
 
-            from selenium.webdriver.common.by import By
-            links = driver.find_elements(By.TAG_NAME, 'a')
-            pdf_url = None
-            for link in links:
-                text = (link.text or '').upper()
-                href = link.get_attribute('href') or ''
-                if month_name in text and str(year) in text and 'DocumentCenter' in href:
-                    pdf_url = href
-                    break
 
-            if not pdf_url:
-                print(f"    no PDF link found for {month_name} {year}", file=sys.stderr)
+def parse_ice_finder(text: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    out = []
+    for i, line in enumerate(lines):
+        mm = ICE_FINDER_LINE.match(line)
+        if not mm or i == 0:
+            continue
+        name = lines[i - 1]
+        if not m.ok(name):
+            continue
+        d = _parse_month_day(mm.group(1), win.start)
+        if not d or not win.contains(d):
+            continue
+        start, end = local(d, mm.group(2)), local(d, mm.group(3))
+        if not sane(start, end):
+            continue
+        price = next((lines[k] for k in range(i + 1, min(i + 4, len(lines))) if "$" in lines[k]), None)
+        out.append(Session(rink["id"], rink["name"], name, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "ice-finder.com", price or rink.get("price")))
+    return out
+
+
+def html_to_lines(html: str) -> str:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    for t in soup(["script", "style", "noscript"]):
+        t.decompose()
+    root = soup.find("main") or soup.body or soup
+    return root.get_text("\n")
+
+
+def scrape_ice_finder(f: Fetcher, rink, m, win) -> list[Session]:
+    url = f"https://ice-finder.com/rinks/michigan/rink/{rink['slug']}"
+    html = f.html(url, must_contain=r"Schedule")
+    return parse_ice_finder(html_to_lines(html), rink, m, win)
+
+
+# ─── Source: Bond Sports API ──────────────────────────────────────────────────
+
+def parse_bond(data: dict, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    out, seen = [], set()
+    for e in data.get("data", []):
+        prog, ev = clean(e.get("programName")), clean(e.get("eventName"))
+        if not m.ok(prog, ev):
+            continue
+        if str(e.get("status", "")).lower() in ("canceled", "cancelled", "inactive"):
+            continue
+        try:
+            d = datetime.strptime(e["eventStartDate"].replace("-", "/"), "%Y/%m/%d").date()
+            d_end = datetime.strptime((e.get("eventEndDate") or e["eventStartDate"]).replace("-", "/"), "%Y/%m/%d").date()
+            tz = ZoneInfo(e.get("eventTimezone") or "America/Detroit")
+            start = datetime.combine(d, datetime.strptime(e["eventStartTime"], "%H:%M:%S").time(), tz)
+            end = datetime.combine(d_end, datetime.strptime(e["eventEndTime"], "%H:%M:%S").time(), tz)
+        except (KeyError, ValueError):
+            continue
+        if not win.contains(d) or not sane(start, end):
+            continue
+        key = (start, ev.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        # "Stick & Puck - Fri - 10:00 am" / "Freestyle Drop-In - October 2026 - Tue - 06:00 am" → base name
+        name = re.sub(r"\s*-\s*(?:\w+ \d{4}\s*-\s*)?\w{3}\s*-\s*\d\d:\d\d\s*[ap]m$", "", ev, flags=re.I) or prog
+        loc = ", ".join(s.get("spaceName", "") for s in (e.get("spaces") or []) if s.get("spaceName")) or None
+        out.append(Session(rink["id"], rink["name"], name, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "Bond Sports", rink.get("price"), loc))
+    return out
+
+
+def scrape_bond(f: Fetcher, rink, m, win) -> list[Session]:
+    url = f"https://api.bondsports.co/v4/facilities/{rink['facility_id']}/programs-schedule"
+    params = {"startDate": win.start.isoformat(), "endDate": (win.end + timedelta(days=1)).isoformat()}
+    data = f.json(url, params, headers={"Origin": "https://bondsports.co", "Referer": "https://bondsports.co/"},
+                  browser_origin="https://bondsports.co/")
+    return parse_bond(data, rink, m, win)
+
+
+# ─── Source: DaySmart Recreation API ──────────────────────────────────────────
+
+def parse_daysmart(pages: list[dict], rink: dict, m: Matcher, win: Window) -> list[Session]:
+    teams = {}
+    for p in pages:
+        for inc in p.get("included", []) or []:
+            if inc.get("type") == "teams":
+                teams[str(inc["id"])] = clean(inc.get("attributes", {}).get("name"))
+    out, seen = [], set()
+    for p in pages:
+        for e in p.get("data", []):
+            a = e.get("attributes", {})
+            desc = clean(a.get("desc"))
+            team = teams.get(str(a.get("hteam_id")), "")
+            if not m.ok(desc, team):
                 continue
-
-            print(f"    downloading {pdf_url.split('/')[-1]}...", file=sys.stderr)
-
-            # Download PDF using session cookies from Selenium
-            cookies = {c['name']: c['value'] for c in driver.get_cookies()}
-            headers = {'User-Agent': driver.execute_script('return navigator.userAgent')}
-            resp = _req.get(pdf_url, cookies=cookies, headers=headers, timeout=20)
-            if resp.status_code != 200:
-                print(f"    PDF download failed: {resp.status_code}", file=sys.stderr)
+            try:
+                if a.get("start_gmt") and a.get("end_gmt"):
+                    start = datetime.fromisoformat(a["start_gmt"][:19]).replace(tzinfo=timezone.utc)
+                    end = datetime.fromisoformat(a["end_gmt"][:19]).replace(tzinfo=timezone.utc)
+                else:
+                    start, end = from_naive_local(a["start"]), from_naive_local(a["end"])
+            except (KeyError, ValueError):
                 continue
-
-            # Parse PDF
-            sessions = _parse_scs_pdf(resp.content, year, month, month_dates, rink)
-            all_sessions.extend(sessions)
-            if sessions:
-                print(f"    → {len(sessions)} session(s)", file=sys.stderr)
-
-        except Exception as e:
-            print(f"    error: {e}", file=sys.stderr)
-
-    return all_sessions
-
-
-def _parse_scs_pdf(pdf_bytes: bytes, year: int, month: int, dates: list, rink: dict) -> list:
-    """
-    Parse the St Clair Shores calendar PDF.
-    The PDF is a visual calendar grid. pdfplumber extracts words with x/y coords.
-    Strategy: group words by approximate x column (day of week) and y row (week).
-    Each cell contains session names and times stacked vertically.
-    """
-    import io
-    import pdfplumber
-    from datetime import date as _date
-
-    HOCKEY_PAT = re.compile(r'drop.?in hockey|adult stick|youth stick', re.I)
-    # Time pattern: "9:30-10:30" or "9:30" "A" (AM) on next word
-    TIME_RANGE_PAT = re.compile(r'(\d{1,2}:\d{2})\s*[AP\.]*\s*[-–]\s*(\d{1,2}:\d{2})\s*([AP])', re.I)
-
-    sessions = []
-    date_set = set(dates)
-
-    try:
-        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-            page = pdf.pages[0]
-            words = page.extract_words(x_tolerance=3, y_tolerance=3)
-
-            if not words:
-                return []
-
-            # Find day-of-week headers to establish column boundaries
-            # Headers: Sun, Mon, Tue, Wed, Thu, Fri, Sat
-            DOW = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
-            col_centers = {}
-            for w in words:
-                text_up = w['text'].upper()
-                for i, day in enumerate(DOW):
-                    if text_up == day or text_up == day[:2]:
-                        col_centers[i] = (w['x0'] + w['x1']) / 2
-                        break
-
-            if len(col_centers) < 6:
-                # Fallback: divide page width into 7 equal columns
-                pw = page.width
-                col_centers = {i: pw * (i + 0.5) / 7 for i in range(7)}
-
-            # Find date numbers in the grid to anchor rows
-            # Date numbers are typically standalone 1-2 digit numbers
-            date_positions = {}
-            for w in words:
-                try:
-                    day_num = int(w['text'].strip())
-                    if 1 <= day_num <= 31:
-                        date_positions[day_num] = {
-                            'x': (w['x0'] + w['x1']) / 2,
-                            'y': w['top'],
-                            'col': _nearest_col(col_centers, (w['x0'] + w['x1']) / 2)
-                        }
-                except ValueError:
-                    pass
-
-            # For each date in our range, find the cell contents
-            for target_date in dates:
-                if target_date.month != month or target_date.year != year:
-                    continue
-                day_num = target_date.day
-                if day_num not in date_positions:
-                    continue
-
-                cell = date_positions[day_num]
-                cell_x = cell['x']
-                cell_y = cell['y']
-
-                # Collect words in this cell: same column, below the date number,
-                # above the next row's date numbers
-                next_row_y = min(
-                    (p['y'] for d, p in date_positions.items()
-                     if p['y'] > cell_y + 5 and abs(p['x'] - cell_x) < 50),
-                    default=cell_y + 200
-                )
-
-                cell_col = cell['col']
-                col_x = col_centers.get(cell_col, cell_x)
-                col_width = page.width / 7
-
-                cell_words = [
-                    w for w in words
-                    if w['top'] > cell_y + 2
-                    and w['top'] < next_row_y - 2
-                    and abs((w['x0'] + w['x1']) / 2 - col_x) < col_width * 0.6
-                ]
-
-                if not cell_words:
-                    continue
-
-                # Reconstruct cell text line by line
-                cell_lines = _words_to_lines(cell_words)
-                cell_text = ' '.join(cell_lines)
-
-                # Find hockey sessions in this cell
-                for i, line in enumerate(cell_lines):
-                    if not HOCKEY_PAT.search(line):
-                        continue
-                    # Find time in adjacent lines
-                    start_raw = end_raw = None
-                    search_range = cell_lines[max(0,i-2):i+3]
-                    for nearby in search_range:
-                        m = TIME_RANGE_PAT.search(nearby)
-                        if m:
-                            am_pm = m.group(3).upper()
-                            start_raw = m.group(1) + ' ' + am_pm
-                            end_raw   = m.group(2) + ' ' + am_pm
-                            break
-                    if not start_raw:
-                        continue
-
-                    sessions.append({
-                        "name":      line.strip().title(),
-                        "date":      target_date,
-                        "start_raw": start_raw,
-                        "end_raw":   end_raw,
-                        "location":  None,
-                        "rink":      rink["name"],
-                        "dist":      rink["dist"],
-                        "price":     rink.get("price"),
-                        "url":       rink["url"],
-                        "source":    "St Clair Shores PDF",
-                    })
-
-    except Exception as e:
-        print(f"    PDF parse error: {e}", file=sys.stderr)
-
-    return sessions
+            if not win.contains(start.astimezone(TZ).date()) or not sane(start, end):
+                continue
+            # Short codes like "ADI" read better as the team/program name
+            name = desc if desc and not re.fullmatch(r"[A-Z]{2,4}", desc) else (team or desc)
+            name = re.sub(r"^\w+ \d{4}\s*-\s*", "", name)          # "October 2026 - Adult Drop In Hockey"
+            name = re.sub(r"\s*:\s*(?:M|T|W|Th|F|Sa|Su|Sundays?|Mondays?)(?:/\w+)*\s*$", "", name)
+            key = (start, name.lower())
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(Session(rink["id"], rink["name"], name, start, end, rink["dist_mi"],
+                               rink.get("url") or "", "DaySmart", rink.get("price")))
+    return out
 
 
-def _nearest_col(col_centers: dict, x: float) -> int:
-    return min(col_centers.keys(), key=lambda c: abs(col_centers[c] - x))
+def scrape_daysmart(f: Fetcher, rink, m, win) -> list[Session]:
+    company = rink["company"]
+    pages, page = [], 1
+    while True:
+        params = {
+            "page[size]": "200", "page[number]": str(page), "sort": "start",
+            "company": company, "filter[unconstrained]": "1", "include": "homeTeam",
+            "filter[start_date__gte]": win.start.isoformat(),
+            "filter[start_date__lte]": win.end.isoformat(),
+        }
+        data = f.json("https://api.daysmartrecreation.com/v1/events", params,
+                      headers={"Accept": "application/vnd.api+json"},
+                      browser_origin=f"https://apps.daysmartrecreation.com/dash/x/#/online/{company}/event-registration")
+        pages.append(data)
+        last = (((data.get("meta") or {}).get("page") or {}).get("last-page")) or 1
+        if page >= last or page >= 20:
+            break
+        page += 1
+    return parse_daysmart(pages, rink, m, win)
 
 
-def _words_to_lines(words: list) -> list:
-    """Group words into lines based on vertical position."""
-    if not words:
-        return []
-    lines = []
-    current_line = [words[0]]
-    for w in words[1:]:
-        if abs(w['top'] - current_line[-1]['top']) < 4:
-            current_line.append(w)
+# ─── Source: iCal feeds ───────────────────────────────────────────────────────
+
+def parse_ics(raw: bytes | str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    import icalendar
+    import recurring_ical_events
+    if isinstance(raw, bytes):
+        raw = raw.decode("utf-8", "replace")
+    # SportsEngine writes "X-WR-TIMEZONE::America/New_York" — harmless, but tidy it.
+    raw = re.sub(r"^(X-WR-[A-Z]+|METHOD)::", r"\1:", raw, flags=re.M)
+    cal = icalendar.Calendar.from_ical(raw)
+    out, seen = [], set()
+    for ev in recurring_ical_events.of(cal).between(win.start_dt, win.end_dt):
+        summary = clean(str(ev.get("SUMMARY", "")))
+        if str(ev.get("STATUS", "")).upper() == "CANCELLED" or re.search(r"cancel", summary, re.I):
+            continue
+        if not m.ok(summary):
+            continue
+        s, e = ev.get("DTSTART").dt, (ev.get("DTEND").dt if ev.get("DTEND") else None)
+        if not isinstance(s, datetime):
+            continue                                 # all-day entries aren't sessions
+        s = s if s.tzinfo else s.replace(tzinfo=TZ)
+        e = e if isinstance(e, datetime) else s + timedelta(minutes=80)
+        e = e if e.tzinfo else e.replace(tzinfo=TZ)
+        if not win.contains(s.astimezone(TZ).date()) or not sane(s, e):
+            continue
+        key = (s, summary.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        loc = clean(str(ev.get("LOCATION", ""))) or None
+        out.append(Session(rink["id"], rink["name"], summary, s, e, rink["dist_mi"],
+                           rink.get("url") or "", "iCal", rink.get("price"), loc))
+    return out
+
+
+def scrape_ics(f: Fetcher, rink, m, win) -> list[Session]:
+    r = f.http.get(rink["ics_url"], timeout=30)
+    r.raise_for_status()
+    if b"BEGIN:VCALENDAR" not in r.content[:500]:
+        raise RuntimeError("response is not an iCal feed")
+    return parse_ics(r.content, rink, m, win)
+
+
+# ─── Source: EZFacility ───────────────────────────────────────────────────────
+
+def parse_ezfacility(items: list[dict], rink: dict, m: Matcher, win: Window) -> list[Session]:
+    out = []
+    for e in items or []:
+        title = clean(e.get("title") or e.get("reservationType"))
+        if not m.ok(title):
+            continue
+        try:
+            start, end = from_naive_local(e["start"]), from_naive_local(e["end"])
+        except (KeyError, ValueError):
+            continue
+        if not win.contains(start.date()) or not sane(start, end):
+            continue
+        out.append(Session(rink["id"], rink["name"], title, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "EZFacility", rink.get("price"), e.get("resourceName")))
+    return out
+
+
+def scrape_ezfacility(f: Fetcher, rink, m, win) -> list[Session]:
+    host = rink["ezfacility_host"]
+    body = (f"LocationId={rink['location_id']}&Sunday=true&Monday=true&Tuesday=true&Wednesday=true"
+            "&Thursday=true&Friday=true&Saturday=true&StartTime=12%3A00%20AM&EndTime=12%3A00%20AM"
+            "&ReservationTypes%5B0%5D.Selected=true&ReservationTypes%5B0%5D.Id=-1"
+            "&Resources%5B0%5D.Selected=true&Resources%5B0%5D.Id=-1"
+            f"&StartDate={win.start.isoformat()}&EndDate={(win.end + timedelta(days=1)).isoformat()}")
+    items = f.json(f"https://{host}/Sessions/FilterResults", method="POST", data=body,
+                   headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                            "X-Requested-With": "XMLHttpRequest", "Referer": f"https://{host}/Sessions"},
+                   browser_origin=f"https://{host}/Sessions")
+    return parse_ezfacility(items, rink, m, win)
+
+
+# ─── Source: FinnlyConnect ────────────────────────────────────────────────────
+
+def parse_finnly(html: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    i = html.find("_onlineScheduleList")
+    if i < 0:
+        raise RuntimeError("schedule data not found on page")
+    i = html.find("[", i)
+    items, _ = json.JSONDecoder().raw_decode(html[i:])
+    out, seen = [], set()
+    for e in items:
+        acct, desc = clean(e.get("AccountName")), clean(e.get("Description"))
+        if not m.ok(acct, desc):
+            continue
+        try:
+            start, end = from_naive_local(e["EventStartTime"]), from_naive_local(e["EventEndTime"])
+        except (KeyError, ValueError):
+            continue
+        if e.get("Closed") or not win.contains(start.date()) or not sane(start, end):
+            continue
+        name = acct or re.sub(r"^Activity:\s*", "", desc)
+        key = (start, name.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(Session(rink["id"], rink["name"], name, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "FinnlyConnect", rink.get("price"), e.get("FacilityName")))
+    return out
+
+
+def scrape_finnly(f: Fetcher, rink, m, win) -> list[Session]:
+    return parse_finnly(f.html(rink["schedule_url"], must_contain="_onlineScheduleList"), rink, m, win)
+
+
+# ─── Source: fixed weekly schedule ────────────────────────────────────────────
+
+DOW = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
+
+
+def build_static(rink: dict, win: Window) -> list[Session]:
+    out = []
+    skip = {date.fromisoformat(x) for x in rink.get("skip_dates", [])}
+    for block in rink["schedule"]:
+        days = {DOW[d[:3].lower()] for d in block["days"]}
+        lo = max(win.start, date.fromisoformat(block.get("from", win.start.isoformat())))
+        hi = min(win.end, date.fromisoformat(block.get("until", win.end.isoformat())))
+        d = lo
+        while d <= hi:
+            if d.weekday() in days and d not in skip:
+                s, e = local(d, block["start"]), local(d, block["end"])
+                if e <= s:
+                    e += timedelta(days=1)
+                out.append(Session(rink["id"], rink["name"], block["name"], s, e, rink["dist_mi"],
+                                   rink.get("url") or "", "rink website (weekly schedule)", rink.get("price"),
+                                   extra="Regular weekly time from the rink's website — holidays/cancellations not reflected."))
+            d += timedelta(days=1)
+    return out
+
+
+def scrape_static(f: Fetcher, rink, m, win) -> list[Session]:
+    if rink.get("verify_url"):
+        page = f.html(rink["verify_url"])
+        if not re.search(rink["verify_text"], page, re.I):
+            raise RuntimeError("rink page no longer mentions this session — check and update rinks.json")
+    return build_static(rink, win)
+
+
+# ─── Source: Jackson Optimist (monthly JPEG → Claude vision) ──────────────────
+
+MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august",
+          "september", "october", "november", "december"]
+VISION_MODELS = [m for m in [os.environ.get("VISION_MODEL"), "claude-sonnet-5-5",
+                             "claude-sonnet-4-5", "claude-opus-4-5"] if m]
+
+
+def find_month_images(html: str, base_url: str) -> dict[tuple[int, int], str]:
+    """Map (year, month) → schedule image URL, based on the filename."""
+    found = {}
+    urls = re.findall(r"""https?://[^\s"'<>(),]+?/wp-content/uploads/[^\s"'<>(),]+?\.(?:jpe?g|png|webp)""", html, re.I)
+    # full-size files first (WordPress also emits resized copies like name-300x232.jpg)
+    urls = sorted(dict.fromkeys(urls), key=lambda u: bool(re.search(r"-\d+x\d+\.\w+$", u)))
+    for src in urls:
+        name = src.rsplit("/", 1)[-1].lower()
+        if re.search(r"logo|icon|cropped|favicon", name):
+            continue
+        mo = next((i + 1 for i, mn in enumerate(MONTHS) if mn in name or mn[:3] + "-" in name), None)
+        yr = re.search(r"(20\d\d)", name) or re.search(r"/(20\d\d)/\d\d/", src)
+        if mo and yr:
+            found.setdefault((int(yr.group(1)), mo), src)
+    return found
+
+
+def parse_vision_json(text: str) -> list[dict]:
+    m = re.search(r"\[.*\]", text, re.S)
+    return json.loads(m.group(0)) if m else []
+
+
+def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("ANTHROPIC_API_KEY not set — can't read the image schedule")
+    html = f.html(rink["url"], must_contain=r"wp-content/uploads")
+    imgs = find_month_images(html, rink["url"])
+    out = []
+    for (yr, mo) in win.months():
+        src = imgs.get((yr, mo))
+        if not src:
+            log(f"    no {MONTHS[mo-1].title()} {yr} image posted yet")
+            continue
+        img = f.bytes(src, referer=rink["url"])
+        media = "image/png" if src.lower().endswith(".png") else ("image/webp" if src.lower().endswith(".webp") else "image/jpeg")
+        prompt = (f"This is the {MONTHS[mo-1].title()} {yr} skating schedule for an ice arena, laid out as a calendar grid. "
+                  "List every Stick & Puck session and every Drop-in Hockey session. Ignore public/open skating. "
+                  "Read the day number in each cell carefully. Return ONLY a JSON array of objects: "
+                  '{"day": int, "type": "Stick & Puck" | "Drop-in Hockey", "start": "H:MM AM/PM", "end": "H:MM AM/PM"}')
+        items = None
+        for model in VISION_MODELS:
+            r = f.http.post("https://api.anthropic.com/v1/messages", timeout=90, headers={
+                "x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                json={"model": model, "max_tokens": 2000, "messages": [{"role": "user", "content": [
+                    {"type": "image", "source": {"type": "base64", "media_type": media,
+                                                 "data": base64.b64encode(img).decode()}},
+                    {"type": "text", "text": prompt}]}]})
+            if r.status_code == 200:
+                items = parse_vision_json(r.json()["content"][0]["text"])
+                break
+            log(f"    {model}: HTTP {r.status_code}")
+            if r.status_code not in (400, 404):
+                break
+        if items is None:
+            raise RuntimeError("Claude API call failed")
+        for it in items:
+            try:
+                d = date(yr, mo, int(it["day"]))
+                s, e = local(d, it["start"]), local(d, it["end"])
+            except (KeyError, ValueError, TypeError):
+                continue
+            name = it.get("type") or "Stick & Puck"
+            if win.contains(d) and sane(s, e) and m.ok(name):
+                out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
+                                   rink["url"], "monthly schedule image", rink.get("price")))
+    return out
+
+
+# ─── Source: St Clair Shores monthly PDF ──────────────────────────────────────
+
+TIME_RANGE = re.compile(
+    r"(\d{1,2}:\d{2})\s*([AP])?\.?M?\.?\s*[-–]\s*(\d{1,2}:\d{2})\s*([AP])\.?M?\.?", re.I)
+WEEKDAY_HEADERS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+
+
+def _range_to_times(m: re.Match) -> tuple[str, str]:
+    s, s_ap, e, e_ap = m.group(1), m.group(2), m.group(3), m.group(4).upper()
+    if s_ap:
+        s_ap = s_ap.upper()
+    else:
+        sh, eh = int(s.split(":")[0]) % 12, int(e.split(":")[0]) % 12
+        s_ap = e_ap if sh <= eh else ("A" if e_ap == "P" else "P")   # "11:30-1:00 P" → 11:30 AM
+    return f"{s} {s_ap}M", f"{e} {e_ap}M"
+
+
+def _lines(words: list[dict]) -> list[str]:
+    words = sorted(words, key=lambda w: (round(w["top"]), w["x0"]))
+    lines, cur, top = [], [], None
+    for w in words:
+        if top is None or abs(w["top"] - top) <= 3:
+            cur.append(w)
+            top = w["top"] if top is None else top
         else:
-            lines.append(' '.join(ww['text'] for ww in sorted(current_line, key=lambda x: x['x0'])))
-            current_line = [w]
-    if current_line:
-        lines.append(' '.join(ww['text'] for ww in sorted(current_line, key=lambda x: x['x0'])))
+            lines.append(" ".join(x["text"] for x in sorted(cur, key=lambda x: x["x0"])))
+            cur, top = [w], w["top"]
+    if cur:
+        lines.append(" ".join(x["text"] for x in sorted(cur, key=lambda x: x["x0"])))
     return lines
 
 
-# ─── SportsEngine scraper ────────────────────────────────────────────────────
+def parse_calendar_words(words: list[dict], page_height: float, year: int, month: int,
+                         rink: dict, m: Matcher, win: Window) -> list[Session]:
+    """Generic month-grid parser: weekday headers give columns, day numbers give rows."""
+    full_names = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"]
+    heads = {}
+    for w in sorted(words, key=lambda w: w["top"]):
+        t = w["text"].strip().upper().rstrip(".")
+        for i in range(7):
+            if t in (WEEKDAY_HEADERS[i], full_names[i]):
+                heads.setdefault(i, ((w["x0"] + w["x1"]) / 2, w["top"]))
+    if len(heads) < 6:
+        raise RuntimeError("couldn't find the weekday header row in the PDF")
+    centers = [heads[i][0] if i in heads else None for i in range(7)]
+    header_y = max(v[1] for v in heads.values())
+    bounds = [-1e9] + [(centers[i] + centers[i + 1]) / 2 for i in range(6)] + [1e9]
 
-def scrape_sportngin(driver, dates: list) -> list[dict]:
-    """
-    SportsEngine month list view renders clean plain text.
-    URL: /event/show_month_list/{page_id}
-    Format per event block:
-      May 4
-      STICKS & PUCKS
-      Monday, 12:00pm EDT-12:50pm EDT
-      Tag(s): Sticks & Pucks
-    """
-    from selenium.webdriver.common.by import By
-    HOCKEY_PAT = re.compile(r'sticks?\s*[&and]+\s*pucks?|drop.?in hockey|pickup hockey|adult hockey', re.I)
-    DATE_PAT   = re.compile(r'^([A-Z][a-z]+ \d{1,2})$')
-    TIME_PAT   = re.compile(r'(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s*(\d{1,2}:\d{2}(?:am|pm))\s*EDT[\-–](\d{1,2}:\d{2}(?:am|pm))', re.I)
-    all_sessions = []
+    def col_of(x):
+        return next(i for i in range(7) if bounds[i] <= x < bounds[i + 1])
 
-    processed_months = set()
-    for rink in SPORTNGIN_RINKS:
-        rink_sessions = []
-        for date in dates:
-            mk = (date.year, date.month)
-            if mk in processed_months:
-                continue
-            processed_months.add(mk)
+    import calendar as _cal
+    ndays = _cal.monthrange(year, month)[1]
+    nums = []
+    for w in words:
+        if re.fullmatch(r"\d{1,2}", w["text"].strip()) and w["top"] > header_y + 2:
+            n = int(w["text"])
+            if 1 <= n <= ndays and col_of(w["x0"]) == (date(year, month, n).weekday() + 1) % 7:
+                nums.append((n, w))
+    pos = {}
+    for n, w in nums:                                # keep the top-most match per day number
+        if n not in pos or w["top"] < pos[n]["top"]:
+            pos[n] = w
+    row_tops = sorted({round(w["top"]) for w in pos.values()})
 
-            # Navigate to month list for this month
-            url = rink["month_list_url"]
-            # SportsEngine month list shows current month by default;
-            # for future months append ?month=YYYY-MM
-            if date.year != datetime.now().year or date.month != datetime.now().month:
-                from calendar import monthrange
-                url += f"?month={date.year}-{date.month:02d}-01"
-
-            print(f"  {rink['name']}: fetching {date.year}-{date.month:02d}...", file=sys.stderr)
-            try:
-                driver.get(url)
-                time.sleep(3)
-                body = driver.find_element(By.TAG_NAME, "body").text
-            except Exception as e:
-                print(f"    error: {e}", file=sys.stderr)
-                continue
-
-            # Parse the plain text
-            lines = [l.strip() for l in body.split("\n") if l.strip()]
-            i = 0
-            while i < len(lines):
-                dm = DATE_PAT.match(lines[i])
-                if dm:
-                    # Try to parse the date (e.g. "May 4")
-                    try:
-                        event_date = datetime.strptime(f"{dm.group(1)} {date.year}", "%B %d %Y").date()
-                        # Handle year boundary
-                        if abs((event_date - date).days) > 180:
-                            event_date = datetime.strptime(f"{dm.group(1)} {date.year+1}", "%B %d %Y").date()
-                    except ValueError:
-                        i += 1
-                        continue
-
-                    if event_date not in dates:
-                        i += 1
-                        continue
-
-                    # Look ahead for hockey event name and time
-                    j = i + 1
-                    while j < min(i + 6, len(lines)):
-                        if HOCKEY_PAT.search(lines[j]):
-                            event_name = lines[j].title()
-                            # Look for time on next line
-                            if j + 1 < len(lines):
-                                tm = TIME_PAT.search(lines[j+1])
-                                if tm:
-                                    start_raw = tm.group(1).upper()
-                                    end_raw   = tm.group(2).upper()
-                                    # Normalize: 12:00PM -> 12:00 PM
-                                    start_raw = re.sub(r'(\d)(AM|PM)', r'\1 \2', start_raw)
-                                    end_raw   = re.sub(r'(\d)(AM|PM)', r'\1 \2', end_raw)
-                                    rink_sessions.append({
-                                        "name":      event_name,
-                                        "date":      event_date,
-                                        "start_raw": start_raw,
-                                        "end_raw":   end_raw,
-                                        "location":  None,
-                                        "rink":      rink["name"],
-                                        "dist":      rink["dist"],
-                                        "price":     rink["price"],
-                                        "url":       rink["url"],
-                                        "source":    "SportsEngine",
-                                    })
-                        j += 1
-                i += 1
-
-        if rink_sessions:
-            print(f"    → {len(rink_sessions)} session(s)", file=sys.stderr)
-        all_sessions.extend(rink_sessions)
-
-    return all_sessions
-
-
-# ─── Allen Park scraper (CivicPlus/Revize list view) ─────────────────────────
-
-def scrape_allen_park(driver, dates: list) -> list[dict]:
-    """
-    Allen Park uses a CivicPlus/Revize calendar.
-    URL: calendar.php?view=list&month=M&day=1&year=Y&display=31
-    Returns the full month as plain text with date headers like:
-    "May 4, 2026Monday9:00am - 10:00amClassical Stretching12:30pm - 3:30pmSticks and Pucks"
-    """
-    from selenium.webdriver.common.by import By
-    rink = DIRECT_RINKS[0]
-    sessions = []
-    processed_months = set()
-    HOCKEY_PAT = re.compile(r'sticks? and pucks?|stick.?puck|drop.?in hockey', re.I)
-    TIME_PAT = re.compile(r'(\d{1,2}:\d{2}[ap]m)\s*-\s*(\d{1,2}:\d{2}[ap]m)', re.I)
-
-    for date in dates:
-        month_key = (date.year, date.month)
-        if month_key in processed_months:
+    out = []
+    for n, w in pos.items():
+        d = date(year, month, n)
+        if not win.contains(d):
             continue
-        processed_months.add(month_key)
+        c = col_of(w["x0"])
+        top = w["top"]
+        below = [t for t in row_tops if t > top + 5]
+        bottom = below[0] - 2 if below else page_height
+        cell = [x for x in words if top + 1 < x["top"] < bottom
+                and bounds[c] <= (x["x0"] + x["x1"]) / 2 < bounds[c + 1] and x is not w]
+        lines = _lines(cell)
+        for i, line in enumerate(lines):
+            label = TIME_RANGE.split(line)[0].strip() if TIME_RANGE.search(line) else line
+            if not m.ok(label):
+                continue
+            tm = None
+            for j in range(i, min(i + 3, len(lines))):  # time is on the label line or just below it
+                tm = TIME_RANGE.search(lines[j])
+                if tm:
+                    break
+            if not tm:
+                continue
+            s_txt, e_txt = _range_to_times(tm)
+            s, e = local(d, s_txt), local(d, e_txt)
+            if not sane(s, e):
+                continue
+            name = re.sub(r"\bA\s+DULT\b", "ADULT", label, flags=re.I).title()
+            out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
+                               rink["url"], "monthly PDF calendar", rink.get("price")))
+    return out
 
-        url = f"https://cityofallenpark.org/calendar.php?view=list&month={date.month}&day=1&year={date.year}&display=31"
-        print(f"  Allen Park: fetching {date.year}-{date.month:02d}...", file=sys.stderr)
-        try:
-            driver.get(url)
-            time.sleep(3)
-            text = driver.find_element(By.TAG_NAME, "body").text
-        except Exception as e:
-            print(f"    error: {e}", file=sys.stderr)
+
+def find_month_pdf_links(html: str, base: str) -> dict[tuple[int, int], str]:
+    from bs4 import BeautifulSoup
+    from urllib.parse import urljoin
+    soup = BeautifulSoup(html, "html.parser")
+    found = {}
+    for a in soup.find_all("a", href=True):
+        txt = a.get_text(" ", strip=True).lower()      # includes links hidden in collapsed tabs
+        if "documentcenter" not in a["href"].lower():
             continue
+        mo = next((i + 1 for i, mn in enumerate(MONTHS) if mn in txt), None)
+        yr = re.search(r"20\d\d", txt)
+        if mo and yr and re.search(r"calendar|skate|schedule", txt):
+            found.setdefault((int(yr.group(0)), mo), urljoin(base, a["href"]))
+    return found
 
-        # Parse: text has date headers like "May 4, 2026Monday" then time+name lines
-        # We look for date blocks and extract events within them
-        # Pattern: find "Month D, YYYY" then time-name pairs until next date
-        date_blocks = re.split(r'((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2},\s+20\d{2})', text)
-        current_date_str = None
-        for chunk in date_blocks:
-            # Check if this chunk is a date header
-            dm = re.match(r'(\w+ \d{1,2}, 20\d{2})', chunk)
-            if dm:
-                current_date_str = dm.group(1)
-                continue
-            if not current_date_str:
-                continue
-            # Parse the date
-            try:
-                event_date = datetime.strptime(current_date_str, "%B %d, %Y").date()
-            except ValueError:
+
+def scrape_scs(f: Fetcher, rink, m, win) -> list[Session]:
+    import pdfplumber
+    html = f.html(rink["url"], must_contain="DocumentCenter")
+    links = find_month_pdf_links(html, rink["url"])
+    out = []
+    for (yr, mo) in win.months():
+        url = links.get((yr, mo))
+        if not url:
+            log(f"    no {MONTHS[mo-1].title()} {yr} PDF posted yet")
+            continue
+        pdf_bytes = f.bytes(url, referer=rink["url"])
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            page = pdf.pages[0]
+            words = page.extract_words(x_tolerance=1.5, y_tolerance=3)
+            out += parse_calendar_words(words, page.height, yr, mo, rink, m, win)
+    return out
+
+
+# ─── Source: Allen Park city calendar (browser) ───────────────────────────────
+
+def parse_allen_park(text: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    tp = re.compile(r"(\d{1,2}:\d{2}\s*[ap]m)\s*-\s*(\d{1,2}:\d{2}\s*[ap]m)", re.I)
+    out = []
+    chunks = re.split(r"((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s+20\d{2})", text)
+    cur = None
+    for chunk in chunks:
+        dm = re.fullmatch(r"(\w+)\s+(\d{1,2}),\s+(20\d{2})", chunk.strip())
+        if dm:
+            for fmt in ("%B %d, %Y", "%b %d, %Y"):
                 try:
-                    event_date = datetime.strptime(current_date_str, "%b %d, %Y").date()
+                    cur = datetime.strptime(chunk.strip(), fmt).date()
+                    break
                 except ValueError:
-                    continue
-            if event_date not in dates:
+                    cur = None
+            continue
+        if not cur or not win.contains(cur):
+            continue
+        lines = [l.strip() for l in chunk.split("\n") if l.strip()]
+        for i, line in enumerate(lines):
+            if not m.ok(tp.sub("", line)):
                 continue
-            # Find hockey sessions in this chunk
-            lines = [l.strip() for l in chunk.split("\n") if l.strip()]
-            for i, line in enumerate(lines):
-                if not HOCKEY_PAT.search(line):
-                    continue
-                # Time is usually in the same line or previous line
-                time_str = None
-                for j in range(max(0, i-1), min(i+2, len(lines))):
-                    tm = TIME_PAT.search(lines[j])
-                    if tm:
-                        time_str = lines[j]
-                        start_raw = tm.group(1).upper().replace(" ", "")
-                        end_raw   = tm.group(2).upper().replace(" ", "")
-                        # Normalize: "12:30PM" -> "12:30 PM"
-                        start_raw = re.sub(r'(\d)(AM|PM)', r'\1 \2', start_raw)
-                        end_raw   = re.sub(r'(\d)(AM|PM)', r'\1 \2', end_raw)
-                        break
-                if not time_str:
-                    # Try extracting time from the same line
-                    tm = TIME_PAT.search(line)
-                    if tm:
-                        start_raw = re.sub(r'(\d)(AM|PM)', r'\1 \2', tm.group(1).upper())
-                        end_raw   = re.sub(r'(\d)(AM|PM)', r'\1 \2', tm.group(2).upper())
-                    else:
-                        continue
-                sessions.append({
-                    "name": "Sticks and Pucks",
-                    "date": event_date,
-                    "start_raw": start_raw,
-                    "end_raw":   end_raw,
-                    "location":  None,
-                    "rink":      rink["name"],
-                    "dist":      rink["dist"],
-                    "price":     rink["price"],
-                    "url":       rink["url"],
-                    "source":    "Allen Park calendar",
-                })
-
-    if sessions:
-        print(f"    → {len(sessions)} Allen Park session(s)", file=sys.stderr)
-    return sessions
+            tm = tp.search(line) or (tp.search(lines[i - 1]) if i else None) or \
+                (tp.search(lines[i + 1]) if i + 1 < len(lines) else None)
+            if not tm:
+                continue
+            s, e = local(cur, tm.group(1)), local(cur, tm.group(2))
+            if sane(s, e):
+                out.append(Session(rink["id"], rink["name"], "Sticks and Pucks", s, e, rink["dist_mi"],
+                                   rink["url"], "Allen Park city calendar", rink.get("price")))
+    # one entry per start time
+    uniq = {(x.start): x for x in out}
+    return list(uniq.values())
 
 
-# ─── Eddie Edgar scraper (Drupal FullCalendar list view) ──────────────────────
-
-def scrape_eddie_edgar(driver, dates: list) -> list[dict]:
-    """
-    Eddie Edgar uses a Drupal FullCalendar.
-    Navigate to /schedule, click the List view button, read all events.
-    Sticks & Pucks only appears on Tuesdays: 11:45am–1:15pm, Edgar B arena.
-    """
+def scrape_allen_park(f: Fetcher, rink, m, win) -> list[Session]:
     from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    rink = DIRECT_RINKS[1]
+    out = []
+    for (yr, mo) in win.months():
+        url = f"https://cityofallenpark.org/calendar.php?view=list&month={mo}&day=1&year={yr}&display=31"
+        f.driver.get(url)
+        time.sleep(3)
+        out += parse_allen_park(f.driver.find_element(By.TAG_NAME, "body").text, rink, m, win)
+    return out
 
-    # Only scrape if there are Tuesdays in our date range
-    tuesday_dates = [d for d in dates if d.weekday() == 1]
-    if not tuesday_dates:
-        return []
 
-    print(f"  Eddie Edgar: fetching schedule (Tuesdays: {tuesday_dates})...", file=sys.stderr)
-    sessions = []
-    HOCKEY_PAT = re.compile(r'stick|puck', re.I)
+# ─── Source: Eddie Edgar FullCalendar (browser) ───────────────────────────────
 
+def parse_eddie_edgar(text: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    out, cur = [], None
+    date_pat = re.compile(r"((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+20\d{2})")
+    range_pat = re.compile(r"(\d{1,2}:\d{2}\s*[ap]m)\s*[-–]\s*(\d{1,2}:\d{2}\s*[ap]m)", re.I)
+    inline_pat = re.compile(r"(\d{1,2}:\d{2}\s*[ap]m)\s*\(([^)]+)\)", re.I)
+    for line in (l.strip() for l in text.split("\n") if l.strip()):
+        dm = date_pat.search(line)
+        if dm and not re.search(r"\d{1,2}:\d{2}", line):
+            cur = datetime.strptime(dm.group(1), "%B %d, %Y").date()
+            continue
+        if not cur or not win.contains(cur):
+            continue
+        # e.g. "11:45 am - 01:15 pm\t\t(Sticks and Pucks), Sticks and Pucks"
+        rm, im = range_pat.search(line), inline_pat.search(line)
+        paren = re.search(r"\(([^)]+)\)", line)
+        name = clean(paren.group(1)) if paren else clean(range_pat.sub("", line))
+        if not (rm or im) or not m.ok(name):
+            continue
+        if rm:
+            s, e = local(cur, rm.group(1)), local(cur, rm.group(2))
+        else:                                          # start time only — S&P runs to 1:15
+            s, e = local(cur, im.group(1)), local(cur, "1:15 PM")
+        out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
+                           rink["url"], "Eddie Edgar calendar", rink.get("price")))
+    uniq = {(x.start, x.name): x for x in out if sane(x.start, x.end)}
+    return list(uniq.values())
+
+
+def scrape_eddie_edgar(f: Fetcher, rink, m, win) -> list[Session]:
+    from selenium.webdriver.common.by import By
+    d = f.driver
+    d.get(rink["url"])
+    time.sleep(5)
+    btns = d.find_elements(By.XPATH, "//button[contains(@class,'fc-listMonth') or contains(@class,'list') "
+                                     "or contains(translate(text(),'LIST','list'),'list')]")
+    if btns:
+        btns[0].click()                                # list view (currently a full-year list)
+        time.sleep(3)
+    return parse_eddie_edgar(d.find_element(By.TAG_NAME, "body").text, rink, m, win)
+
+
+# ─── iCal output ──────────────────────────────────────────────────────────────
+
+def _esc(s: str) -> str:
+    return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def _fold(line: str) -> str:
+    """RFC 5545 line folding at 75 octets."""
+    b = line.encode("utf-8")
+    if len(b) <= 75:
+        return line
+    parts, cur = [], b""
+    for ch in line:
+        cb = ch.encode("utf-8")
+        if len(cur) + len(cb) > (75 if not parts else 74):
+            parts.append(cur.decode("utf-8"))
+            cur = b""
+        cur += cb
+    parts.append(cur.decode("utf-8"))
+    return "\r\n ".join(parts)
+
+
+def _utc(dt: datetime) -> str:
+    return dt.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+
+def short_name(rink: str) -> str:
+    return re.split(r"\s[–—-]\s", rink)[-1].strip() if re.search(r"\s[–—-]\s", rink) else rink
+
+
+def to_ical(sessions: list[Session]) -> str:
+    now = datetime.now(timezone.utc)
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Metro Detroit Hockey v3//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+        "X-WR-CALNAME:Metro Detroit Hockey Sessions", "X-WR-TIMEZONE:America/Detroit",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H",
+        f"X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated {now:%Y-%m-%d %H:%M} UTC.",
+    ]
+    for s in sorted(sessions, key=lambda x: (x.start, x.dist, x.rink)):
+        uid = hashlib.md5(f"{s.rink_id}|{s.start.isoformat()}|{s.kind}".encode()).hexdigest() + "@mdh"
+        desc = "\n".join(filter(None, [
+            s.name, "",
+            f"Rink: {s.rink}", f"~{s.dist} mi from Ann Arbor",
+            f"Price: {s.price}" if s.price else None,
+            f"Ice: {s.location}" if s.location else None,
+            s.extra,
+            f"Source: {s.source}", "",
+            f"Info: {s.url}" if s.url else None,
+            "Confirm with the rink — schedules change.",
+        ]))
+        lines += [
+            "BEGIN:VEVENT", f"UID:{uid}", f"DTSTAMP:{_utc(now)}",
+            f"DTSTART:{_utc(s.start)}", f"DTEND:{_utc(s.end)}",
+            f"SUMMARY:{_esc(f'🏒 {s.kind} – {short_name(s.rink)}')}",
+            f"DESCRIPTION:{_esc(desc)}", f"LOCATION:{_esc(s.rink)}",
+        ]
+        if s.url:
+            lines.append(f"URL:{s.url}")
+        lines.append("END:VEVENT")
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(_fold(l) for l in lines) + "\r\n"
+
+
+# ─── Main ─────────────────────────────────────────────────────────────────────
+
+SCRAPERS = {
+    "ice_finder": scrape_ice_finder,
+    "bond": scrape_bond,
+    "daysmart": scrape_daysmart,
+    "ics": scrape_ics,
+    "ezfacility": scrape_ezfacility,
+    "finnly": scrape_finnly,
+    "static_weekly": scrape_static,
+    "jackson_vision": scrape_jackson,
+    "scs_pdf": scrape_scs,
+    "allen_park": scrape_allen_park,
+    "eddie_edgar": scrape_eddie_edgar,
+}
+
+
+def dedupe(sessions: list[Session]) -> list[Session]:
+    best = {}
+    for s in sessions:
+        key = (s.rink_id, s.start, s.kind)
+        if key not in best or len(s.name) > len(best[key].name):
+            best[key] = s
+    return list(best.values())
+
+
+def run(config: dict, win: Window, headless: bool, only: set[str] | None = None):
+    defaults = config["defaults"]
+    f = Fetcher(headless)
+    sessions, status = [], []
     try:
-        driver.get("https://www.eddieedgar.org/schedule")
-        time.sleep(5)
-        # Click List view button
-        list_btns = driver.find_elements(By.XPATH, "//button[contains(@class,'fc-listMonth') or contains(text(),'list') or @data-view='list']")
-        if not list_btns:
-            list_btns = driver.find_elements(By.XPATH, "//*[contains(@class,'fc-button') and contains(translate(text(),'LIST','list'),'list')]")
-        if list_btns:
-            list_btns[0].click()
-            time.sleep(2)
-        text = driver.find_element(By.TAG_NAME, "body").text
-    except Exception as e:
-        print(f"    error: {e}", file=sys.stderr)
-        return []
-
-    # Parse the list view text
-    # Format: "May 2026 ... May 5, 2026 Tuesday ... 11:45 am (Sticks and Pucks) @ Edgar B arena..."
-    lines = [l.strip() for l in text.split("\n") if l.strip()]
-    current_date = None
-    DATE_PAT = re.compile(r'(\w+ \d{1,2}, 20\d{2})')
-    TIME_PAT  = re.compile(r'(\d{1,2}:\d{2}\s*(?:am|pm))\s*[-–]\s*(\d{1,2}:\d{2}\s*(?:am|pm))', re.I)
-    # Also match inline format: "11:45 am (Sticks and Pucks) @ Edgar B arena"
-    INLINE_PAT = re.compile(r'(\d{1,2}:\d{2}\s*(?:am|pm))\s*\(([^)]+)\)', re.I)
-
-    for line in lines:
-        dm = DATE_PAT.search(line)
-        if dm and not re.search(r'\d{1,2}:\d{2}', line):
+        for rink in config["rinks"]:
+            if not rink.get("active", True) or (only and rink["id"] not in only):
+                continue
+            fn = SCRAPERS.get(rink["source"])
+            log(f"── {rink['name']}  [{rink['source']}]")
+            st = {"id": rink["id"], "name": rink["name"], "source": rink["source"], "sessions": 0, "error": None}
             try:
-                current_date = datetime.strptime(dm.group(1), "%B %d, %Y").date()
-            except ValueError:
-                pass
-            continue
-        if current_date not in dates:
-            continue
-        # Match inline event format from Eddie Edgar's list view
-        im = INLINE_PAT.search(line)
-        if im and HOCKEY_PAT.search(im.group(2)):
-            start_t = im.group(1).strip().upper()
-            start_t = re.sub(r'(\d)(AM|PM)', r'\1 \2', start_t)
-            # Eddie Edgar S&P is always 11:45am-1:15pm
-            sessions.append({
-                "name":      "Sticks and Pucks",
-                "date":      current_date,
-                "start_raw": start_t,
-                "end_raw":   "1:15 PM",
-                "location":  "Edgar B arena",
-                "rink":      rink["name"],
-                "dist":      rink["dist"],
-                "price":     rink["price"],
-                "url":       rink["url"],
-                "source":    "Eddie Edgar calendar",
-            })
+                if fn is None:
+                    raise RuntimeError(f"unknown source {rink['source']!r}")
+                got = fn(f, rink, matcher_for(rink, defaults), win)
+                st["sessions"] = len(got)
+                sessions += got
+                log(f"    → {len(got)} session(s)")
+            except Exception as e:
+                st["error"] = f"{e.__class__.__name__}: {e}"[:300]
+                log(f"    ✗ {st['error']}")
+            status.append(st)
+    finally:
+        f.close()
+    return dedupe(sessions), status
 
-    if sessions:
-        print(f"    → {len(sessions)} Eddie Edgar session(s)", file=sys.stderr)
-    return sessions
-
-
-
-# ─── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--days", type=int, default=14)
     p.add_argument("--output", default="hockey_sessions.ics")
+    p.add_argument("--status", default="rink_status.json")
+    p.add_argument("--config", default=str(HERE / "rinks.json"))
     p.add_argument("--headless", default="true")
-    args = p.parse_args()
-    headless = args.headless.lower() != "false"
-    today = datetime.now().date()
-    cutoff = today + timedelta(days=args.days)
+    p.add_argument("--only", default="", help="comma-separated rink ids to run")
+    a = p.parse_args()
 
-    print(f"Metro Detroit Hockey iCal v2 — {args.days} days", file=sys.stderr)
-    print(f"From {today} through {cutoff}\n", file=sys.stderr)
+    today = datetime.now(TZ).date()
+    win = Window(today, today + timedelta(days=a.days - 1))
+    config = json.loads(Path(a.config).read_text())
+    only = {x.strip() for x in a.only.split(",") if x.strip()} or None
 
-    try:
-        driver = make_driver(headless)
-    except Exception as e:
-        print(f"Could not start browser: {e}", file=sys.stderr)
-        print("Run: pip install selenium webdriver-manager", file=sys.stderr)
-        sys.exit(1)
+    log(f"Metro Detroit Hockey v3 — {win.start} through {win.end}\n")
+    sessions, status = run(config, win, a.headless.lower() != "false", only)
 
-    all_sessions = []
-    try:
-        print("── ice-finder.com ──────────────────────────────────────────", file=sys.stderr)
-        all_sessions += scrape_ice_finder_all(driver, args.days, today, cutoff)
+    log(f"\nTotal: {len(sessions)} session(s) from {sum(1 for s in status if s['sessions'])} rink(s)\n")
+    for s in sorted(sessions, key=lambda x: (x.start, x.dist)):
+        t = s.start.astimezone(TZ)
+        log(f"  {t:%a %m/%d %I:%M%p}  ~{s.dist:>2}mi  {s.kind:<12} {s.rink}")
 
-        print("\n── Bond Sports ─────────────────────────────────────────────", file=sys.stderr)
-        all_sessions += scrape_bond_all(driver, args.days, today)
+    log("\nRink health:")
+    for st in status:
+        flag = "✗" if st["error"] else ("·" if st["sessions"] == 0 else "✓")
+        log(f"  {flag} {st['sessions']:>3}  {st['name']}" + (f"  — {st['error']}" if st["error"] else ""))
 
-        date_list = [today + timedelta(days=i) for i in range(args.days)]
+    Path(a.output).write_text(to_ical(sessions), encoding="utf-8")
+    report = {
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "window": [win.start.isoformat(), win.end.isoformat()],
+        "total_sessions": len(sessions),
+        "rinks": status,
+    }
+    Path(a.status).write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    log(f"\n✓ Wrote {a.output} and {a.status}")
 
-        print("\n── DaySmart (Tam-O-Shanter) ─────────────────────────────────", file=sys.stderr)
-        all_sessions += scrape_daysmart(driver, date_list)
-
-        print("\n── Jackson Optimist (vision OCR) ────────────────────────────", file=sys.stderr)
-        all_sessions += scrape_jackson_optimist(driver, date_list)
-
-        print("\n── SportsEngine (Arctic Edge Canton) ────────────────────────", file=sys.stderr)
-        all_sessions += scrape_sportngin(driver, date_list)
-
-        print("\n── St Clair Shores (PDF calendar) ──────────────────────────", file=sys.stderr)
-        all_sessions += scrape_pdf_calendars(driver, date_list)
-
-        print("\n── Direct scrapes (Allen Park, Eddie Edgar) ─────────────────", file=sys.stderr)
-        all_sessions += scrape_allen_park(driver, date_list)
-        all_sessions += scrape_eddie_edgar(driver, date_list)
-    finally:
-        driver.quit()
-
-    print(f"\nTotal: {len(all_sessions)} session(s)\n", file=sys.stderr)
-    for s in sorted(all_sessions, key=lambda x: (x["date"], x["dist"])):
-        print(f"  {s['date']}  {s['start_raw']:>10} – {s['end_raw']:<10}  ~{s['dist']:>2}mi  {s['rink']}", file=sys.stderr)
-
-    Path(args.output).write_text(to_ical(all_sessions), encoding="utf-8")
-    print(f"\n✓ Written to {args.output}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

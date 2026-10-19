@@ -2,7 +2,7 @@ name: Generate hockey iCal feed
 
 on:
   schedule:
-    # Runs at 7:00 AM Eastern every day (11:00 UTC)
+    # 7:00 AM Eastern daylight time (11:00 UTC). GitHub often starts scheduled runs late.
     - cron: '0 11 * * *'
   workflow_dispatch:  # allows manual trigger from GitHub UI
 
@@ -30,16 +30,20 @@ jobs:
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
 
+      - name: Parser tests (offline)
+        continue-on-error: true
+        run: python -m pytest -q
+
       - name: Run scraper
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scraper.py --days 14 --output hockey_sessions.ics --headless true
+        run: python scraper.py --days 14 --output hockey_sessions.ics --status rink_status.json --headless true
 
-      - name: Commit and push ics file
+      - name: Commit and push feed + rink health report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add hockey_sessions.ics
+          git add hockey_sessions.ics rink_status.json
           git diff --staged --quiet || git commit -m "Update hockey_sessions.ics [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git pull --rebase origin main
           git push

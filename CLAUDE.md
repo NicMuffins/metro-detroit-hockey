@@ -1,104 +1,61 @@
 # Metro Detroit Hockey Session Finder
 
 ## What this project does
-Finds stick & puck and drop-in hockey sessions at 17 rinks near Ann Arbor, MI.
-Sorted by distance from Ann Arbor (48108).
+Builds a daily iCal feed of stick & puck and drop-in hockey sessions at 27 rinks within about an hour of Ann Arbor, MI (48108), published at:
+https://nicmuffins.github.io/metro-detroit-hockey/hockey_sessions.ics
 
 ## Folder structure
 - Project files: `~/Desktop/Claude CoWork/Projects/metro-detroit-hockey/`
 - Output files:  `~/Desktop/Claude CoWork/Claude Outputs/metro-detroit-hockey/`
 
-## How to run a session lookup
+## Key files
+- `rinks.json` — THE rink list: one entry per rink (source system + settings), the default include/exclude regexes, and `not_scraping` (rinks checked and skipped, with reasons and dates).
+- `scraper.py` — reads rinks.json, scrapes each rink, writes `hockey_sessions.ics` and `rink_status.json`.
+- `rink_status.json` — per-rink health from the latest run (session count + error). Start here when auditing.
+- `tests/test_parsers.py` — offline parser tests using samples captured from the real sites.
+- `.github/workflows/generate.yml` — daily GitHub Actions run (7am ET; GitHub often starts it late).
+
+## Source types (rinks.json `source`)
+| source | used by | notes |
+|---|---|---|
+| bond | Biggby Ann Arbor/Chelsea/Brighton, Hazel Park | `api.bondsports.co/v4/facilities/{facility_id}/programs-schedule` |
+| daysmart | Taylor (tsx), Trenton, Southgate, Tam-O-Shanter | `api.daysmartrecreation.com/v1/events`, paginated, names from `desc` or `homeTeam` |
+| ics | Royal Oak (Google Cal), Westland (CivicPlus), Canton (SportsEngine tag feed) | any public iCal URL |
+| ice_finder | Novi, Suburban Ice x3, Garden City, Troy, Biggby East Lansing | ~7 days ahead only |
+| ezfacility | Big Boy Arena (Fraser) | POST /Sessions/FilterResults, no login needed |
+| finnly | Hartland Ice House | schedule JSON embedded in the page (`_onlineScheduleList`) |
+| static_weekly | USA Hockey Arena, Wyandotte, Southfield | fixed weekly times; `verify_url`/`verify_text` turns a rink off if its page stops mentioning the session |
+| jackson_vision | Jackson Optimist | monthly JPEG read with the Claude API (needs ANTHROPIC_API_KEY) |
+| scs_pdf | St Clair Shores | monthly PDF grid |
+| allen_park / eddie_edgar | Allen Park, Eddie Edgar (Livonia) | headless Chrome |
+
+## Common tasks
+
+### Show me today's / this week's sessions
 ```bash
 cd ~/Desktop/Claude\ CoWork/Projects/metro-detroit-hockey
-python scraper.py --days 1 --output ~/Desktop/Claude\ CoWork/Claude\ Outputs/metro-detroit-hockey/today.ics
+python scraper.py --days 1 --output ~/Desktop/Claude\ CoWork/Claude\ Outputs/metro-detroit-hockey/today.ics --status /tmp/status.json
+python scraper.py --days 7 --output ~/Desktop/Claude\ CoWork/Claude\ Outputs/metro-detroit-hockey/this_week.ics --status /tmp/status.json
 ```
+Then show the sessions as a table sorted by time.
 
-For a specific date range:
+### Audit the feed
+Read `rink_status.json` from the repo (latest Actions run). Any rink with an `error` needs a look; 0 sessions with no error usually just means nothing is posted.
+
+### Add a rink
+1. Identify its scheduling system (see the source table above).
+2. Add an entry to `rinks.json` (copy a rink with the same source).
+3. `python scraper.py --only <id>` and check the output.
+4. `python -m pytest -q`, then commit and push.
+
+## Install dependencies
 ```bash
-python scraper.py --days 7 --output ~/Desktop/Claude\ CoWork/Claude\ Outputs/metro-detroit-hockey/this_week.ics
+pip install -r requirements.txt
 ```
+Chrome must be installed (only needed for ice-finder fallback, Allen Park and Eddie Edgar).
 
-## Install dependencies (run once before first use)
-```bash
-pip install selenium webdriver-manager requests pdfplumber
-```
-Chrome must be installed on this machine.
-
-## Rinks covered (17 total)
-
-### Bond Sports (browser scrape)
-- Biggby Ice Cube – Ann Arbor (~3 mi, $15)
-- Biggby Ice Cube – Chelsea (~16 mi, $15)
-- Biggby Ice Cube – Brighton (~22 mi, $15)
-
-### ice-finder.com (browser scrape)
-- Novi Ice Arena (~26 mi, $15)
-- Arctic Edge Ice Arena – Canton (~27 mi)
-- Suburban Ice – Farmington Hills (~32 mi, $15)
-- Garden City Civic Arena (~34 mi, $12)
-- Hazel Park Viking Arena (~47 mi)
-- John Lindell – Royal Oak (~54 mi)
-- Buffalo Wild Wings Arena – Troy (~58 mi, $15)
-- Suburban Ice Rochester (~60 mi, $15)
-- Suburban Ice Macomb (~65 mi, $15)
-
-### Direct scrapes
-- Frank J. Lada Civic Arena – Allen Park (~37 mi) — CivicPlus calendar
-- Eddie Edgar Ice Arena – Dearborn (~38 mi) — FullCalendar, Tuesdays only
-- Jackson Optimist Ice Arena – Jackson MI (~38 mi, $10) — vision OCR
-
-### DaySmart API
-- Tam-O-Shanter Ice Rink – Sylvania, OH (~58 mi, $10) — Tuesdays 12–1:50pm
-
-### PDF calendar
-- St Clair Shores Civic Arena (~50 mi, $10) — monthly PDF
-
-## GitHub repo
-https://github.com/NicMuffins/metro-detroit-hockey
-
-The GitHub Actions workflow runs scraper.py daily at 7am ET and publishes
-hockey_sessions.ics to GitHub Pages for Apple Calendar subscription:
-https://nicmuffins.github.io/metro-detroit-hockey/hockey_sessions.ics
-
-## Common CoWork tasks
-
-### Show me today's sessions
-Run the scraper for 1 day, write output to Claude Outputs, then display results
-as a formatted table in a markdown file in Claude Outputs.
-
-### Show me sessions for a specific date
-```bash
-python scraper.py --days 1 --output ~/Desktop/Claude\ CoWork/Claude\ Outputs/metro-detroit-hockey/sessions.ics
-```
-Then parse the .ics file and display as a table sorted by time.
-
-### Add a new rink
-1. Identify the rink's scheduling system (Bond Sports / ice-finder / SportsEngine / DaySmart / CivicPlus)
-2. Add it to the appropriate list in scraper.py
-3. Test with: python scraper.py --days 3
-4. Push the updated scraper.py to GitHub:
-```bash
-cd ~/Desktop/Claude\ CoWork/Projects/metro-detroit-hockey
-git add scraper.py
-git commit -m "Add new rink"
-git push
-```
-
-### Push changes to GitHub
-```bash
-cd ~/Desktop/Claude\ CoWork/Projects/metro-detroit-hockey
-git add -A
-git commit -m "Your message here"
-git push
-```
-
-## Environment variables needed
-- ANTHROPIC_API_KEY — for Jackson Optimist vision OCR (optional, skips gracefully if not set)
-
-## Notes
-- Allen Park ice closes for season after May 9 each year
-- Plymouth Cultural Center closes May 9 each year
-- USA Hockey Arena under renovation as of March 2026
-- GitHub Actions runs automatically at 7am ET daily — no local action needed for iCal feed
-- Big Boy Arena (Fraser) not yet cracked — EZFacility session cookie issue
+## Seasonal notes
+- Southfield's weekly times come from the city's Fall 2026 guide (valid through late Dec 2026). Update from the winter guide in December.
+- Canton isn't posting S&P as of Oct 2026; its feed will fill in automatically.
+- Allen Park and Plymouth Cultural Center ice close in early May; Ann Arbor Vets is closed for the 2026–27 season.
+- Youth-only, private, HS, figure and parent/tot sessions are filtered by the default `exclude` regex in rinks.json.
