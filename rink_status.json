@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-19T22:17:11Z",
+  "generated_at": "2026-10-19T22:19:50Z",
   "window": [
     "2026-10-19",
     "2026-11-01"
   ],
-  "total_sessions": 215,
+  "total_sessions": 221,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -115,7 +115,7 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 0,
+      "sessions": 6,
       "error": null
     },
     {
