@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-19T22:19:50Z",
+  "generated_at": "2026-10-20T15:35:33Z",
   "window": [
-    "2026-10-19",
-    "2026-11-01"
+    "2026-10-20",
+    "2026-11-02"
   ],
-  "total_sessions": 221,
+  "total_sessions": 219,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 27,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 9,
+      "sessions": 8,
       "error": null
     },
     {
@@ -101,7 +101,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 9,
+      "sessions": 8,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 14,
+      "sessions": 13,
       "error": null
     },
     {
@@ -164,7 +164,7 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 26,
+      "sessions": 24,
       "error": null
     },
     {
