@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-20T15:35:33Z",
+  "generated_at": "2026-10-21T15:52:03Z",
   "window": [
-    "2026-10-20",
-    "2026-11-02"
+    "2026-10-21",
+    "2026-11-03"
   ],
-  "total_sessions": 219,
+  "total_sessions": 208,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 14,
+      "sessions": 13,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 27,
+      "sessions": 21,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 8,
+      "sessions": 7,
       "error": null
     },
     {
@@ -101,7 +101,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 8,
+      "sessions": 9,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 11,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
@@ -164,7 +164,7 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 24,
+      "sessions": 22,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 2,
+      "sessions": 3,
       "error": null
     },
     {
