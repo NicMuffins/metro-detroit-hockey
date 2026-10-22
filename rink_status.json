@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-21T15:52:03Z",
+  "generated_at": "2026-10-22T15:49:00Z",
   "window": [
-    "2026-10-21",
-    "2026-11-03"
+    "2026-10-22",
+    "2026-11-04"
   ],
-  "total_sessions": 208,
+  "total_sessions": 206,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 24,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 4,
+      "sessions": 3,
       "error": null
     },
     {
@@ -143,14 +143,14 @@
       "id": "st-clair-shores",
       "name": "St Clair Shores Civic Arena",
       "source": "scs_pdf",
-      "sessions": 3,
+      "sessions": 2,
       "error": null
     },
     {
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 12,
+      "sessions": 11,
       "error": null
     },
     {
@@ -164,7 +164,7 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 22,
+      "sessions": 20,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 3,
+      "sessions": 4,
       "error": null
     },
     {
