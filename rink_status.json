@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-22T15:49:00Z",
+  "generated_at": "2026-10-23T15:39:50Z",
   "window": [
-    "2026-10-22",
-    "2026-11-04"
+    "2026-10-23",
+    "2026-11-05"
   ],
-  "total_sessions": 206,
+  "total_sessions": 205,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 27,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 11,
+      "sessions": 12,
       "error": null
     },
     {
@@ -157,14 +157,14 @@
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 11,
+      "sessions": 12,
       "error": null
     },
     {
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 20,
+      "sessions": 18,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 4,
+      "sessions": 0,
       "error": null
     },
     {
