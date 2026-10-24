@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-23T15:39:50Z",
+  "generated_at": "2026-10-24T14:19:35Z",
   "window": [
-    "2026-10-23",
-    "2026-11-05"
+    "2026-10-24",
+    "2026-11-06"
   ],
-  "total_sessions": 205,
+  "total_sessions": 214,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 27,
+      "sessions": 30,
       "error": null
     },
     {
@@ -94,7 +94,7 @@
       "id": "southgate",
       "name": "Southgate Civic Arena",
       "source": "daysmart",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 11,
+      "sessions": 15,
       "error": null
     },
     {
@@ -164,7 +164,7 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 18,
+      "sessions": 17,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 0,
+      "sessions": 2,
       "error": null
     },
     {
