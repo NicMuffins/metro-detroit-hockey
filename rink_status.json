@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T17:09:48Z",
+  "generated_at": "2026-10-27T16:15:22Z",
   "window": [
-    "2026-10-26",
-    "2026-11-08"
+    "2026-10-27",
+    "2026-11-09"
   ],
-  "total_sessions": 197,
+  "total_sessions": 185,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 19,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 6,
+      "sessions": 11,
       "error": null
     },
     {
@@ -108,14 +108,14 @@
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 6,
-      "error": null
+      "sessions": 0,
+      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 3,
+      "sessions": 2,
       "error": null
     },
     {
@@ -164,35 +164,35 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 13,
+      "sessions": 11,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 3,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 4,
+      "sessions": 2,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 3,
       "error": null
     },
     {
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     }
   ]
