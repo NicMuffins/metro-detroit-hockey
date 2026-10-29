@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-28T17:02:23Z",
+  "generated_at": "2026-10-29T17:20:39Z",
   "window": [
-    "2026-10-28",
-    "2026-11-10"
+    "2026-10-29",
+    "2026-11-11"
   ],
   "total_sessions": 179,
   "rinks": [
@@ -17,7 +17,7 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 19,
+      "sessions": 21,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 18,
+      "sessions": 21,
       "error": null
     },
     {
@@ -80,7 +80,7 @@
       "id": "hartland",
       "name": "Hartland Ice House",
       "source": "finnly",
-      "sessions": 3,
+      "sessions": 4,
       "error": null
     },
     {
@@ -94,7 +94,7 @@
       "id": "southgate",
       "name": "Southgate Civic Arena",
       "source": "daysmart",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -115,14 +115,14 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 2,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 14,
+      "sessions": 13,
       "error": null
     },
     {
@@ -164,28 +164,28 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 8,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 2,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 2,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 2,
+      "sessions": 3,
       "error": null
     },
     {
