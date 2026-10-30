@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-29T17:20:39Z",
+  "generated_at": "2026-10-30T16:58:10Z",
   "window": [
-    "2026-10-29",
-    "2026-11-11"
+    "2026-10-30",
+    "2026-11-12"
   ],
-  "total_sessions": 179,
+  "total_sessions": 176,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 20,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 24,
       "error": null
     },
     {
@@ -73,7 +73,7 @@
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -87,7 +87,7 @@
       "id": "garden-city",
       "name": "Garden City Civic Arena",
       "source": "ice_finder",
-      "sessions": 1,
+      "sessions": 0,
       "error": null
     },
     {
@@ -164,21 +164,21 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 3,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 1,
+      "sessions": 0,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 2,
       "error": null
     },
     {
@@ -192,7 +192,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     }
   ]
