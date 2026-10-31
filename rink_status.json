@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-30T16:58:10Z",
+  "generated_at": "2026-10-31T15:58:39Z",
   "window": [
-    "2026-10-30",
-    "2026-11-12"
+    "2026-10-31",
+    "2026-11-13"
   ],
-  "total_sessions": 176,
+  "total_sessions": 183,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 20,
+      "sessions": 19,
       "error": null
     },
     {
@@ -31,14 +31,14 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 18,
       "error": null
     },
     {
       "id": "novi",
       "name": "Novi Ice Arena",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
@@ -73,7 +73,7 @@
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
@@ -101,22 +101,22 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 0,
-      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
+      "sessions": 6,
+      "error": null
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 1,
-      "error": null
+      "sessions": 0,
+      "error": "RuntimeError: no usable sessions from schedule image(s); found images for [(2026, 10)]; model returned [{\"day\": 2, \"type\": \"Stick & Puck\", \"start\": \"4:30 PM\", \"end\": \"5:50 PM\"}, {\"day\": 5, \"type\": \"Stick & Puck\", \"start\": \"3:30 PM\", \"end\": \"4:50 PM\"}, {\"day\": 6, \"type\": \"Stick & Puck\", \"start\": \"3:3"
     },
     {
       "id": "trenton",
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 13,
+      "sessions": 11,
       "error": null
     },
     {
@@ -164,35 +164,35 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 3,
+      "sessions": 2,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 0,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 2,
+      "sessions": 7,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 3,
+      "sessions": 4,
       "error": null
     },
     {
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 5,
       "error": null
     }
   ]
