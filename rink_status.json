@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-31T15:58:39Z",
+  "generated_at": "2026-11-01T17:01:45Z",
   "window": [
-    "2026-10-31",
-    "2026-11-13"
+    "2026-11-01",
+    "2026-11-14"
   ],
-  "total_sessions": 183,
+  "total_sessions": 172,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 9,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 19,
+      "sessions": 17,
       "error": null
     },
     {
@@ -31,14 +31,14 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 18,
+      "sessions": 16,
       "error": null
     },
     {
       "id": "novi",
       "name": "Novi Ice Arena",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 7,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 11,
+      "sessions": 12,
       "error": null
     },
     {
@@ -87,7 +87,7 @@
       "id": "garden-city",
       "name": "Garden City Civic Arena",
       "source": "ice_finder",
-      "sessions": 0,
+      "sessions": 3,
       "error": null
     },
     {
@@ -108,15 +108,15 @@
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 6,
-      "error": null
+      "sessions": 0,
+      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
       "sessions": 0,
-      "error": "RuntimeError: no usable sessions from schedule image(s); found images for [(2026, 10)]; model returned [{\"day\": 2, \"type\": \"Stick & Puck\", \"start\": \"4:30 PM\", \"end\": \"5:50 PM\"}, {\"day\": 5, \"type\": \"Stick & Puck\", \"start\": \"3:30 PM\", \"end\": \"4:50 PM\"}, {\"day\": 6, \"type\": \"Stick & Puck\", \"start\": \"3:3"
+      "error": "RuntimeError: no usable sessions from schedule image(s); found images for [(2026, 10)]; model returned []"
     },
     {
       "id": "trenton",
@@ -150,21 +150,21 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "ice_finder",
-      "sessions": 2,
+      "sessions": 7,
       "error": null
     },
     {
@@ -178,14 +178,14 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 7,
+      "sessions": 2,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 3,
       "error": null
     },
     {
