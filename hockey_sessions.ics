@@ -7,180 +7,11 @@ X-WR-CALNAME:Metro Detroit Hockey Sessions
 X-WR-TIMEZONE:America/Detroit
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
-X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-11-02 2
- 0:39 UTC.
-BEGIN:VEVENT
-UID:0486d5fb57ad66d375aa5d3c21e50368@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T140000Z
-DTEND:20261102T153000Z
-SUMMARY:🏒 Drop-In – Trenton
-DESCRIPTION:Adult Drop-In\nRink: Kennedy Recreation Center – Trenton\n~38
-  mi from Ann Arbor\nSource: DaySmart\nInfo: https://apps.daysmartrecreatio
- n.com/dash/x/#/online/trenton/event-registration\nConfirm with the rink 
- — schedules change.
-LOCATION:Kennedy Recreation Center – Trenton
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
- tration
-END:VEVENT
-BEGIN:VEVENT
-UID:fa3685b5475d451adf24e2f7beafaf50@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T143000Z
-DTEND:20261102T155000Z
-SUMMARY:🏒 Stick & Puck – Royal Oak
-DESCRIPTION:Sticks & Pucks\nRink: John Lindell Ice Arena – Royal Oak\n~54
-  mi from Ann Arbor\nPrice: S&P $20 · Drop-in $15\nSource: iCal\nInfo: htt
- ps://www.royaloakicearena.com/public-skating\nConfirm with the rink — sc
- hedules change.
-LOCATION:John Lindell Ice Arena – Royal Oak
-URL:https://www.royaloakicearena.com/public-skating
-END:VEVENT
-BEGIN:VEVENT
-UID:a604a10ebac03aa052125d4d86ae150b@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T150000Z
-DTEND:20261102T162000Z
-SUMMARY:🏒 Stick & Puck – Chelsea
-DESCRIPTION:Sticks and Pucks\nRink: Biggby Ice Cube – Chelsea\n~16 mi fro
- m Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https
- ://bondsports.co/org/474/529/schedule\nConfirm with the rink — schedules
-  change.
-LOCATION:Biggby Ice Cube – Chelsea
-URL:https://bondsports.co/org/474/529/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:dda58f4946a58c7253ec2d9ab5918f74@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T150000Z
-DTEND:20261102T165000Z
-SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
-DESCRIPTION:Stick & Puck\nRink: Taylor Sportsplex\n~30 mi from Ann Arbor\nS
- ource: DaySmart\nInfo: https://www.cityoftaylor.com/1472/Stick-Puck\nConfi
- rm with the rink — schedules change.
-LOCATION:Taylor Sportsplex
-URL:https://www.cityoftaylor.com/1472/Stick-Puck
-END:VEVENT
-BEGIN:VEVENT
-UID:268f868155c9f60b85c19efb31aa7078@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T150000Z
-DTEND:20261102T163000Z
-SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
-DESCRIPTION:Stick & Puck\nRink: Hazel Park Ice Arena\n~47 mi from Ann Arbor
- \nIce: Hazel Park Ice Arena Pro\nSource: Bond Sports\nInfo: https://www.ha
- zelparkicearena.com/programs/stick-and-puck\nConfirm with the rink — sch
- edules change.
-LOCATION:Hazel Park Ice Arena
-URL:https://www.hazelparkicearena.com/programs/stick-and-puck
-END:VEVENT
-BEGIN:VEVENT
-UID:b042eef7b7a9291bd00f8420bb9080c1@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T153000Z
-DTEND:20261102T165000Z
-SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
-DESCRIPTION:Sticks & Pucks\nRink: Southfield Sports Arena\n~40 mi from Ann 
- Arbor\nPrice: $8\nRegular weekly time from the rink's website — holidays
- /cancellations not reflected.\nSource: rink website (weekly schedule)\nInf
- o: https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
- 3.pdf\nConfirm with the rink — schedules change.
-LOCATION:Southfield Sports Arena
-URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
- 3.pdf
-END:VEVENT
-BEGIN:VEVENT
-UID:b4f5857f6395935d866cc8675a74df78@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T170000Z
-DTEND:20261102T182000Z
-SUMMARY:🏒 Stick & Puck – Ann Arbor
-DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 m
- i from Ann Arbor\nPrice: $10\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSo
- urce: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfi
- rm with the rink — schedules change.
-LOCATION:Biggby Ice Cube – Ann Arbor
-URL:https://bondsports.co/org/246/262/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:ba90ac09d5aecb4d09be2c61c90a2c1f@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T170000Z
-DTEND:20261102T182000Z
-SUMMARY:🏒 Stick & Puck – Chelsea
-DESCRIPTION:Sticks and Pucks\nRink: Biggby Ice Cube – Chelsea\n~16 mi fro
- m Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https
- ://bondsports.co/org/474/529/schedule\nConfirm with the rink — schedules
-  change.
-LOCATION:Biggby Ice Cube – Chelsea
-URL:https://bondsports.co/org/474/529/schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:c639c606dd497a28a9cb531251d86b8c@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T170000Z
-DTEND:20261102T185000Z
-SUMMARY:🏒 Drop-In – Sylvania\, OH
-DESCRIPTION:Adult Drop In Hockey\nRink: Tam-O-Shanter Ice Rink – Sylvania
- \, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://
- apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
- \nConfirm with the rink — schedules change.
-LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
-URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
- egistration
-END:VEVENT
-BEGIN:VEVENT
-UID:5a2ea86fc5c8ace7b50c1b8e5a679243@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T173000Z
-DTEND:20261102T185000Z
-SUMMARY:🏒 Stick & Puck – Hartland Ice House
-DESCRIPTION:Sticks & Pucks\nRink: Hartland Ice House\n~33 mi from Ann Arbor
- \nIce: Pond\nSource: FinnlyConnect\nInfo: https://www.hartlandicehouse.com
- /\nConfirm with the rink — schedules change.
-LOCATION:Hartland Ice House
-URL:https://www.hartlandicehouse.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:f46fb75ae1e89e9ba9ec73a6e6b3d28f@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261102T223000Z
-DTEND:20261102T232000Z
-SUMMARY:🏒 Stick & Puck – Westland
-DESCRIPTION:Sticks and Pucks\nRink: Mike Modano Ice Arena – Westland\n~27
-  mi from Ann Arbor\nPrice: $10\nIce: Mike Modano Ice Arena - 6210 Wildwood
-  Westland MI 48185\nSource: iCal\nInfo: https://cityofwestland.com/590/Mik
- e-Modano-Ice-Arena\nConfirm with the rink — schedules change.
-LOCATION:Mike Modano Ice Arena – Westland
-URL:https://cityofwestland.com/590/Mike-Modano-Ice-Arena
-END:VEVENT
-BEGIN:VEVENT
-UID:7ec2535348fc54a183cf3a46aabe84db@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T021000Z
-DTEND:20261103T034000Z
-SUMMARY:🏒 Stick & Puck – Fraser
-DESCRIPTION:Stick & Puck\nRink: Big Boy Arena – Fraser\n~60 mi from Ann A
- rbor\nPrice: $20\nIce: Rink 4\nSource: EZFacility\nInfo: https://bigboyare
- na.ezfacility.com/Sessions\nConfirm with the rink — schedules change.
-LOCATION:Big Boy Arena – Fraser
-URL:https://bigboyarena.ezfacility.com/Sessions
-END:VEVENT
-BEGIN:VEVENT
-UID:163113893be91afc0fcdf37f185a560f@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T113000Z
-DTEND:20261103T125000Z
-SUMMARY:🏒 Drop-In – Suburban Ice Rochester
-DESCRIPTION:Pickup Hockey\nRink: Suburban Ice Rochester\n~60 mi from Ann Ar
- bor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanicer
- ochester.com/public-skating\nConfirm with the rink — schedules change.
-LOCATION:Suburban Ice Rochester
-URL:https://www.suburbanicerochester.com/public-skating
-END:VEVENT
+X-WR-CALDESC:Stick & Puck / Drop-In near Ann Arbor MI. Updated 2026-11-03 1
+ 8:15 UTC.
 BEGIN:VEVENT
 UID:6f2b4b0fc346718f2849b6fb6e12a04c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T143000Z
 DTEND:20261103T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -193,7 +24,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:148f3d17379e32f1fdd62e1f57b3922c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T150000Z
 DTEND:20261103T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -206,7 +37,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:4bcc6a47f005c793a6034c85885b0180@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T150000Z
 DTEND:20261103T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -218,7 +49,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:7e727119bd3e2c141087282fe23db9e1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T150000Z
 DTEND:20261103T163000Z
 SUMMARY:🏒 Stick & Puck – Trenton
@@ -231,33 +62,8 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
  tration
 END:VEVENT
 BEGIN:VEVENT
-UID:20aa302711c3d57bfc61d81fcf1760b9@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T153000Z
-DTEND:20261103T165000Z
-SUMMARY:🏒 Stick & Puck – Novi Ice Arena
-DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPr
- ice: $15.00\nSource: ice-finder.com\nInfo: https://www.noviicearena.com/pu
- blic-schedule\nConfirm with the rink — schedules change.
-LOCATION:Novi Ice Arena
-URL:https://www.noviicearena.com/public-schedule
-END:VEVENT
-BEGIN:VEVENT
-UID:76d87745bfc3eaa2945ef58667c083a0@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T160000Z
-DTEND:20261103T173000Z
-SUMMARY:🏒 Stick & Puck – Farmington Hills
-DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi
-  from Ann Arbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.
- suburbanicefarmingtonhills.com/public-skating\nConfirm with the rink — s
- chedules change.
-LOCATION:Suburban Ice – Farmington Hills
-URL:https://www.suburbanicefarmingtonhills.com/public-skating
-END:VEVENT
-BEGIN:VEVENT
 UID:cc010fb8aa01b5056b45f22832044a04@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T163000Z
 DTEND:20261103T175000Z
 SUMMARY:🏒 Drop-In – Hazel Park Ice Arena
@@ -269,20 +75,8 @@ LOCATION:Hazel Park Ice Arena
 URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
-UID:7eb78e4afdec10bc67474c5cf50e7a26@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T163000Z
-DTEND:20261103T175000Z
-SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
-DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann A
- rbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanice
- rochester.com/public-skating\nConfirm with the rink — schedules change.
-LOCATION:Suburban Ice Rochester
-URL:https://www.suburbanicerochester.com/public-skating
-END:VEVENT
-BEGIN:VEVENT
 UID:9dc097ad6ff706e0fa14654a0e558b96@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T164500Z
 DTEND:20261103T181500Z
 SUMMARY:🏒 Stick & Puck – Livonia
@@ -294,7 +88,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f4a6c369ee54af819281ec2c4871be6f@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T170000Z
 DTEND:20261103T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -307,33 +101,8 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
  egistration
 END:VEVENT
 BEGIN:VEVENT
-UID:0696aafe545fbcaa4cff5dc280cc1dd2@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T170000Z
-DTEND:20261103T182000Z
-SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
-DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbo
- r\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanicemac
- omb.com/public-skating\nConfirm with the rink — schedules change.
-LOCATION:Suburban Ice Macomb
-URL:https://www.suburbanicemacomb.com/public-skating
-END:VEVENT
-BEGIN:VEVENT
-UID:51dca10245f9eb27eae405b8b6f0d824@mdh
-DTSTAMP:20261102T203938Z
-DTSTART:20261103T171500Z
-DTEND:20261103T184500Z
-SUMMARY:🏒 Drop-In – Troy
-DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi 
- from Ann Arbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.t
- roysports.com/page/show/438622-adult-drop-in\nConfirm with the rink — sc
- hedules change.
-LOCATION:Buffalo Wild Wings Arena – Troy
-URL:https://www.troysports.com/page/show/438622-adult-drop-in
-END:VEVENT
-BEGIN:VEVENT
 UID:c6f22fc6baf8f277f924f0ca845fc039@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T183000Z
 DTEND:20261103T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -345,8 +114,20 @@ LOCATION:Frank J. Lada Civic Arena – Allen Park
 URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
+UID:497c2e9b55b20fa7174d979aba5debdf@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261103T183000Z
+DTEND:20261103T195000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbo
+ r\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanicemac
+ omb.com/public-skating\nConfirm with the rink — schedules change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
 UID:94e885deb69b14459f85f6ea26364f43@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261103T193000Z
 DTEND:20261103T210000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -358,8 +139,20 @@ LOCATION:Suburban Ice – Farmington Hills
 URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
+UID:4d27eea5bbac05bca2ba18fbcbd7d10f@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261103T200000Z
+DTEND:20261103T213000Z
+SUMMARY:🏒 Stick & Puck – Fraser
+DESCRIPTION:Stick & Puck\nRink: Big Boy Arena – Fraser\n~60 mi from Ann A
+ rbor\nPrice: $20\nIce: Rink 4\nSource: EZFacility\nInfo: https://bigboyare
+ na.ezfacility.com/Sessions\nConfirm with the rink — schedules change.
+LOCATION:Big Boy Arena – Fraser
+URL:https://bigboyarena.ezfacility.com/Sessions
+END:VEVENT
+BEGIN:VEVENT
 UID:3eeb35957313a4ba6e4125374e0460ec@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T031000Z
 DTEND:20261104T043000Z
 SUMMARY:🏒 Drop-In – Plymouth
@@ -374,7 +167,7 @@ URL:https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-us
 END:VEVENT
 BEGIN:VEVENT
 UID:4fea56a9aa5a0f3f43e7323fbc255775@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T110000Z
 DTEND:20261104T123000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -387,7 +180,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:0f356e6770360e376ab7355590ccfa8b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T140000Z
 DTEND:20261104T153000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -401,7 +194,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:d3b1190a7333483ab8a3351846b45f88@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T143000Z
 DTEND:20261104T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -414,7 +207,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:f83446bd1d773c2b5ce97d6e749876a2@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T150000Z
 DTEND:20261104T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -427,7 +220,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:22739261e78e385be00048950a9e7f88@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T150000Z
 DTEND:20261104T162000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -440,7 +233,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a05a5d8d30cc01ab676b6999894d3b62@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T150000Z
 DTEND:20261104T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -452,7 +245,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:9734492b5780ecfc94718b722a68bbce@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T150000Z
 DTEND:20261104T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -465,7 +258,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:c2489f85c40f484d1da5539480f8cf9d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T153000Z
 DTEND:20261104T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -477,7 +270,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c3c94fbb70466b0417e1989b94a76fb9@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T153000Z
 DTEND:20261104T165000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -492,7 +285,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:004f4cde424a2069f7e74dd169fb5506@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T160000Z
 DTEND:20261104T175000Z
 SUMMARY:🏒 Drop-In – Garden City Civic Arena
@@ -504,7 +297,7 @@ URL:https://www.gardencitymi.org/951/Sticks-and-Pucks
 END:VEVENT
 BEGIN:VEVENT
 UID:becd8881bcabe5d44b88d4bd051d9d3b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T163000Z
 DTEND:20261104T180000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -517,7 +310,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:69adfa8447259b0df01e185097685aab@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T163000Z
 DTEND:20261104T175000Z
 SUMMARY:🏒 Drop-In – Hazel Park Ice Arena
@@ -530,7 +323,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:2c88e27ed3b9da9a3de93260eb9c8492@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T163000Z
 DTEND:20261104T175000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -542,7 +335,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:741131bc3262dd783b3b65a533588abb@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -555,7 +348,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:cc1393e5b5f34d9fa35e30fb8f6382a6@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T182000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -568,7 +361,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9b434a7ecee3eef99461b86398c2337c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T182000Z
 SUMMARY:🏒 Stick & Puck – Southgate Civic Arena
@@ -580,7 +373,7 @@ URL:https://www.southgatemi.gov/departments/parks_recreation/index.php
 END:VEVENT
 BEGIN:VEVENT
 UID:efe06792d8ff020d0a84ba18a5236fb4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T183000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -593,7 +386,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:b64499edaa90b66da9f89a2d606cc498@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -607,7 +400,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:2c4d1880494cbaf15eac632e3ae78fcc@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T170000Z
 DTEND:20261104T182000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -619,7 +412,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:fc6d93a79cf7a559f2c7262df38a8db7@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T172000Z
 DTEND:20261104T184000Z
 SUMMARY:🏒 Stick & Puck – East Lansing
@@ -633,7 +426,7 @@ URL:https://ice-finder.com/rinks/michigan/rink/biggby-coffee-ice-cube-east-
 END:VEVENT
 BEGIN:VEVENT
 UID:59230c422fc973f2c6f334b06e5ab3fd@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T173000Z
 DTEND:20261104T185000Z
 SUMMARY:🏒 Stick & Puck – Hartland Ice House
@@ -645,7 +438,7 @@ URL:https://www.hartlandicehouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:10414a0edebf839544692667a2052f0e@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261104T173000Z
 DTEND:20261104T213000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -658,7 +451,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:11874d146ed478a2ed53ee9111c752b6@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T140000Z
 DTEND:20261105T153000Z
 SUMMARY:🏒 Stick & Puck – Trenton
@@ -672,7 +465,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:0e5a40a431db77ed42182bb5f909fc08@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T143000Z
 DTEND:20261105T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -685,7 +478,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:31888f4e58c4d9a56110684d1bec2623@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T150000Z
 DTEND:20261105T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -698,7 +491,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:1da99d5b2929a874f2d74f85e311b2ce@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T150000Z
 DTEND:20261105T162000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -711,7 +504,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3644c0f95bf23b289bd2853a0f1e0711@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T150000Z
 DTEND:20261105T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -723,7 +516,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:dc9368b3478da97a8ed76e5a14f67da9@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T150000Z
 DTEND:20261105T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -736,7 +529,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:30dcc6ba70e7ec1b2fa42f0f5336c7a3@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T153000Z
 DTEND:20261105T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -748,7 +541,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:f648b071d53fa18e33c4e41e9fc22c93@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T153000Z
 DTEND:20261105T170000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -762,7 +555,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:cfd9255291ba847d1252207ae1da1a45@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T163000Z
 DTEND:20261105T175000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -774,7 +567,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:15d2ce0af8a1f9fdf9cc233737998688@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -787,7 +580,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8db446297df0d0a94051c98a6e3f2d28@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T182000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -800,7 +593,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:2230d1ae592f02b3c2b3c5c5cb53d470@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T183000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -813,7 +606,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:2ebebc1e917ce3941fa3c83855e3060f@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T183000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -826,7 +619,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:c0dacef541a4d6cfc8e8930030936c55@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -840,7 +633,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:7959707df23038c847d08ae40ec9386d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T182000Z
 SUMMARY:🏒 Stick & Puck – East Lansing
@@ -854,7 +647,7 @@ URL:https://ice-finder.com/rinks/michigan/rink/biggby-coffee-ice-cube-east-
 END:VEVENT
 BEGIN:VEVENT
 UID:e5964b111c4fe20e4ae5dadd09972330@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T170000Z
 DTEND:20261105T182000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -866,7 +659,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:d409de3f93db66ef8f72a2e5fd8a9dce@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261105T173000Z
 DTEND:20261105T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -879,7 +672,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:881ec1f6c1ffd587fa93595ad1d51a09@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T013000Z
 DTEND:20261106T025000Z
 SUMMARY:🏒 Drop-In – Southgate Civic Arena
@@ -891,7 +684,7 @@ URL:https://www.southgatemi.gov/departments/parks_recreation/index.php
 END:VEVENT
 BEGIN:VEVENT
 UID:ca19324803bd12e7293ca60a17a2deb6@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T031000Z
 DTEND:20261106T043000Z
 SUMMARY:🏒 Drop-In – Plymouth
@@ -906,7 +699,7 @@ URL:https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-us
 END:VEVENT
 BEGIN:VEVENT
 UID:ee0d943b3fd680f149ac3e1304fd7a43@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T110000Z
 DTEND:20261106T123000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -919,7 +712,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:a32c4249ce44f4ab15e0b58afb7d4b73@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T140000Z
 DTEND:20261106T153000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -933,7 +726,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:f398356164d628af3d5a426a56dabc02@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T150000Z
 DTEND:20261106T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -946,7 +739,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a40b8d0fbce0fcee2e1f54b1c75b71a4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T150000Z
 DTEND:20261106T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -958,7 +751,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:ccbac6d73c0de56249ac1699ff1d2846@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T150000Z
 DTEND:20261106T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -971,7 +764,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:8a5a6918b2b9e3b49b31adaf1616d4d5@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T150000Z
 DTEND:20261106T162000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -984,7 +777,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:0586ad9c90ee43d9b63354293861b6fc@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T153000Z
 DTEND:20261106T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -996,7 +789,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:fd43e8f1af647ddacd11bcb45237ebd4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T153000Z
 DTEND:20261106T165000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -1011,7 +804,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:bb08df272d63ede37f38b63e0d3c9bd4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T160000Z
 DTEND:20261106T175000Z
 SUMMARY:🏒 Drop-In – Garden City Civic Arena
@@ -1023,7 +816,7 @@ URL:https://www.gardencitymi.org/951/Sticks-and-Pucks
 END:VEVENT
 BEGIN:VEVENT
 UID:da7338511ead529120ad59808c69f677@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T163000Z
 DTEND:20261106T175000Z
 SUMMARY:🏒 Drop-In – Royal Oak
@@ -1036,7 +829,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:794bc47e41c4d3fa764df9e15b0ba170@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T163000Z
 DTEND:20261106T175000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -1048,7 +841,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:537b3d4a802c5a0f885607e777e56923@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -1061,7 +854,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:3311f19ff810ba6a19abbf5e50377f59@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T183000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -1074,7 +867,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:ee127e4bcab15d5fb6c10e0b7f668661@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T182000Z
 SUMMARY:🏒 Drop-In – Southgate Civic Arena
@@ -1086,7 +879,7 @@ URL:https://www.southgatemi.gov/departments/parks_recreation/index.php
 END:VEVENT
 BEGIN:VEVENT
 UID:8c7b6f85685332160432267959faaf8c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T183000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -1099,7 +892,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:a57220d2746e5a22fc7d8320a9d0eda0@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -1113,7 +906,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:c409f19c3d642801a9c385b435a66c8f@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T170000Z
 DTEND:20261106T182000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -1125,7 +918,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:22ff006a803acd6933bb8cdfac9fde69@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261106T183000Z
 DTEND:20261106T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -1138,7 +931,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:c9770d5344c92deb651b2ed47c977d61@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261107T124500Z
 DTEND:20261107T140500Z
 SUMMARY:🏒 Drop-In – Ann Arbor
@@ -1151,7 +944,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:065f2bad4d85a43976b2da49f8490090@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261107T153000Z
 DTEND:20261107T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -1162,8 +955,22 @@ LOCATION:Novi Ice Arena
 URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:d00592bf1285215d49b8c7eaa853ccbd@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261107T200000Z
+DTEND:20261107T212000Z
+SUMMARY:🏒 Stick & Puck – East Lansing
+DESCRIPTION:Stick And Puck\nRink: Biggby Ice Cube – East Lansing\n~62 mi 
+ from Ann Arbor\nPrice: $10.00\nSource: ice-finder.com\nInfo: https://ice-f
+ inder.com/rinks/michigan/rink/biggby-coffee-ice-cube-east-lansing\nConfirm
+  with the rink — schedules change.
+LOCATION:Biggby Ice Cube – East Lansing
+URL:https://ice-finder.com/rinks/michigan/rink/biggby-coffee-ice-cube-east-
+ lansing
+END:VEVENT
+BEGIN:VEVENT
 UID:f72e788809e5df255fc7f08f26e0f7ec@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261107T201500Z
 DTEND:20261107T210500Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1176,7 +983,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e443ce8cff1c2d10d2f6109640fd5e53@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261107T220000Z
 DTEND:20261108T000000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -1189,7 +996,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:4887028ead2e881af08c8b3f83a82301@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T000000Z
 DTEND:20261108T012000Z
 SUMMARY:🏒 Drop-In – Taylor Sportsplex
@@ -1201,7 +1008,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:6647dd54742476ba0523cf667fea637d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T140000Z
 DTEND:20261108T153000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -1215,7 +1022,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:bcde5d05e2093b4a09b878e1b5ce73be@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T153000Z
 DTEND:20261108T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -1227,7 +1034,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:c7281c453e0dcd8cfcbae6ba3efb7f40@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T170000Z
 DTEND:20261108T182000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -1242,7 +1049,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:5182ff50d87768d55bffd519bc7193e1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T201500Z
 DTEND:20261108T213500Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -1254,7 +1061,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:3e2bc4873de069625757b6ff1003a222@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261108T203000Z
 DTEND:20261108T215000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -1266,7 +1073,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:63b7589f11998014b6f8ddc0316956ab@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T140000Z
 DTEND:20261109T152000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1279,7 +1086,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e1b0893bc4115b894017d2bf1739fbc4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T140000Z
 DTEND:20261109T153000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -1293,7 +1100,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:33a16a33248169deb56bca52e7f15f94@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T143000Z
 DTEND:20261109T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -1306,7 +1113,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:3969ab5bbc1c91f39683b33ed81b99eb@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T150000Z
 DTEND:20261109T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1319,7 +1126,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:06d9479e4ac0d1d1e08dc7f80abc869c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T150000Z
 DTEND:20261109T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -1331,7 +1138,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:15273737c8e137426a5e3cac1b3a7c3c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T150000Z
 DTEND:20261109T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -1344,7 +1151,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:664c7e0a964fb0a8db59fafdbd2e7a8d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T153000Z
 DTEND:20261109T165000Z
 SUMMARY:🏒 Stick & Puck – Novi Ice Arena
@@ -1356,7 +1163,7 @@ URL:https://www.noviicearena.com/public-schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:bbd4db3a4c62229f907e23a3f1a5f60b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T153000Z
 DTEND:20261109T165000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -1371,7 +1178,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:cfe4a23247fc919b710c2e4e312ce3aa@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T160000Z
 DTEND:20261109T172000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1384,7 +1191,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e5d6670b918c85037960745ce094944e@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T160000Z
 DTEND:20261109T175000Z
 SUMMARY:🏒 Drop-In – Garden City Civic Arena
@@ -1396,7 +1203,7 @@ URL:https://www.gardencitymi.org/951/Sticks-and-Pucks
 END:VEVENT
 BEGIN:VEVENT
 UID:614f977bdfe5ce59a8e781f1aed8234f@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T163000Z
 DTEND:20261109T175000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
@@ -1408,7 +1215,7 @@ URL:https://www.suburbanicerochester.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:9759b10bb4600795c065f063cafe1355@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -1421,7 +1228,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:cbd7801242e49c97afe6ae4a49b76e75@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T182000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1434,7 +1241,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9baa6f281b20b71851a98b05d2ab220b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T183000Z
 SUMMARY:🏒 Stick & Puck – Farmington Hills
@@ -1447,7 +1254,7 @@ URL:https://www.suburbanicefarmingtonhills.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:407a6588979b05400bc5ac878093cf92@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T183000Z
 SUMMARY:🏒 Drop-In – Troy
@@ -1460,7 +1267,7 @@ URL:https://www.troysports.com/page/show/438622-adult-drop-in
 END:VEVENT
 BEGIN:VEVENT
 UID:6d772b3c716d5b031adc6cd8f5a0e108@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -1474,7 +1281,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:b1a1184a5483104ebd52463ce2a08d56@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T182000Z
 SUMMARY:🏒 Stick & Puck – East Lansing
@@ -1488,7 +1295,7 @@ URL:https://ice-finder.com/rinks/michigan/rink/biggby-coffee-ice-cube-east-
 END:VEVENT
 BEGIN:VEVENT
 UID:684e34ac1979ab52200681c9a5534a51@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T170000Z
 DTEND:20261109T182000Z
 SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
@@ -1500,7 +1307,7 @@ URL:https://www.suburbanicemacomb.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:003af05954d59533fd563106db262fe1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T173000Z
 DTEND:20261109T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -1513,7 +1320,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:c81edd140a8d5d392b84be485924a6d1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T175500Z
 DTEND:20261109T191500Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1526,7 +1333,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:7ac402b4e3e4012d53ee0216d380e94e@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T181500Z
 DTEND:20261109T193500Z
 SUMMARY:🏒 Stick & Puck – Hartland Ice House
@@ -1538,7 +1345,7 @@ URL:https://www.hartlandicehouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bc38874a25c6d412e653dfbf79242ffa@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261109T223000Z
 DTEND:20261109T232000Z
 SUMMARY:🏒 Stick & Puck – Westland
@@ -1550,8 +1357,20 @@ LOCATION:Mike Modano Ice Arena – Westland
 URL:https://cityofwestland.com/590/Mike-Modano-Ice-Arena
 END:VEVENT
 BEGIN:VEVENT
+UID:2f5b84bde856a46e52af60bc431948ff@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T113000Z
+DTEND:20261110T125000Z
+SUMMARY:🏒 Drop-In – Suburban Ice Rochester
+DESCRIPTION:Pickup Hockey\nRink: Suburban Ice Rochester\n~60 mi from Ann Ar
+ bor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanicer
+ ochester.com/public-skating\nConfirm with the rink — schedules change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
 UID:6460a710116a79f968ef9ab8426503c1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T143000Z
 DTEND:20261110T155000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1564,7 +1383,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8be0abe5ffb35e0f138ffb641df09fbe@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T143000Z
 DTEND:20261110T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -1577,7 +1396,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:a9eb5cb530c33d282fa2757a133c7f65@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T150000Z
 DTEND:20261110T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1590,7 +1409,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b76e82b54b937c2a2a2879efbde21a17@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T150000Z
 DTEND:20261110T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -1602,7 +1421,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:8aabfb5d2abad5fe3491f06f2e5382a5@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T150000Z
 DTEND:20261110T163000Z
 SUMMARY:🏒 Stick & Puck – Trenton
@@ -1616,7 +1435,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:63b3ea93726146cd03b48cf2e8b2d4a0@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T150000Z
 DTEND:20261110T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -1628,8 +1447,20 @@ LOCATION:Hazel Park Ice Arena
 URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
+UID:95c48ee33f4607cfd5a4d9af4da1e590@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T153000Z
+DTEND:20261110T165000Z
+SUMMARY:🏒 Stick & Puck – Novi Ice Arena
+DESCRIPTION:Stick And Puck\nRink: Novi Ice Arena\n~26 mi from Ann Arbor\nPr
+ ice: $15.00\nSource: ice-finder.com\nInfo: https://www.noviicearena.com/pu
+ blic-schedule\nConfirm with the rink — schedules change.
+LOCATION:Novi Ice Arena
+URL:https://www.noviicearena.com/public-schedule
+END:VEVENT
+BEGIN:VEVENT
 UID:be6026579f88709bc2f23d12665f993a@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T163000Z
 DTEND:20261110T175000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1642,7 +1473,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d49f165785f1ac3c1ea2c75a10483905@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T163000Z
 DTEND:20261110T180000Z
 SUMMARY:🏒 Drop-In – Hazel Park Ice Arena
@@ -1654,8 +1485,20 @@ LOCATION:Hazel Park Ice Arena
 URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
+UID:7e4e114f3d95716a0e43782804bba220@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T163000Z
+DTEND:20261110T175000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Rochester
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Rochester\n~60 mi from Ann A
+ rbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanice
+ rochester.com/public-skating\nConfirm with the rink — schedules change.
+LOCATION:Suburban Ice Rochester
+URL:https://www.suburbanicerochester.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
 UID:9fcc8c2e6b51b4c96e7ee0449748e5e2@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T164500Z
 DTEND:20261110T181500Z
 SUMMARY:🏒 Stick & Puck – Livonia
@@ -1667,7 +1510,7 @@ URL:https://www.eddieedgar.org/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:769c224273db99364ae0e41a259ac4d2@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T170000Z
 DTEND:20261110T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -1679,8 +1522,21 @@ LOCATION:Biggby Ice Cube – Ann Arbor
 URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
+UID:ff9f596ef099fc5da08a9122bfc22824@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T170000Z
+DTEND:20261110T183000Z
+SUMMARY:🏒 Stick & Puck – Farmington Hills
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice – Farmington Hills\n~32 mi
+  from Ann Arbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.
+ suburbanicefarmingtonhills.com/public-skating\nConfirm with the rink — s
+ chedules change.
+LOCATION:Suburban Ice – Farmington Hills
+URL:https://www.suburbanicefarmingtonhills.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
 UID:0ef6c6c2d9b2b6cf8d0c962620cba1a0@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T170000Z
 DTEND:20261110T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -1693,8 +1549,33 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
  egistration
 END:VEVENT
 BEGIN:VEVENT
+UID:e9d00a310f2d4c9de589a81c19d1b698@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T170000Z
+DTEND:20261110T182000Z
+SUMMARY:🏒 Stick & Puck – Suburban Ice Macomb
+DESCRIPTION:Stick And Puck\nRink: Suburban Ice Macomb\n~65 mi from Ann Arbo
+ r\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.suburbanicemac
+ omb.com/public-skating\nConfirm with the rink — schedules change.
+LOCATION:Suburban Ice Macomb
+URL:https://www.suburbanicemacomb.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:1c3b3112edd1275f54ea09dc0176f42d@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261110T171500Z
+DTEND:20261110T184500Z
+SUMMARY:🏒 Drop-In – Troy
+DESCRIPTION:Pickup Hockey\nRink: Buffalo Wild Wings Arena – Troy\n~58 mi 
+ from Ann Arbor\nPrice: $15.00\nSource: ice-finder.com\nInfo: https://www.t
+ roysports.com/page/show/438622-adult-drop-in\nConfirm with the rink — sc
+ hedules change.
+LOCATION:Buffalo Wild Wings Arena – Troy
+URL:https://www.troysports.com/page/show/438622-adult-drop-in
+END:VEVENT
+BEGIN:VEVENT
 UID:6aef28133efe89b3119814b9dc892c4d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T183000Z
 DTEND:20261110T195000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1707,7 +1588,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:070c19039598122dc5a96f8de40a4745@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T183000Z
 DTEND:20261110T195000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1720,7 +1601,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:81b3e66dd593a4f749d47b4ea5d1db57@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261110T183000Z
 DTEND:20261110T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -1733,7 +1614,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:e6e994f76e1c76288e3e0ce048bfa31a@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T031000Z
 DTEND:20261111T043000Z
 SUMMARY:🏒 Drop-In – Plymouth
@@ -1748,7 +1629,7 @@ URL:https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-us
 END:VEVENT
 BEGIN:VEVENT
 UID:0fec82e7a8d127bf806ee92ee1225ba1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T140000Z
 DTEND:20261111T152000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1761,7 +1642,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:113881963b1ae71186d2aaddffeef142@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T143000Z
 DTEND:20261111T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -1774,7 +1655,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:5d1162edb123c7f8bac7c2f6276621e7@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T150000Z
 DTEND:20261111T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1787,7 +1668,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:b6ba1b4a5a628706cbe753abdbfc3bb5@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T150000Z
 DTEND:20261111T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -1799,7 +1680,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:ee82851394c767fe7632bff23d653235@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T150000Z
 DTEND:20261111T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -1812,7 +1693,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:325c5ac25f85832d79d98751a78b47af@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T153000Z
 DTEND:20261111T165000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -1827,7 +1708,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:95fb6d5410ce90ada7a7bc9dd2022862@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T160000Z
 DTEND:20261111T172000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1840,7 +1721,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:31e5c3d6f43e06080d458a322408964f@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T163000Z
 DTEND:20261111T175000Z
 SUMMARY:🏒 Drop-In – Hazel Park Ice Arena
@@ -1853,7 +1734,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:927ff76c10f8a5c96f107a69d9434e7a@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T170000Z
 DTEND:20261111T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -1866,7 +1747,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9308ce0f18ccf4632deca98d317e664a@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T170000Z
 DTEND:20261111T182000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1879,7 +1760,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:94b78a12b1f8e4319c9a3c7c15f3828b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T170000Z
 DTEND:20261111T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -1893,7 +1774,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:8e61a60a3eb51239f93be632a8560739@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T173000Z
 DTEND:20261111T213000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -1906,7 +1787,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:db1e52d9a79415a72bee8ae16fb469eb@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T175500Z
 DTEND:20261111T191500Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1919,7 +1800,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:e298213cd677c935f153fe5766fddef7@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261111T181500Z
 DTEND:20261111T193500Z
 SUMMARY:🏒 Stick & Puck – Hartland Ice House
@@ -1931,7 +1812,7 @@ URL:https://www.hartlandicehouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:b99b89ac1f6aca7ec27ff4a310842a06@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T140000Z
 DTEND:20261112T153000Z
 SUMMARY:🏒 Stick & Puck – Trenton
@@ -1945,7 +1826,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:769f630d53e9f65906ef46a5d4e110e9@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T143000Z
 DTEND:20261112T155000Z
 SUMMARY:🏒 Stick & Puck – Royal Oak
@@ -1958,7 +1839,7 @@ URL:https://www.royaloakicearena.com/public-skating
 END:VEVENT
 BEGIN:VEVENT
 UID:70112da9613d5b8c00e1c686ce1b77a6@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T150000Z
 DTEND:20261112T162000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -1971,7 +1852,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a8dc8657f43debd0bd0a2363a1e809f4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T150000Z
 DTEND:20261112T162000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -1984,7 +1865,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9de8669381fa2cbdba721cc6a82c3bb1@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T150000Z
 DTEND:20261112T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -1996,7 +1877,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:09de0212bcc5c9c3d68fcad84bcfd50e@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T150000Z
 DTEND:20261112T163000Z
 SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
@@ -2009,7 +1890,7 @@ URL:https://www.hazelparkicearena.com/programs/stick-and-puck
 END:VEVENT
 BEGIN:VEVENT
 UID:205e64c47bfcbe7915d7c2ea1d5b03a9@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T153000Z
 DTEND:20261112T170000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -2023,7 +1904,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:6a66409116f080bac8ecf8ffdbfc3845@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T170000Z
 DTEND:20261112T182000Z
 SUMMARY:🏒 Stick & Puck – Ann Arbor
@@ -2036,7 +1917,7 @@ URL:https://bondsports.co/org/246/262/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:9521e119d9ce7d4bdcee955174e2d247@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T170000Z
 DTEND:20261112T182000Z
 SUMMARY:🏒 Stick & Puck – Chelsea
@@ -2049,7 +1930,7 @@ URL:https://bondsports.co/org/474/529/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:8f31cf1699eff45e082b7ccaf67ef2bc@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T170000Z
 DTEND:20261112T182000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -2062,7 +1943,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:a657b582faba6d621fdf710e48bbd1f4@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T170000Z
 DTEND:20261112T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -2076,7 +1957,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:7a7fc95f18a3bf7663154811ed32bac6@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T173000Z
 DTEND:20261112T203000Z
 SUMMARY:🏒 Stick & Puck – Allen Park
@@ -2089,7 +1970,7 @@ URL:https://cityofallenpark.org/calendar.php
 END:VEVENT
 BEGIN:VEVENT
 UID:152f2dc05e45ffe344a7026e8c18df19@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261112T190000Z
 DTEND:20261112T202000Z
 SUMMARY:🏒 Stick & Puck – Brighton
@@ -2102,7 +1983,7 @@ URL:https://bondsports.co/org/353/386/schedule
 END:VEVENT
 BEGIN:VEVENT
 UID:d497ea2db27204915c402a87c6ea8762@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T013000Z
 DTEND:20261113T025000Z
 SUMMARY:🏒 Drop-In – Southgate Civic Arena
@@ -2114,7 +1995,7 @@ URL:https://www.southgatemi.gov/departments/parks_recreation/index.php
 END:VEVENT
 BEGIN:VEVENT
 UID:c6c75d23c77f03ece9d953a5f8ddbc6d@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T031000Z
 DTEND:20261113T043000Z
 SUMMARY:🏒 Drop-In – Plymouth
@@ -2129,7 +2010,7 @@ URL:https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-us
 END:VEVENT
 BEGIN:VEVENT
 UID:90fbc1ad32ba58292d4160370642b6f7@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T140000Z
 DTEND:20261113T153000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -2143,7 +2024,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:0792411c4048fd311697ba9adfe78965@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T150000Z
 DTEND:20261113T165000Z
 SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
@@ -2155,7 +2036,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:c34e42309194a9cca59f94f80811ba3c@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T153000Z
 DTEND:20261113T165000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -2170,7 +2051,7 @@ URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
 END:VEVENT
 BEGIN:VEVENT
 UID:3416d442ca5463c0cf5b0aa8234b24a3@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T170000Z
 DTEND:20261113T182000Z
 SUMMARY:🏒 Drop-In – Southgate Civic Arena
@@ -2182,7 +2063,7 @@ URL:https://www.southgatemi.gov/departments/parks_recreation/index.php
 END:VEVENT
 BEGIN:VEVENT
 UID:789b575e42e90599767d34f1f52eaef9@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261113T170000Z
 DTEND:20261113T185000Z
 SUMMARY:🏒 Drop-In – Sylvania\, OH
@@ -2196,7 +2077,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
 END:VEVENT
 BEGIN:VEVENT
 UID:632ff8edd57603a09ddfdb8e1139e47b@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261115T000000Z
 DTEND:20261115T012000Z
 SUMMARY:🏒 Drop-In – Taylor Sportsplex
@@ -2208,7 +2089,7 @@ URL:https://www.cityoftaylor.com/1472/Stick-Puck
 END:VEVENT
 BEGIN:VEVENT
 UID:180dd8535473e05dbdaa714350301bcf@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261115T133000Z
 DTEND:20261115T150000Z
 SUMMARY:🏒 Drop-In – Trenton
@@ -2222,7 +2103,7 @@ URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
 END:VEVENT
 BEGIN:VEVENT
 UID:c5f76d6346d7c8d94386d7cbb99565ca@mdh
-DTSTAMP:20261102T203938Z
+DTSTAMP:20261103T181548Z
 DTSTART:20261115T170000Z
 DTEND:20261115T182000Z
 SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
@@ -2234,5 +2115,202 @@ DESCRIPTION:Sticks & Pucks\nRink: Southfield Sports Arena\n~40 mi from Ann
 LOCATION:Southfield Sports Arena
 URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
  3.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:951e9d142a81451771aa686aa0cbb675@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T140000Z
+DTEND:20261116T152000Z
+SUMMARY:🏒 Stick & Puck – Brighton
+DESCRIPTION:Sticks & Pucks\nRink: Biggby Ice Cube – Brighton\n~22 mi from
+  Ann Arbor\nPrice: $12\nIce: East Rink\nSource: Bond Sports\nInfo: https:/
+ /bondsports.co/org/353/386/schedule\nConfirm with the rink — schedules c
+ hange.
+LOCATION:Biggby Ice Cube – Brighton
+URL:https://bondsports.co/org/353/386/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:34762339e77d99b448ff5cc23d321ed3@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T140000Z
+DTEND:20261116T153000Z
+SUMMARY:🏒 Drop-In – Trenton
+DESCRIPTION:Adult Drop-In\nRink: Kennedy Recreation Center – Trenton\n~38
+  mi from Ann Arbor\nSource: DaySmart\nInfo: https://apps.daysmartrecreatio
+ n.com/dash/x/#/online/trenton/event-registration\nConfirm with the rink 
+ — schedules change.
+LOCATION:Kennedy Recreation Center – Trenton
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/trenton/event-regis
+ tration
+END:VEVENT
+BEGIN:VEVENT
+UID:a7df8243b670f819fb656a8f8f66a6e1@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T143000Z
+DTEND:20261116T155000Z
+SUMMARY:🏒 Stick & Puck – Royal Oak
+DESCRIPTION:Sticks & Pucks\nRink: John Lindell Ice Arena – Royal Oak\n~54
+  mi from Ann Arbor\nPrice: S&P $20 · Drop-in $15\nSource: iCal\nInfo: htt
+ ps://www.royaloakicearena.com/public-skating\nConfirm with the rink — sc
+ hedules change.
+LOCATION:John Lindell Ice Arena – Royal Oak
+URL:https://www.royaloakicearena.com/public-skating
+END:VEVENT
+BEGIN:VEVENT
+UID:75783badf8b5bf4f6ae1c8765c9124d0@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T150000Z
+DTEND:20261116T162000Z
+SUMMARY:🏒 Stick & Puck – Chelsea
+DESCRIPTION:Sticks and Pucks\nRink: Biggby Ice Cube – Chelsea\n~16 mi fro
+ m Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https
+ ://bondsports.co/org/474/529/schedule\nConfirm with the rink — schedules
+  change.
+LOCATION:Biggby Ice Cube – Chelsea
+URL:https://bondsports.co/org/474/529/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:a3d23f74eba3189579c93a1d5dde04f8@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T150000Z
+DTEND:20261116T165000Z
+SUMMARY:🏒 Stick & Puck – Taylor Sportsplex
+DESCRIPTION:Stick & Puck\nRink: Taylor Sportsplex\n~30 mi from Ann Arbor\nS
+ ource: DaySmart\nInfo: https://www.cityoftaylor.com/1472/Stick-Puck\nConfi
+ rm with the rink — schedules change.
+LOCATION:Taylor Sportsplex
+URL:https://www.cityoftaylor.com/1472/Stick-Puck
+END:VEVENT
+BEGIN:VEVENT
+UID:245abd2bfc4bae319354dab605d60b49@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T150000Z
+DTEND:20261116T163000Z
+SUMMARY:🏒 Stick & Puck – Hazel Park Ice Arena
+DESCRIPTION:Stick & Puck\nRink: Hazel Park Ice Arena\n~47 mi from Ann Arbor
+ \nIce: Hazel Park Ice Arena Pro\nSource: Bond Sports\nInfo: https://www.ha
+ zelparkicearena.com/programs/stick-and-puck\nConfirm with the rink — sch
+ edules change.
+LOCATION:Hazel Park Ice Arena
+URL:https://www.hazelparkicearena.com/programs/stick-and-puck
+END:VEVENT
+BEGIN:VEVENT
+UID:2a200840a316b32ca0fac88660009ac4@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T153000Z
+DTEND:20261116T165000Z
+SUMMARY:🏒 Stick & Puck – Southfield Sports Arena
+DESCRIPTION:Sticks & Pucks\nRink: Southfield Sports Arena\n~40 mi from Ann 
+ Arbor\nPrice: $8\nRegular weekly time from the rink's website — holidays
+ /cancellations not reflected.\nSource: rink website (weekly schedule)\nInf
+ o: https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
+ 3.pdf\nConfirm with the rink — schedules change.
+LOCATION:Southfield Sports Arena
+URL:https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_
+ 3.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:05a1a57c3cd37adc5bccada87a115d9f@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T160000Z
+DTEND:20261116T172000Z
+SUMMARY:🏒 Stick & Puck – Brighton
+DESCRIPTION:Sticks & Pucks\nRink: Biggby Ice Cube – Brighton\n~22 mi from
+  Ann Arbor\nPrice: $12\nIce: East Rink\nSource: Bond Sports\nInfo: https:/
+ /bondsports.co/org/353/386/schedule\nConfirm with the rink — schedules c
+ hange.
+LOCATION:Biggby Ice Cube – Brighton
+URL:https://bondsports.co/org/353/386/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:07d599fa63bf11f14dba061cb1fc65ff@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T170000Z
+DTEND:20261116T182000Z
+SUMMARY:🏒 Stick & Puck – Ann Arbor
+DESCRIPTION:Adult Sticks & Pucks\nRink: Biggby Ice Cube – Ann Arbor\n~3 m
+ i from Ann Arbor\nPrice: $10\nIce: VAR Ann Arbor Ice Cube Varsity Rink\nSo
+ urce: Bond Sports\nInfo: https://bondsports.co/org/246/262/schedule\nConfi
+ rm with the rink — schedules change.
+LOCATION:Biggby Ice Cube – Ann Arbor
+URL:https://bondsports.co/org/246/262/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:779b5706b331c526638e149c08a93f73@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T170000Z
+DTEND:20261116T182000Z
+SUMMARY:🏒 Stick & Puck – Chelsea
+DESCRIPTION:Sticks and Pucks\nRink: Biggby Ice Cube – Chelsea\n~16 mi fro
+ m Ann Arbor\nPrice: $15\nIce: North Rink\nSource: Bond Sports\nInfo: https
+ ://bondsports.co/org/474/529/schedule\nConfirm with the rink — schedules
+  change.
+LOCATION:Biggby Ice Cube – Chelsea
+URL:https://bondsports.co/org/474/529/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:0ecbe2136d2a29f0246ed321bb8445e5@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T170000Z
+DTEND:20261116T185000Z
+SUMMARY:🏒 Drop-In – Sylvania\, OH
+DESCRIPTION:Adult Drop In Hockey\nRink: Tam-O-Shanter Ice Rink – Sylvania
+ \, OH\n~58 mi from Ann Arbor\nPrice: $10\nSource: DaySmart\nInfo: https://
+ apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration
+ \nConfirm with the rink — schedules change.
+LOCATION:Tam-O-Shanter Ice Rink – Sylvania\, OH
+URL:https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-r
+ egistration
+END:VEVENT
+BEGIN:VEVENT
+UID:bbdac40776573b939e3852cede3f4bb4@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T173000Z
+DTEND:20261116T185000Z
+SUMMARY:🏒 Stick & Puck – Hartland Ice House
+DESCRIPTION:Sticks & Pucks\nRink: Hartland Ice House\n~33 mi from Ann Arbor
+ \nIce: Pond\nSource: FinnlyConnect\nInfo: https://www.hartlandicehouse.com
+ /\nConfirm with the rink — schedules change.
+LOCATION:Hartland Ice House
+URL:https://www.hartlandicehouse.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:2720ca9f6eb90f87a892bc7c202dd7b8@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T173000Z
+DTEND:20261116T203000Z
+SUMMARY:🏒 Stick & Puck – Allen Park
+DESCRIPTION:Sticks and Pucks\nRink: Frank J. Lada Civic Arena – Allen Par
+ k\n~37 mi from Ann Arbor\nSource: Allen Park city calendar\nInfo: https://
+ cityofallenpark.org/calendar.php\nConfirm with the rink — schedules chan
+ ge.
+LOCATION:Frank J. Lada Civic Arena – Allen Park
+URL:https://cityofallenpark.org/calendar.php
+END:VEVENT
+BEGIN:VEVENT
+UID:efef0bffaed9dbd2eada8f2e04de232c@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T180000Z
+DTEND:20261116T192000Z
+SUMMARY:🏒 Stick & Puck – Brighton
+DESCRIPTION:Sticks & Pucks\nRink: Biggby Ice Cube – Brighton\n~22 mi from
+  Ann Arbor\nPrice: $12\nIce: East Rink\nSource: Bond Sports\nInfo: https:/
+ /bondsports.co/org/353/386/schedule\nConfirm with the rink — schedules c
+ hange.
+LOCATION:Biggby Ice Cube – Brighton
+URL:https://bondsports.co/org/353/386/schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:6facf839a9d3ddba78ad46f629d36176@mdh
+DTSTAMP:20261103T181548Z
+DTSTART:20261116T223000Z
+DTEND:20261116T232000Z
+SUMMARY:🏒 Stick & Puck – Westland
+DESCRIPTION:Sticks and Pucks\nRink: Mike Modano Ice Arena – Westland\n~27
+  mi from Ann Arbor\nPrice: $10\nIce: Mike Modano Ice Arena - 6210 Wildwood
+  Westland MI 48185\nSource: iCal\nInfo: https://cityofwestland.com/590/Mik
+ e-Modano-Ice-Arena\nConfirm with the rink — schedules change.
+LOCATION:Mike Modano Ice Arena – Westland
+URL:https://cityofwestland.com/590/Mike-Modano-Ice-Arena
 END:VEVENT
 END:VCALENDAR
