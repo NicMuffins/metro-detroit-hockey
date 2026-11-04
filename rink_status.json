@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-03T18:15:48Z",
+  "generated_at": "2026-11-04T18:31:19Z",
   "window": [
-    "2026-11-03",
-    "2026-11-16"
+    "2026-11-04",
+    "2026-11-17"
   ],
-  "total_sessions": 177,
+  "total_sessions": 190,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 9,
+      "sessions": 11,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 17,
+      "sessions": 18,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 17,
+      "sessions": 20,
       "error": null
     },
     {
@@ -73,7 +73,7 @@
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -108,8 +108,8 @@
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 0,
-      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
+      "sessions": 6,
+      "error": null
     },
     {
       "id": "jackson",
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 3,
       "error": null
     },
     {
@@ -192,7 +192,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 8,
+      "sessions": 7,
       "error": null
     }
   ]
