@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T18:31:19Z",
+  "generated_at": "2026-11-05T18:35:03Z",
   "window": [
-    "2026-11-04",
-    "2026-11-17"
+    "2026-11-05",
+    "2026-11-18"
   ],
-  "total_sessions": 190,
+  "total_sessions": 180,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -17,7 +17,7 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 18,
+      "sessions": 17,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 20,
+      "sessions": 7,
       "error": null
     },
     {
@@ -115,8 +115,8 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 0,
-      "error": "RuntimeError: no usable sessions from schedule image(s); found images for [(2026, 10)]; model returned []"
+      "sessions": 6,
+      "error": null
     },
     {
       "id": "trenton",
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 3,
+      "sessions": 2,
       "error": null
     },
     {
