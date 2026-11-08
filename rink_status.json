@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-07T16:46:39Z",
+  "generated_at": "2026-11-08T16:58:23Z",
   "window": [
-    "2026-11-07",
-    "2026-11-20"
+    "2026-11-08",
+    "2026-11-21"
   ],
-  "total_sessions": 189,
+  "total_sessions": 182,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 11,
+      "sessions": 12,
       "error": null
     },
     {
@@ -59,14 +59,14 @@
       "id": "westland",
       "name": "Mike Modano Ice Arena \u2013 Westland",
       "source": "ics",
-      "sessions": 2,
-      "error": null
+      "sessions": 0,
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='cityofwestland.com', port=443): Max retries exceeded with url: /common/modules/iCalendar/iCalendar.aspx?catID=42&feed=calendar (Caused by ConnectTimeoutError(<HTTPSConnection(host='cityofwestland.com', port=443) at 0x7e59e88baa90>, 'Connection to cityofwestl"
     },
     {
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
@@ -144,13 +144,13 @@
       "name": "St Clair Shores Civic Arena",
       "source": "scs_pdf",
       "sessions": 0,
-      "error": "RuntimeError: couldn't find the weekday header row in the PDF"
+      "error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=156.0.8078.79)\nStacktrace:\n#0 0x56acf153f0aa <unknown>\n#1 0x56acf0e72875 <unknown>\n#2 0x56acf0e62802 <unknown>\n#3 0x56acf0e62576 <unknown>\n#4 0x56acf0e60cfb <unknown>\n#5 0x56acf0e6110f <unkn"
     },
     {
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -178,14 +178,14 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 7,
+      "sessions": 4,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
