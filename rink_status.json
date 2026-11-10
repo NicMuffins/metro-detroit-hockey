@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-08T16:58:23Z",
+  "generated_at": "2026-11-10T18:31:23Z",
   "window": [
-    "2026-11-08",
-    "2026-11-21"
+    "2026-11-10",
+    "2026-11-23"
   ],
-  "total_sessions": 182,
+  "total_sessions": 179,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 17,
+      "sessions": 20,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 9,
+      "sessions": 11,
       "error": null
     },
     {
@@ -59,8 +59,8 @@
       "id": "westland",
       "name": "Mike Modano Ice Arena \u2013 Westland",
       "source": "ics",
-      "sessions": 0,
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='cityofwestland.com', port=443): Max retries exceeded with url: /common/modules/iCalendar/iCalendar.aspx?catID=42&feed=calendar (Caused by ConnectTimeoutError(<HTTPSConnection(host='cityofwestland.com', port=443) at 0x7e59e88baa90>, 'Connection to cityofwestl"
+      "sessions": 2,
+      "error": null
     },
     {
       "id": "taylor",
@@ -108,14 +108,14 @@
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 6,
-      "error": null
+      "sessions": 0,
+      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
@@ -144,7 +144,7 @@
       "name": "St Clair Shores Civic Arena",
       "source": "scs_pdf",
       "sessions": 0,
-      "error": "TimeoutException: Message: timeout: Timed out receiving message from renderer: -0.002\n  (Session info: chrome=156.0.8078.79)\nStacktrace:\n#0 0x56acf153f0aa <unknown>\n#1 0x56acf0e72875 <unknown>\n#2 0x56acf0e62802 <unknown>\n#3 0x56acf0e62576 <unknown>\n#4 0x56acf0e60cfb <unknown>\n#5 0x56acf0e6110f <unkn"
+      "error": "RuntimeError: couldn't find the weekday header row in the PDF"
     },
     {
       "id": "royal-oak",
@@ -178,21 +178,21 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 4,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 5,
       "error": null
     }
   ]
