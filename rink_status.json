@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-10T18:31:23Z",
+  "generated_at": "2026-11-11T18:25:53Z",
   "window": [
-    "2026-11-10",
-    "2026-11-23"
+    "2026-11-11",
+    "2026-11-24"
   ],
-  "total_sessions": 179,
+  "total_sessions": 183,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -17,7 +17,7 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 20,
+      "sessions": 21,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 11,
+      "sessions": 13,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 9,
+      "sessions": 10,
       "error": null
     },
     {
