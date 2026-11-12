@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-11T18:25:53Z",
+  "generated_at": "2026-11-12T18:44:40Z",
   "window": [
-    "2026-11-11",
-    "2026-11-24"
+    "2026-11-12",
+    "2026-11-25"
   ],
-  "total_sessions": 183,
+  "total_sessions": 188,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 15,
       "error": null
     },
     {
@@ -94,7 +94,7 @@
       "id": "southgate",
       "name": "Southgate Civic Arena",
       "source": "daysmart",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
@@ -122,7 +122,7 @@
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 13,
+      "sessions": 14,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 11,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 10,
+      "sessions": 11,
       "error": null
     },
     {
@@ -178,7 +178,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 3,
       "error": null
     },
     {
