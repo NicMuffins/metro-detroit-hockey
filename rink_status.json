@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-12T18:44:40Z",
+  "generated_at": "2026-11-13T18:25:46Z",
   "window": [
-    "2026-11-12",
-    "2026-11-25"
+    "2026-11-13",
+    "2026-11-26"
   ],
-  "total_sessions": 188,
+  "total_sessions": 182,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 20,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 15,
+      "sessions": 17,
       "error": null
     },
     {
@@ -66,14 +66,14 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 5,
       "error": null
     },
     {
@@ -94,14 +94,14 @@
       "id": "southgate",
       "name": "Southgate Civic Arena",
       "source": "daysmart",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -122,7 +122,7 @@
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 14,
+      "sessions": 12,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
@@ -150,14 +150,14 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -171,21 +171,21 @@
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 3,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 7,
       "error": null
     },
     {
