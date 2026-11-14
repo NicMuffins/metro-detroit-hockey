@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-13T18:25:46Z",
+  "generated_at": "2026-11-14T16:53:20Z",
   "window": [
-    "2026-11-13",
-    "2026-11-26"
+    "2026-11-14",
+    "2026-11-27"
   ],
-  "total_sessions": 182,
+  "total_sessions": 197,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 20,
+      "sessions": 22,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 17,
+      "sessions": 20,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 9,
+      "sessions": 8,
       "error": null
     },
     {
@@ -80,7 +80,7 @@
       "id": "hartland",
       "name": "Hartland Ice House",
       "source": "finnly",
-      "sessions": 4,
+      "sessions": 11,
       "error": null
     },
     {
@@ -122,7 +122,7 @@
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 12,
+      "sessions": 11,
       "error": null
     },
     {
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 10,
+      "sessions": 12,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 10,
+      "sessions": 12,
       "error": null
     },
     {
