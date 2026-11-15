@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-14T16:53:20Z",
+  "generated_at": "2026-11-15T17:36:58Z",
   "window": [
-    "2026-11-14",
-    "2026-11-27"
+    "2026-11-15",
+    "2026-11-28"
   ],
-  "total_sessions": 197,
+  "total_sessions": 207,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 14,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 22,
+      "sessions": 23,
       "error": null
     },
     {
@@ -66,7 +66,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 8,
+      "sessions": 7,
       "error": null
     },
     {
@@ -101,15 +101,15 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 9,
+      "sessions": 10,
       "error": null
     },
     {
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 0,
-      "error": "RuntimeError: rink page no longer mentions this session \u2014 check and update rinks.json"
+      "sessions": 6,
+      "error": null
     },
     {
       "id": "jackson",
@@ -136,7 +136,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 14,
       "error": null
     },
     {
@@ -150,14 +150,14 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 9,
+      "sessions": 10,
       "error": null
     },
     {
@@ -178,14 +178,14 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 0,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
