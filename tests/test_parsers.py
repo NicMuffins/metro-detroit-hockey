@@ -581,3 +581,21 @@ def test_scs_falls_back_to_vision_for_image_pdf(monkeypatch):
             return b"%PDF-1.4"
     got = S.scrape_scs(F(), RINKS["st-clair-shores"], M("st-clair-shores"), S.Window(date(2026, 10, 19), date(2026, 10, 31)))
     assert calls["block"] == "document" and [hm(s) for s in got] == ["Wed 10/21 09:30-11:30"]
+
+
+def test_static_blocked_page_warns_but_changed_page_errors():
+    import copy
+    import pytest
+    rink = copy.deepcopy(RINKS["wyandotte"])
+
+    class F:
+        def __init__(self, html):
+            self._h = html
+
+        def html(self, url, must_contain=None):
+            return self._h
+    got = S.scrape_static(F("<title>Access Denied</title><p>Reference #18.abc</p>"), rink, M("wyandotte"), WIN)
+    assert len(got) == 6 and "Access Denied" in rink.pop("_warning")
+    with pytest.raises(RuntimeError):
+        S.scrape_static(F("<title>Facilities • Yack Arena</title><p>Yack Arena public skating only</p>"),
+                        rink, M("wyandotte"), WIN)

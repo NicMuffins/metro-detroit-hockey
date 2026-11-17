@@ -690,10 +690,19 @@ def scrape_static(f: Fetcher, rink, m, win) -> list[Session]:
     put the listed times in them so a schedule change shows up as an error instead of stale events."""
     if rink.get("verify_url"):
         checks = rink["verify_text"] if isinstance(rink["verify_text"], list) else [rink["verify_text"]]
-        txt = page_text(f.html(rink["verify_url"], must_contain=checks[0]))
+        html = f.html(rink["verify_url"], must_contain=checks[0])
+        txt = page_text(html)
         missing = [c for c in checks if not re.search(c, txt, re.I)]
         if missing:
-            raise RuntimeError(f"rink page no longer matches {missing[0]!r} — schedule may have changed; update rinks.json")
+            title = clean((re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S) or [None, "?"])[1])[:60]
+            marker = rink.get("verify_marker")
+            if marker and not re.search(marker, txt, re.I):
+                # We didn't get the rink's page at all (bot block / outage): keep the usual times, flag it.
+                rink["_warning"] = (f"couldn't check the rink page today (got '{title}', {len(html)} bytes); "
+                                    "posted the usual weekly times")
+            else:
+                raise RuntimeError(f"rink page ('{title}') no longer matches {missing[0]!r} — "
+                                   "schedule may have changed; update rinks.json")
     return build_static(rink, win)
 
 
@@ -1158,6 +1167,9 @@ def run(config: dict, win: Window, headless: bool, only: set[str] | None = None)
                 got = fn(f, rink, matcher_for(rink, defaults), win)
                 st["sessions"] = len(got)
                 sessions += got
+                if rink.get("_warning"):
+                    st["warning"] = rink.pop("_warning")
+                    log(f"    ! {st['warning']}")
                 log(f"    → {len(got)} session(s)")
             except Exception as e:
                 st["error"] = f"{e.__class__.__name__}: {e}"[:300]
@@ -1193,8 +1205,9 @@ def main():
 
     log("\nRink health:")
     for st in status:
-        flag = "✗" if st["error"] else ("·" if st["sessions"] == 0 else "✓")
-        log(f"  {flag} {st['sessions']:>3}  {st['name']}" + (f"  — {st['error']}" if st["error"] else ""))
+        flag = "✗" if st["error"] else ("!" if st.get("warning") else ("·" if st["sessions"] == 0 else "✓"))
+        note = st["error"] or st.get("warning")
+        log(f"  {flag} {st['sessions']:>3}  {st['name']}" + (f"  — {note}" if note else ""))
 
     Path(a.output).write_text(to_ical(sessions), encoding="utf-8")
     report = {

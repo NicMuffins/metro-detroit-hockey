@@ -135,7 +135,8 @@
         }
       ],
       "notes": "Outdoor city rink, opened Nov 15, 2026, weather permitting. Fixed weekly times from the city page; the scraper checks the listed times are unchanged. Registration in person, 30 min before.",
-      "active": true
+      "active": true,
+      "verify_marker": "Buhr"
     },
     {
       "id": "biggby-chelsea",
@@ -183,7 +184,8 @@
         }
       ],
       "notes": "Fixed weekly schedule from the rink's Adult Hockey page (18+, full equipment). Only published while that page still mentions drop-in hockey.",
-      "active": true
+      "active": true,
+      "verify_marker": "USA Hockey Arena"
     },
     {
       "id": "novi",
@@ -315,7 +317,8 @@
         }
       ],
       "notes": "Fixed weekly schedule from the city's Yack Arena page (no calendar). Only published while that page still lists Sticks & Pucks.",
-      "active": true
+      "active": true,
+      "verify_marker": "Yack"
     },
     {
       "id": "jackson",
