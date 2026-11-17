@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T16:26:14Z",
+  "generated_at": "2026-11-17T19:40:16Z",
   "window": [
     "2026-11-17",
     "2026-11-30"
   ],
-  "total_sessions": 307,
+  "total_sessions": 304,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -124,7 +124,7 @@
       "source": "static_weekly",
       "sessions": 6,
       "error": null,
-      "warning": "couldn't check the rink page today (got 'Just a moment...', 45042 bytes); posted the usual weekly times"
+      "warning": "couldn't check the rink page today (got 'Attention Required! | Cloudflare', 5565 bytes); posted the usual weekly times"
     },
     {
       "id": "jackson",
@@ -186,7 +186,7 @@
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 14,
+      "sessions": 13,
       "error": null
     },
     {
@@ -214,7 +214,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 3,
+      "sessions": 1,
       "error": null
     },
     {
