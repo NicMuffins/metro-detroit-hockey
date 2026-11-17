@@ -19,6 +19,9 @@ Sources (the "source" field in rinks.json):
   scs_pdf         St Clair Shores monthly PDF calendar
   allen_park      Allen Park city calendar (browser)
   eddie_edgar     Eddie Edgar FullCalendar (browser)
+  allstar         All Star Rec Manager calendar API (The Barn)
+  wix_events      Wix Events data embedded in a page (810 Sports Complex)
+  frontline       Frontline Connect monthly session schedules (Crystal Fieldhouse, Troy)
 
 Usage:
   python scraper.py [--days 14] [--output hockey_sessions.ics] [--headless true]
@@ -352,9 +355,12 @@ def parse_daysmart(pages: list[dict], rink: dict, m: Matcher, win: Window) -> li
             if inc.get("type") == "teams":
                 teams[str(inc["id"])] = clean(inc.get("attributes", {}).get("name"))
     out, seen = [], set()
+    only_res = {int(x) for x in rink.get("resource_ids", [])}   # one DaySmart account can run several rinks
     for p in pages:
         for e in p.get("data", []):
             a = e.get("attributes", {})
+            if only_res and int(a.get("resource_id") or -1) not in only_res:
+                continue
             desc = clean(a.get("desc"))
             team = teams.get(str(a.get("hteam_id")), "")
             if not m.ok(desc, team):
@@ -371,7 +377,8 @@ def parse_daysmart(pages: list[dict], rink: dict, m: Matcher, win: Window) -> li
                 continue
             # Short codes like "ADI" read better as the team/program name
             name = desc if desc and not re.fullmatch(r"[A-Z]{2,4}", desc) else (team or desc)
-            name = re.sub(r"^\w+ \d{4}\s*-\s*", "", name)          # "October 2026 - Adult Drop In Hockey"
+            # "October 2026 - Adult Drop In Hockey" / "December 2026 Adult Drop-In"
+            name = re.sub(r"^(?:%s)\s+\d{4}\s*-?\s*" % "|".join(MONTHS), "", name, flags=re.I) or name
             name = re.sub(r"\s*:\s*(?:M|T|W|Th|F|Sa|Su|Sundays?|Mondays?)(?:/\w+)*\s*$", "", name)
             key = (start, name.lower())
             if key in seen:
@@ -511,6 +518,140 @@ def scrape_finnly(f: Fetcher, rink, m, win) -> list[Session]:
     return parse_finnly(f.html(rink["schedule_url"], must_contain="_onlineScheduleList"), rink, m, win)
 
 
+# ─── Source: All Star Rec Manager (The Barn, Fenton) ──────────────────────────
+
+def parse_allstar(data: dict, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    out, seen = [], set()
+    for e in data.get("events", []) or []:
+        title = clean(e.get("title"))
+        if e.get("allDay") or not m.ok(title):
+            continue
+        try:
+            start, end = from_naive_local(e["start"].replace(" ", "T")), from_naive_local(e["end"].replace(" ", "T"))
+        except (KeyError, ValueError, AttributeError):
+            continue
+        if not win.contains(start.date()) or not sane(start, end):
+            continue
+        key = (start, title.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        res = ((e.get("extendedProps") or {}).get("eResources") or [[]])[0]
+        loc = res[3] if len(res) > 3 else None
+        out.append(Session(rink["id"], rink["name"], title, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "All Star Rec Manager", rink.get("price"), loc))
+    return out
+
+
+def scrape_allstar(f: Fetcher, rink, m, win) -> list[Session]:
+    org, loc = rink["organization_id"], rink["location_id"]
+    url = f"https://allstarrecmanager.com/functions.php?organizationid={org}&locationid={loc}"
+    files = {  # multipart form, same as the site's own calendar
+        "data": (None, "change-event-view"),
+        "start": (None, f"{win.start} 00:00:00"),
+        "end": (None, f"{win.end + timedelta(days=1)} 00:00:00"),
+        "token": (None, ""), "accessToken": (None, ""),
+        "filters": (None, json.dumps([{"organizationId": org, "locationId": loc}])),
+        "page": (None, "calendar"),
+    }
+    r = f.http.post(url, files=files, timeout=30,
+                    headers={"Referer": f"https://allstarrecmanager.com/calendar.html?organizationid={org}&locationid={loc}"})
+    r.raise_for_status()
+    return parse_allstar(r.json(), rink, m, win)
+
+
+# ─── Source: Wix Events embedded in a page (810 Sports Complex) ───────────────
+
+def parse_wix_events(html: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    dec, out, seen = json.JSONDecoder(), [], set()
+    for mm in re.finditer(r'"scheduling"\s*:\s*\{', html):
+        try:
+            sched, end_i = dec.raw_decode(html, mm.end() - 1)
+        except ValueError:
+            continue
+        tm = re.match(r'\s*,\s*"title"\s*:\s*"((?:[^"\\]|\\.)*)"', html[end_i:end_i + 400])
+        if not tm:
+            continue
+        title = clean(json.loads(f'"{tm.group(1)}"'))
+        cfg = sched.get("config") or {}
+        if cfg.get("scheduleTbd") or not m.ok(title):
+            continue
+        try:
+            start = datetime.fromisoformat(cfg["startDate"].replace("Z", "+00:00"))
+            end = datetime.fromisoformat(cfg["endDate"].replace("Z", "+00:00"))
+        except (KeyError, ValueError):
+            continue
+        if not win.contains(start.astimezone(TZ).date()) or not sane(start, end):
+            continue
+        key = (start, title.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(Session(rink["id"], rink["name"], title, start, end, rink["dist_mi"],
+                           rink.get("url") or "", "rink website (Wix Events)", rink.get("price")))
+    return out
+
+
+def scrape_wix_events(f: Fetcher, rink, m, win) -> list[Session]:
+    return parse_wix_events(f.html(rink["events_url"], must_contain='"scheduling"'), rink, m, win)
+
+
+# ─── Source: Frontline Connect monthly session schedules (Crystal, Troy) ──────
+
+def parse_frontline(html: str, label: str, rink: dict, m: Matcher, win: Window) -> list[Session]:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    rng = re.compile(r"(\d{1,2}:\d{2}\s*[AP]M)\s*-\s*(\d{1,2}:\d{2}\s*[AP]M)", re.I)
+    out = []
+    for td in soup.find_all("td"):
+        sp = td.find("span", id=re.compile(r"^spandt"))
+        if not sp:
+            continue
+        try:
+            d = datetime.strptime(sp.get_text(strip=True), "%b %d %Y").date()
+        except ValueError:
+            continue
+        if not win.contains(d):
+            continue
+        arena = None
+        # walk the cell in order: an arena header, then the sessions on that arena
+        for el in td.find_all("div", class_=re.compile(r"surfdiv|sessdiv")):
+            cls = el.get("class") or []
+            if "surfdiv" in cls:
+                arena = el.get_text(" ", strip=True).title() or None
+                continue
+            txt = el.get_text(" ", strip=True)
+            tm = rng.search(txt)
+            if not tm:
+                continue
+            raw = rng.sub("", txt).strip()
+            base = label
+            if re.search(r"drop", raw, re.I) and not re.search(r"drop", label, re.I):
+                base = "Drop-In Hockey"                    # the cell's own text wins over the page label
+            elif re.search(r"stick|puck", raw, re.I) and not re.search(r"stick|puck", label, re.I):
+                base = "Stick N Puck"
+            age = re.match(r"(\d{2})\s*\+", raw)
+            name = f"{age.group(1)}+ {base}" if age else base
+            if not m.ok(name, raw):
+                continue
+            s, e = local(d, tm.group(1)), local(d, tm.group(2))
+            if sane(s, e):
+                out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
+                                   rink.get("url") or "", "Frontline Connect", rink.get("price"), arena))
+    return out
+
+
+def scrape_frontline(f: Fetcher, rink, m, win) -> list[Session]:
+    host, fac = rink["frontline_host"], rink["fac"]
+    out = []
+    for sess in rink["sessions"]:
+        for (yr, mo) in win.months():
+            url = f"https://{host}/monthlysched.cfm?fac={fac}&facid={rink.get('facid', 1)}&session={sess['session']}&month={mo}"
+            out += parse_frontline(f.html(url, must_contain="spandt"), sess["name"], rink, m, win)
+    uniq = {(s.start, s.name, s.location): s for s in out}   # adjacent-month days repeat across pages
+    return list(uniq.values())
+
+
 # ─── Source: fixed weekly schedule ────────────────────────────────────────────
 
 DOW = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
@@ -536,11 +677,23 @@ def build_static(rink: dict, win: Window) -> list[Session]:
     return out
 
 
+def page_text(html: str) -> str:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    for t in soup(["script", "style", "noscript"]):
+        t.decompose()
+    return re.sub(r"\s+", " ", soup.get_text(" ")).replace("–", "-").replace("—", "-")
+
+
 def scrape_static(f: Fetcher, rink, m, win) -> list[Session]:
+    """Fixed weekly times. `verify_text` (a regex or list of regexes) must all still match the rink's page —
+    put the listed times in them so a schedule change shows up as an error instead of stale events."""
     if rink.get("verify_url"):
-        page = f.html(rink["verify_url"])
-        if not re.search(rink["verify_text"], page, re.I):
-            raise RuntimeError("rink page no longer mentions this session — check and update rinks.json")
+        checks = rink["verify_text"] if isinstance(rink["verify_text"], list) else [rink["verify_text"]]
+        txt = page_text(f.html(rink["verify_url"], must_contain=checks[0]))
+        missing = [c for c in checks if not re.search(c, txt, re.I)]
+        if missing:
+            raise RuntimeError(f"rink page no longer matches {missing[0]!r} — schedule may have changed; update rinks.json")
     return build_static(rink, win)
 
 
@@ -574,9 +727,60 @@ def parse_vision_json(text: str) -> list[dict]:
     return json.loads(m.group(0)) if m else []
 
 
-def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
+def vision_read_month(f: Fetcher, block: dict, yr: int, mo: int, rink: dict, m: Matcher,
+                      win: Window, source: str) -> tuple[list[Session], list[dict]]:
+    """Ask Claude to read a month-grid schedule (an image or PDF content block). Returns (sessions, raw items)."""
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
+        raise RuntimeError("ANTHROPIC_API_KEY not set — can't read the image schedule")
+    prompt = (f"This is the {MONTHS[mo-1].title()} {yr} skating schedule for an ice arena, laid out as a calendar grid. "
+              "List every Stick & Puck session and every Drop-in Hockey session, using the session's name as written "
+              "(e.g. 'Adult Stick & Puck', 'Adult Drop-In Hockey', 'Youth Stick & Puck'). Ignore public/open skating, "
+              "parent & tot and pucks & parents. Read the day number in each cell carefully. Return ONLY a JSON array of "
+              'objects: {"day": int, "type": "<session name>", "start": "H:MM AM/PM", "end": "H:MM AM/PM"}')
+    items = None
+    for model in VISION_MODELS:
+        r = f.http.post("https://api.anthropic.com/v1/messages", timeout=120, headers={
+            "x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+            json={"model": model, "max_tokens": 3000, "messages": [{"role": "user", "content": [
+                block, {"type": "text", "text": prompt}]}]})
+        if r.status_code == 200:
+            blocks = r.json().get("content", [])
+            items = parse_vision_json("".join(b.get("text", "") for b in blocks if b.get("type") == "text"))
+            break
+        log(f"    {model}: HTTP {r.status_code}")
+        if r.status_code not in (400, 404):
+            break
+    if items is None:
+        raise RuntimeError("Claude API call failed")
+    log(f"    {MONTHS[mo-1].title()}: model listed {len(items)} session(s)")
+    out = []
+    for it in items:
+        try:
+            d = date(yr, mo, int(it.get("day") or it.get("date_num")))
+            s, e = vision_times(d, str(it.get("start") or it.get("time_start")),
+                                str(it.get("end") or it.get("time_end") or ""))
+        except (KeyError, ValueError, TypeError):
+            log(f"    couldn't read {it}")
+            continue
+        name = it.get("type") or "Stick & Puck"
+        if win.contains(d) and sane(s, e) and m.ok(name):
+            out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
+                               rink["url"], source, rink.get("price")))
+    return out, items
+
+
+def image_block(data: bytes, media: str) -> dict:
+    return {"type": "image", "source": {"type": "base64", "media_type": media, "data": base64.b64encode(data).decode()}}
+
+
+def pdf_block(data: bytes) -> dict:
+    return {"type": "document", "source": {"type": "base64", "media_type": "application/pdf",
+                                           "data": base64.b64encode(data).decode()}}
+
+
+def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
+    if not os.environ.get("ANTHROPIC_API_KEY"):
         raise RuntimeError("ANTHROPIC_API_KEY not set — can't read the image schedule")
     html = f.html(rink["url"], must_contain=r"wp-content/uploads")
     imgs = find_month_images(html, rink["url"])
@@ -588,40 +792,8 @@ def scrape_jackson(f: Fetcher, rink, m, win) -> list[Session]:
             continue
         img = f.bytes(src, referer=rink["url"])
         media = "image/png" if src.lower().endswith(".png") else ("image/webp" if src.lower().endswith(".webp") else "image/jpeg")
-        prompt = (f"This is the {MONTHS[mo-1].title()} {yr} skating schedule for an ice arena, laid out as a calendar grid. "
-                  "List every Stick & Puck session and every Drop-in Hockey session. Ignore public/open skating. "
-                  "Read the day number in each cell carefully. Return ONLY a JSON array of objects: "
-                  '{"day": int, "type": "Stick & Puck" | "Drop-in Hockey", "start": "H:MM AM/PM", "end": "H:MM AM/PM"}')
-        items = None
-        for model in VISION_MODELS:
-            r = f.http.post("https://api.anthropic.com/v1/messages", timeout=90, headers={
-                "x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                json={"model": model, "max_tokens": 2000, "messages": [{"role": "user", "content": [
-                    {"type": "image", "source": {"type": "base64", "media_type": media,
-                                                 "data": base64.b64encode(img).decode()}},
-                    {"type": "text", "text": prompt}]}]})
-            if r.status_code == 200:
-                blocks = r.json().get("content", [])
-                items = parse_vision_json("".join(b.get("text", "") for b in blocks if b.get("type") == "text"))
-                break
-            log(f"    {model}: HTTP {r.status_code}")
-            if r.status_code not in (400, 404):
-                break
-        if items is None:
-            raise RuntimeError("Claude API call failed")
-        log(f"    {MONTHS[mo-1].title()}: model listed {len(items)} session(s)")
-        for it in items:
-            try:
-                d = date(yr, mo, int(it.get("day") or it.get("date_num")))
-                s, e = vision_times(d, str(it.get("start") or it.get("time_start")),
-                                    str(it.get("end") or it.get("time_end") or ""))
-            except (KeyError, ValueError, TypeError):
-                log(f"    couldn't read {it}")
-                continue
-            name = it.get("type") or "Stick & Puck"
-            if win.contains(d) and sane(s, e) and m.ok(name):
-                out.append(Session(rink["id"], rink["name"], name, s, e, rink["dist_mi"],
-                                   rink["url"], "monthly schedule image", rink.get("price")))
+        got, items = vision_read_month(f, image_block(img, media), yr, mo, rink, m, win, "monthly schedule image")
+        out += got
         seen_any += items
     if not out:
         raise RuntimeError("no usable sessions from schedule image(s); found images for "
@@ -773,7 +945,16 @@ def scrape_scs(f: Fetcher, rink, m, win) -> list[Session]:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
             page = pdf.pages[0]
             words = page.extract_words(x_tolerance=1.5, y_tolerance=3)
-            out += parse_calendar_words(words, page.height, yr, mo, rink, m, win)
+            height = page.height
+        try:
+            if len(words) < 20:
+                raise RuntimeError("no text layer")
+            out += parse_calendar_words(words, height, yr, mo, rink, m, win)
+        except RuntimeError as e:
+            # Some months are posted as a scanned image inside the PDF — read it with Claude instead.
+            log(f"    {MONTHS[mo-1].title()} PDF: {e}; reading it as an image")
+            got, _ = vision_read_month(f, pdf_block(pdf_bytes), yr, mo, rink, m, win, "monthly PDF calendar (read by Claude)")
+            out += got
     return out
 
 
@@ -945,6 +1126,9 @@ SCRAPERS = {
     "scs_pdf": scrape_scs,
     "allen_park": scrape_allen_park,
     "eddie_edgar": scrape_eddie_edgar,
+    "allstar": scrape_allstar,
+    "wix_events": scrape_wix_events,
+    "frontline": scrape_frontline,
 }
 
 

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-19",
+  "last_updated": "2026-11-17",
   "home_zip": "48108",
   "_readme": "Single source of truth for scraper.py. Each active rink needs an id, name, dist_mi, source and that source's settings. Optional per-rink 'include' / 'exclude' regexes override the defaults below. 'price' is what the rink lists, used when the source doesn't give one.",
   "defaults": {
@@ -18,6 +18,126 @@
       "active": true
     },
     {
+      "id": "yost",
+      "name": "Yost Ice Arena – Ann Arbor",
+      "dist_mi": 3,
+      "price": null,
+      "source": "finnly",
+      "schedule_url": "https://yostarena.finnlyconnect.com/schedule/909",
+      "url": "https://yost.umich.edu/",
+      "notes": "Public skate only as of Nov 2026; has run Sticks and Pucks before, so it's wired up in case they come back.",
+      "active": true
+    },
+    {
+      "id": "buhr-park",
+      "name": "Buhr Park Ice Arena – Ann Arbor",
+      "dist_mi": 4,
+      "price": "$8 (Senior/Youth $7)",
+      "source": "static_weekly",
+      "url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/buhr-ice-arena-and-pool/",
+      "verify_url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/buhr-ice-arena-and-pool/",
+      "verify_text": [
+        "Sticks\\s*(?:and|&|&amp;|\\+)\\s*Pucks",
+        "Sunday:\\s*9\\s*-\\s*10\\s*a\\.m\\.\\s*Monday:\\s*2:15\\s*-\\s*3:15\\s*p\\.m\\.\\s*Friday:\\s*3:00\\s*-\\s*5\\s*p\\.m\\.\\s*Saturday:\\s*1:30\\s*-\\s*2:30\\s*p\\.m\\.",
+        "Monday:\\s*9\\s*-\\s*10\\s*p\\.m\\.\\s*\\(All Ages\\)\\s*Tuesday:\\s*9\\s*-\\s*10\\s*p\\.m\\.\\s*\\(Women.s\\)\\s*Wednesday:\\s*9\\s*-\\s*10\\s*p\\.m\\.\\s*\\(Men.s\\)",
+        "Thursday:\\s*10:30\\s*-\\s*11:30\\s*a\\.m\\.\\s*\\(Past Masters\\)[^:]{0,40}?10:15\\s*-\\s*11:15\\s*p\\.m\\.\\s*\\(All Ages\\)"
+      ],
+      "schedule": [
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Sun"
+          ],
+          "start": "9:00 AM",
+          "end": "10:00 AM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Mon"
+          ],
+          "start": "2:15 PM",
+          "end": "3:15 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Fri"
+          ],
+          "start": "3:00 PM",
+          "end": "5:00 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Sat"
+          ],
+          "start": "1:30 PM",
+          "end": "2:30 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Drop-In Hockey (All Ages)",
+          "days": [
+            "Mon"
+          ],
+          "start": "9:00 PM",
+          "end": "10:00 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Women's Drop-In Hockey",
+          "days": [
+            "Tue"
+          ],
+          "start": "9:00 PM",
+          "end": "10:00 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Men's Drop-In Hockey",
+          "days": [
+            "Wed"
+          ],
+          "start": "9:00 PM",
+          "end": "10:00 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Past Masters Drop-In Hockey",
+          "days": [
+            "Thu"
+          ],
+          "start": "10:30 AM",
+          "end": "11:30 AM",
+          "from": "2026-12-03",
+          "until": "2027-03-15"
+        },
+        {
+          "name": "Drop-In Hockey (All Ages)",
+          "days": [
+            "Thu"
+          ],
+          "start": "10:15 PM",
+          "end": "11:15 PM",
+          "from": "2026-11-15",
+          "until": "2027-03-15"
+        }
+      ],
+      "notes": "Outdoor city rink, opened Nov 15, 2026, weather permitting. Fixed weekly times from the city page; the scraper checks the listed times are unchanged. Registration in person, 30 min before.",
+      "active": true
+    },
+    {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube – Chelsea",
       "dist_mi": 16,
@@ -28,21 +148,6 @@
       "active": true
     },
     {
-      "id": "usa-hockey-arena",
-      "name": "USA Hockey Arena – Plymouth",
-      "dist_mi": 22,
-      "price": null,
-      "source": "static_weekly",
-      "url": "https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-usa-hockey-arena",
-      "verify_url": "https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-usa-hockey-arena",
-      "verify_text": "drop-?in hockey",
-      "schedule": [
-        {"name": "Adult Drop-In Hockey (Ed's Hockey)", "days": ["Tue", "Thu"], "start": "10:10 PM", "end": "11:30 PM", "from": "2026-09-01", "until": "2027-04-30"}
-      ],
-      "notes": "Fixed weekly schedule from the rink's Adult Hockey page (18+, full equipment). Only published while that page still mentions drop-in hockey.",
-      "active": true
-    },
-    {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube – Brighton",
       "dist_mi": 22,
@@ -50,6 +155,34 @@
       "source": "bond",
       "facility_id": 386,
       "url": "https://bondsports.co/org/353/386/schedule",
+      "active": true
+    },
+    {
+      "id": "usa-hockey-arena",
+      "name": "USA Hockey Arena – Plymouth",
+      "dist_mi": 22,
+      "price": null,
+      "source": "static_weekly",
+      "url": "https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-usa-hockey-arena",
+      "verify_url": "https://www.usahockeyarena.com/page/show/1816981-adult-hockey-at-the-usa-hockey-arena",
+      "verify_text": [
+        "drop-?in hockey",
+        "Tuesday and Thursday nights,?\\s*from\\s*10:10\\s*p\\.m\\.\\s*-\\s*11:30\\s*p\\.m\\."
+      ],
+      "schedule": [
+        {
+          "name": "Adult Drop-In Hockey (Ed's Hockey)",
+          "days": [
+            "Tue",
+            "Thu"
+          ],
+          "start": "10:10 PM",
+          "end": "11:30 PM",
+          "from": "2026-09-01",
+          "until": "2027-04-30"
+        }
+      ],
+      "notes": "Fixed weekly schedule from the rink's Adult Hockey page (18+, full equipment). Only published while that page still mentions drop-in hockey.",
       "active": true
     },
     {
@@ -163,9 +296,23 @@
       "source": "static_weekly",
       "url": "https://www.wyandottemi.gov/Facilities/Facility/Details/Benjamin-F-Yack-Arena-3",
       "verify_url": "https://www.wyandottemi.gov/Facilities/Facility/Details/Benjamin-F-Yack-Arena-3",
-      "verify_text": "Sticks\\s*&(?:amp;)?\\s*Pucks",
+      "verify_text": [
+        "Sticks\\s*&(?:amp;)?\\s*Pucks",
+        "Tuesday,?\\s*Wednesday,?\\s*and\\s*Thursday\\s*Mornings\\s*9\\s*am\\s*to\\s*10:50\\s*am"
+      ],
       "schedule": [
-        {"name": "Sticks & Pucks", "days": ["Tue", "Wed", "Thu"], "start": "9:00 AM", "end": "10:50 AM", "from": "2026-09-01", "until": "2027-04-30"}
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Tue",
+            "Wed",
+            "Thu"
+          ],
+          "start": "9:00 AM",
+          "end": "10:50 AM",
+          "from": "2026-09-01",
+          "until": "2027-04-30"
+        }
       ],
       "notes": "Fixed weekly schedule from the city's Yack Arena page (no calendar). Only published while that page still lists Sticks & Pucks.",
       "active": true
@@ -199,12 +346,61 @@
       "source": "static_weekly",
       "url": "https://www.cityofsouthfield.com/sites/default/files/2026-08/Fall26Web_3.pdf",
       "schedule": [
-        {"name": "Sticks & Pucks", "days": ["Mon"], "start": "10:30 AM", "end": "11:50 AM", "from": "2026-09-14", "until": "2026-12-28"},
-        {"name": "Sticks & Pucks", "days": ["Wed"], "start": "10:30 AM", "end": "11:50 AM", "from": "2026-09-09", "until": "2026-12-30"},
-        {"name": "Sticks & Pucks", "days": ["Fri"], "start": "10:30 AM", "end": "11:50 AM", "from": "2026-09-11", "until": "2026-12-18"},
-        {"name": "Sticks & Pucks", "days": ["Sun"], "start": "12:00 PM", "end": "1:20 PM", "from": "2026-09-13", "until": "2026-12-27"}
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Mon"
+          ],
+          "start": "10:30 AM",
+          "end": "11:50 AM",
+          "from": "2026-09-14",
+          "until": "2026-12-28"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Wed"
+          ],
+          "start": "10:30 AM",
+          "end": "11:50 AM",
+          "from": "2026-09-09",
+          "until": "2026-12-30"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Fri"
+          ],
+          "start": "10:30 AM",
+          "end": "11:50 AM",
+          "from": "2026-09-11",
+          "until": "2026-12-18"
+        },
+        {
+          "name": "Sticks & Pucks",
+          "days": [
+            "Sun"
+          ],
+          "start": "12:00 PM",
+          "end": "1:20 PM",
+          "from": "2026-09-13",
+          "until": "2026-12-27"
+        }
       ],
       "notes": "From the city's Fall 2026 activities guide (first 20 players). Winter guide comes out in December — update these dates then.",
+      "active": true
+    },
+    {
+      "id": "the-barn-fenton",
+      "name": "The Barn – Fenton",
+      "dist_mi": 45,
+      "price": null,
+      "source": "allstar",
+      "organization_id": 11,
+      "location_id": 54,
+      "url": "https://allstarrecmanager.com/calendar.html?organizationid=11&locationid=54",
+      "exclude": "no adults|\\byouth\\b|\\bHS\\b|high school|unified|private|\\b\\d{1,2}\\s*-\\s*\\d{1,2}\\s*(?:year|yr)?s?(?:\\s*olds?)?\\b(?!:)|freestyle|figure|cancel+ed|\\btot\\b|\\bmites?\\b|parent|learn to|\\bjr\\b|griffins",
+      "notes": "Barn Hockey Fenton. Lunch Time Shinny, Senior Drop-In, Stick & Puck and 3v3 drop-ins. Jr Griffins youth sessions filtered out.",
       "active": true
     },
     {
@@ -228,6 +424,25 @@
       "active": true
     },
     {
+      "id": "ottawa-park",
+      "name": "Ottawa Park Ice Rink – Toledo, OH",
+      "dist_mi": 52,
+      "price": null,
+      "source": "daysmart",
+      "company": "tamoshanter",
+      "resource_ids": [
+        18,
+        19,
+        21,
+        22,
+        23,
+        24
+      ],
+      "url": "https://ottawaparkrink.com/drop-in-hockey",
+      "notes": "Outdoor city rink run by Tam-O-Shanter (same DaySmart account; filtered to Ottawa Park's rinks). Adult drop-in starts December.",
+      "active": true
+    },
+    {
       "id": "royal-oak",
       "name": "John Lindell Ice Arena – Royal Oak",
       "dist_mi": 54,
@@ -238,14 +453,37 @@
       "active": true
     },
     {
-      "id": "tam-o-shanter",
-      "name": "Tam-O-Shanter Ice Rink – Sylvania, OH",
-      "dist_mi": 58,
-      "price": "$10",
-      "source": "daysmart",
-      "company": "tamoshanter",
-      "url": "https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration",
-      "notes": "Adult Drop-In (ADI) weekdays at noon. Their Stick & Puck is ages 5–13 only, so it's filtered out.",
+      "id": "810-flint",
+      "name": "810 Sports Complex – Flint",
+      "dist_mi": 55,
+      "price": null,
+      "source": "wix_events",
+      "events_url": "https://www.810sportscomplex.com/",
+      "url": "https://www.810sportscomplex.com/",
+      "notes": "Weekday Stick & Puck and 55+ Drop-In, from the events list on the rink's homepage. Book online.",
+      "active": true
+    },
+    {
+      "id": "crystal-fieldhouse",
+      "name": "Crystal Fieldhouse – Burton",
+      "dist_mi": 57,
+      "price": null,
+      "source": "frontline",
+      "frontline_host": "crystal.frontline-connect.com",
+      "fac": "crystal",
+      "facid": 1,
+      "sessions": [
+        {
+          "session": 3,
+          "name": "Stick N Puck"
+        },
+        {
+          "session": 1,
+          "name": "Drop-In Hockey"
+        }
+      ],
+      "url": "https://crystal.frontline-connect.com/scheduleselect.cfm?fac=crystal&facid=1",
+      "notes": "Stick N Puck (all ages) most days; Drop-In is 50+ (Mon/Wed/Fri 11am).",
       "active": true
     },
     {
@@ -253,20 +491,38 @@
       "name": "Buffalo Wild Wings Arena – Troy",
       "dist_mi": 58,
       "price": "$15",
-      "source": "ice_finder",
-      "slug": "buffalo-wild-wings-arena",
-      "url": "https://www.troysports.com/page/show/438622-adult-drop-in",
-      "active": true
+      "source": "frontline",
+      "url": "https://troy.frontline-connect.com/scheduleselect.cfm?fac=troy&facid=1",
+      "active": true,
+      "frontline_host": "troy.frontline-connect.com",
+      "fac": "troy",
+      "facid": 1,
+      "sessions": [
+        {
+          "session": 16,
+          "name": "Sticks N Pucks"
+        },
+        {
+          "session": 3,
+          "name": "Adult Drop-In"
+        }
+      ]
     },
     {
-      "id": "suburban-rochester",
-      "name": "Suburban Ice Rochester",
-      "dist_mi": 60,
-      "price": "$15",
-      "source": "ice_finder",
-      "slug": "suburban-ice-rochester",
-      "url": "https://www.suburbanicerochester.com/public-skating",
-      "active": true
+      "id": "tam-o-shanter",
+      "name": "Tam-O-Shanter Ice Rink – Sylvania, OH",
+      "dist_mi": 58,
+      "price": "$10",
+      "source": "daysmart",
+      "company": "tamoshanter",
+      "url": "https://apps.daysmartrecreation.com/dash/x/#/online/tamoshanter/event-registration",
+      "notes": "Adult Drop-In (ADI) weekdays at noon. Their Stick & Puck is ages 5–13 only, so it's filtered out. Same DaySmart account as Ottawa Park, so only Tam-O-Shanter's rinks (resources 1, 6, 7) are used.",
+      "active": true,
+      "resource_ids": [
+        1,
+        6,
+        7
+      ]
     },
     {
       "id": "big-boy-fraser",
@@ -278,6 +534,16 @@
       "location_id": 17275,
       "url": "https://bigboyarena.ezfacility.com/Sessions",
       "notes": "Sessions are posted only a day or two ahead. Book online.",
+      "active": true
+    },
+    {
+      "id": "suburban-rochester",
+      "name": "Suburban Ice Rochester",
+      "dist_mi": 60,
+      "price": "$15",
+      "source": "ice_finder",
+      "slug": "suburban-ice-rochester",
+      "url": "https://www.suburbanicerochester.com/public-skating",
       "active": true
     },
     {
@@ -302,17 +568,70 @@
     }
   ],
   "not_scraping": [
-    {"name": "Veterans Memorial Ice Arena – Ann Arbor", "reason": "Closed for the 2026–27 season after tornado damage", "checked": "2026-10-19"},
-    {"name": "Plymouth Cultural Center", "reason": "Fall 2026 schedule is open skate and figure freestyle only — no hockey sessions", "checked": "2026-10-19"},
-    {"name": "Birmingham Ice Sports Arena", "reason": "DaySmart shows open skate, adult skate and youth/parent hockey only — no S&P or drop-in", "checked": "2026-10-19"},
-    {"name": "Brownstown Sports Center", "reason": "No ice programs published online (township DaySmart has no ice events)", "checked": "2026-10-19"},
-    {"name": "Lakeland Arena – Waterford", "reason": "Runs Stick & Puck ($12) but the schedule isn't published anywhere machine-readable (not in their Bond programs)", "checked": "2026-10-19"},
-    {"name": "Oak Park Ice Arena", "reason": "Drop-in page says 'No availability at this time'", "checked": "2026-10-19"},
-    {"name": "Beech Tot Lot – Redford", "reason": "Township facility calendar is empty", "checked": "2026-10-19"},
-    {"name": "Farmington Hills Ice Arena (city rink)", "reason": "Public skate only", "checked": "2026-10-19"},
-    {"name": "Dearborn Ice Skating Center", "reason": "Public skate only", "checked": "2026-10-19"},
-    {"name": "Mount Clemens Ice Arena", "reason": "Public skate and freestyle only", "checked": "2026-10-19"},
-    {"name": "Crystal Fieldhouse", "reason": "Has S&P and 50+ drop-in, but ~70+ min drive — outside the 1-hour radius", "checked": "2026-10-19"},
-    {"name": "Clark Park – Detroit", "reason": "Outdoor and seasonal; online listings show youth hockey and open skate only", "checked": "2026-10-19"}
+    {
+      "name": "Veterans Memorial Ice Arena – Ann Arbor",
+      "reason": "Closed for the 2026–27 season after tornado damage",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Plymouth Cultural Center",
+      "reason": "Fall 2026 schedule is open skate and figure freestyle only — no hockey sessions",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Birmingham Ice Sports Arena",
+      "reason": "DaySmart shows open skate, adult skate and youth/parent hockey only — no S&P or drop-in",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Brownstown Sports Center",
+      "reason": "No ice programs published online (township DaySmart has no ice events)",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Lakeland Arena – Waterford",
+      "reason": "Runs Stick & Puck ($12) but the schedule isn't published anywhere machine-readable (not in their Bond programs)",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Oak Park Ice Arena",
+      "reason": "Drop-in page says 'No availability at this time'",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Beech Tot Lot – Redford",
+      "reason": "Township facility calendar is empty",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Farmington Hills Ice Arena (city rink)",
+      "reason": "Public skate only",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Dearborn Ice Skating Center",
+      "reason": "Public skate only",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Mount Clemens Ice Arena",
+      "reason": "Public skate and freestyle only",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Clark Park – Detroit",
+      "reason": "Outdoor and seasonal; online listings show youth hockey and open skate only",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Summit Sports & Ice Complex – Dimondale",
+      "reason": "Posts S&P / drop-in only on social media; website has no schedule (and ~65+ mi)",
+      "checked": "2026-11-17"
+    },
+    {
+      "name": "Arrington Ice Arena – Adrian",
+      "reason": "Facility calendar (ActiveNet) has college hockey, figure and public skate only; S&P announced on Facebook",
+      "checked": "2026-11-17"
+    }
   ]
 }

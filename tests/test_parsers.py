@@ -123,9 +123,9 @@ def test_bond_hazel_park_name_suffix_trimmed():
 
 # ── DaySmart ─────────────────────────────────────────────────────────────────
 
-def ds_ev(desc, start_gmt, end_gmt, hteam=None):
+def ds_ev(desc, start_gmt, end_gmt, hteam=None, res=6):
     return {"attributes": {"desc": desc, "start_gmt": start_gmt, "end_gmt": end_gmt, "hteam_id": hteam,
-                           "start": "x", "end": "x"}}
+                           "start": "x", "end": "x", "resource_id": res}}
 
 
 def test_daysmart_tam_o_shanter_names_and_youth_filter():
@@ -411,3 +411,173 @@ def test_every_active_rink_has_a_known_source():
         assert r["source"] in S.SCRAPERS, r["id"]
         assert r["id"] and r["name"] and isinstance(r["dist_mi"], int)
     assert len({r["id"] for r in CONFIG["rinks"]}) == len(CONFIG["rinks"])
+
+
+# ── All Star Rec Manager (The Barn) ──────────────────────────────────────────
+
+def _barn(id_, title, s, e, cat="1591"):
+    return {"id": id_, "title": title, "allDay": False, "start": s, "end": e,
+            "extendedProps": {"category": cat, "location": "The Barn",
+                              "eResources": [["1", "186", "0", "Ice Rink", "715 Torrey Rd, Fenton, Michigan 48430", "1071", ""]]}}
+
+
+def test_allstar_the_barn():
+    data = {"access": "access", "events": [
+        _barn("14148", "Lunch Time Shinny", "2026-10-20 11:00", "2026-10-20 14:00"),
+        _barn("14149", "Senior Drop In Hockey", "2026-10-20 14:00", "2026-10-20 15:00"),
+        _barn("14150", "Stick & Puck", "2026-10-20 15:00", "2026-10-20 16:30"),
+        _barn("14151", "Open Skate", "2026-10-20 16:30", "2026-10-20 18:00", "1590"),
+        _barn("13862", "Youth Stick & Puck", "2026-10-21 19:00", "2026-10-21 20:00"),
+        _barn("13863", "Booked", "2026-10-21 18:00", "2026-10-21 20:00", "1604"),
+        _barn("14426", "Drop In 3V3 (18+)", "2026-10-21 20:30", "2026-10-21 22:30"),
+        _barn("x", "Jr Griffins - Full Gear Stick & Puck - Kirk Allen", "2026-10-22 17:00", "2026-10-22 18:00"),
+    ]}
+    got = S.parse_allstar(data, RINKS["the-barn-fenton"], M("the-barn-fenton"), WIN)
+    assert [(hm(s), s.name) for s in got] == [
+        ("Tue 10/20 11:00-14:00", "Lunch Time Shinny"), ("Tue 10/20 14:00-15:00", "Senior Drop In Hockey"),
+        ("Tue 10/20 15:00-16:30", "Stick & Puck"), ("Wed 10/21 20:30-22:30", "Drop In 3V3 (18+)")]
+    assert got[0].location == "Ice Rink" and got[0].kind == "Drop-In" and got[2].kind == "Stick & Puck"
+
+
+# ── Wix Events (810 Sports Complex) ──────────────────────────────────────────
+
+def _wix(title, s, e):
+    return ('{"location":{"name":"810","address":"1160 Elms Rd, Flint, MI 48532, USA","tbd":false},'
+            '"scheduling":{"config":{"scheduleTbd":false,"startDate":"%s","endDate":"%s",'
+            '"timeZoneId":"America\\/New_York","endDateHidden":false,"showTimeZone":false,'
+            '"recurrences":{"occurrences":[],"categoryId":"60b1","status":2}},'
+            '"formatted":"x","startDateFormatted":"x","startTimeFormatted":"x"},"title":"%s","slug":"x"}' % (s, e, title))
+
+
+def test_wix_events_810():
+    html = ("<script>var x={\"events\":[" + ",".join([
+        _wix("55+ Drop-In Hockey", "2026-10-21T13:45:00.000Z", "2026-10-21T14:50:00.000Z"),
+        _wix("Stick &amp; Puck", "2026-10-20T17:00:00.000Z", "2026-10-20T18:20:00.000Z"),
+        _wix("Stick & Puck", "2026-10-20T17:00:00.000Z", "2026-10-20T18:20:00.000Z"),   # repeated block
+        _wix("Public Skate", "2026-10-20T19:00:00.000Z", "2026-10-20T20:00:00.000Z"),
+        _wix("810 Freestyle", "2026-10-20T15:30:00.000Z", "2026-10-20T16:30:00.000Z"),
+    ]) + "]}</script>")
+    got = sorted(S.parse_wix_events(html, RINKS["810-flint"], M("810-flint"), WIN), key=lambda s: s.start)
+    assert [(hm(s), s.name) for s in got] == [("Tue 10/20 13:00-14:20", "Stick & Puck"),
+                                             ("Wed 10/21 09:45-10:50", "55+ Drop-In Hockey")]
+
+
+# ── Frontline Connect (Crystal, Troy) ────────────────────────────────────────
+
+FRONTLINE_TD = (
+    '<table><tr><td valign="top" id="46345"> <span style="display:none;" id="spandt46345">Oct 21 2026</span>'
+    '<div class="badge ">21<br></div> <div class="surfdiv hidden-sm hidden-xs"> <strong>NORTH ARENA</strong> </div>'
+    '<div class="hidden-lg hidden-md hidden-sm"><strong>NORTH ARENA</strong></div>'
+    '<div id="popoverdiv46345" class="popoverdata" title="Oct 21 2026"> <div class="sessdiv hidden-sm hidden-xs">'
+    '<strong><span style="text-decoration:underline;">STICKNPUCK</span></strong><br> 5:00 PM - 6:05 PM <br> </div>'
+    '<div class="hidden-lg hidden-md hidden-sm" style="font-size:10px;"><strong><span>STICKN\nPUCK\n</span></strong><br>'
+    ' 5:00P <span style="font-size:9px;">to</span> 6:05P <br>-------- </div>'
+    '<div class="hidden-lg hidden-md hidden-xs"><strong><span>STICKNPUCK</span></strong><br> 5:00P - 6:05P <br></div></div>'
+    '<div class="surfdiv hidden-sm hidden-xs"> <strong>SOUTH ARENA</strong> </div>'
+    '<div id="popoverdiv46346" class="popoverdata"> <div class="sessdiv hidden-sm hidden-xs">'
+    '<strong><span>STICKNPUCK</span></strong><br> 7:30 PM - 8:45 PM <br> </div></div>'
+    '</td><td><span style="display:none;" id="spandt46346">Oct 23 2026</span>'
+    '<div class="surfdiv hidden-sm hidden-xs"> <strong>SOUTH ARENA</strong> </div>'
+    '<div class="popoverdata"><div class="sessdiv hidden-sm hidden-xs"><strong><span>50+DROP-INHOCKEY</span></strong>'
+    '<br> 11:00 AM - 12:20 PM <br></div></div>'
+    '<div class="popoverdata"><div class="sessdiv hidden-sm hidden-xs"><strong><span>STICKNPUCK</span></strong>'
+    '<br> 12:00 AM - 12:00 AM <br></div></div></td></tr></table>')
+
+
+def test_frontline_month_grid():
+    sp = S.parse_frontline(FRONTLINE_TD, "Stick N Puck", RINKS["crystal-fieldhouse"], M("crystal-fieldhouse"), WIN)
+    assert [(hm(s), s.location) for s in sp if s.kind == "Stick & Puck"] == [
+        ("Wed 10/21 17:00-18:05", "North Arena"), ("Wed 10/21 19:30-20:45", "South Arena")]
+    assert [s.name for s in sp if s.kind == "Drop-In"] == ["50+ Drop-In Hockey"]   # cell text beats page label
+    di = S.parse_frontline(FRONTLINE_TD, "Drop-In Hockey", RINKS["crystal-fieldhouse"], M("crystal-fieldhouse"), WIN)
+    assert ("Fri 10/23 11:00-12:20", "50+ Drop-In Hockey") in [(hm(s), s.name) for s in di]
+
+
+# ── DaySmart rink filter (Tam-O-Shanter vs Ottawa Park) ──────────────────────
+
+def test_daysmart_resource_filter_and_month_prefix():
+    def ev(desc, res, s, e):
+        x = ds_ev(desc, s, e)
+        x["attributes"]["resource_id"] = res
+        return x
+    pages = [{"data": [ev("ADI", 6, "2026-10-19T16:00:00", "2026-10-19T17:50:00"),
+                       ev("December 2026 Adult Drop-In", 19, "2026-10-22T17:00:00", "2026-10-22T18:30:00")],
+              "included": []}]
+    tam = S.parse_daysmart(pages, RINKS["tam-o-shanter"], M("tam-o-shanter"), WIN)
+    otp = S.parse_daysmart(pages, RINKS["ottawa-park"], M("ottawa-park"), WIN)
+    assert [hm(s) for s in tam] == ["Mon 10/19 12:00-13:50"]
+    assert [(hm(s), s.name) for s in otp] == [("Thu 10/22 13:00-14:30", "Adult Drop-In")]
+
+
+# ── Fixed weekly schedules: Buhr Park + time checks ──────────────────────────
+
+BUHR_PAGE = ("<html><body><div class='tab'>Sticks and Pucks Sticks and Pucks at Buhr Park is a public session ... "
+             "Schedule: Sunday: 9&ndash;10 a.m. Monday: 2:15-3:15 p.m. Friday: 3:00&ndash;5 p.m. Saturday: 1:30&ndash;2:30 p.m. "
+             "* Schedule subject to change</div><div class='tab'>Drop-In Hockey ... Schedule: Monday: 9&ndash;10 p.m. (All Ages) "
+             "Tuesday: 9-10 p.m. (Women&rsquo;s) Wednesday: 9&ndash;10 p.m. (Men's) Thursday: 10:30-11:30 a.m. (Past Masters) "
+             "starting 12/3, 10:15-11:15 p.m. (All Ages) Drop-in Hockey Admission Adult $8</div></body></html>")
+
+
+def test_buhr_verify_and_schedule():
+    rink = RINKS["buhr-park"]
+    txt = S.page_text(BUHR_PAGE)
+    assert all(__import__("re").search(c, txt, __import__("re").I) for c in rink["verify_text"])
+    changed = S.page_text(BUHR_PAGE.replace("2:15-3:15", "2:30-3:30"))
+    assert not all(__import__("re").search(c, changed, __import__("re").I) for c in rink["verify_text"])
+    got = S.build_static(rink, S.Window(date(2026, 11, 29), date(2026, 12, 5)))
+    summary = sorted(f"{hm(s)} {s.name}" for s in got)
+    assert "Sun 11/29 09:00-10:00 Sticks & Pucks" in summary
+    assert "Thu 12/03 10:30-11:30 Past Masters Drop-In Hockey" in summary
+    assert "Thu 12/03 22:15-23:15 Drop-In Hockey (All Ages)" in summary
+    assert "Tue 12/01 21:00-22:00 Women's Drop-In Hockey" in summary
+    assert len(got) == 9
+
+
+def test_wyandotte_and_usa_verify_text_match_current_pages():
+    import re
+    wy = S.page_text("<p>Sticks &amp; Pucks Schedule</p><p>Tuesday, Wednesday and Thursday Mornings 9 am to 10:50 am</p>")
+    assert all(re.search(c, wy, re.I) for c in RINKS["wyandotte"]["verify_text"])
+    usa = S.page_text("<p>ADULT HOCKEY DROP-IN Come out to USA Hockey Arena on Tuesday and Thursday nights, "
+                      "from 10:10 p.m. &ndash; 11:30 p.m. this year for adult-only drop-in hockey</p>")
+    assert all(re.search(c, usa, re.I) for c in RINKS["usa-hockey-arena"]["verify_text"])
+
+
+# ── St Clair Shores scanned-PDF fallback ─────────────────────────────────────
+
+def test_scs_falls_back_to_vision_for_image_pdf(monkeypatch):
+    calls = {}
+
+    def fake_vision(f, block, yr, mo, rink, m, win, source):
+        calls["block"] = block["type"]
+        d = date(yr, mo, 21)
+        return [S.Session(rink["id"], rink["name"], "Adult Drop-In Hockey", S.local(d, "9:30 AM"),
+                          S.local(d, "11:30 AM"), rink["dist_mi"], rink["url"], source)], []
+    monkeypatch.setattr(S, "vision_read_month", fake_vision)
+    # empty word list → "no text layer" → vision
+    import types
+
+    class FakePage:
+        height = 600
+
+        def extract_words(self, **k):
+            return []
+
+    class FakePDF:
+        pages = [FakePage()]
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+    fake_pdfplumber = types.SimpleNamespace(open=lambda b: FakePDF())
+    monkeypatch.setitem(sys.modules, "pdfplumber", fake_pdfplumber)
+
+    class F:
+        def html(self, url, must_contain=None):
+            return '<a href="/DocumentCenter/View/13390">October 2026 Public Skate Calendar</a>'
+
+        def bytes(self, url, referer=None):
+            return b"%PDF-1.4"
+    got = S.scrape_scs(F(), RINKS["st-clair-shores"], M("st-clair-shores"), S.Window(date(2026, 10, 19), date(2026, 10, 31)))
+    assert calls["block"] == "document" and [hm(s) for s in got] == ["Wed 10/21 09:30-11:30"]
