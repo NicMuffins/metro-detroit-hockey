@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T19:40:16Z",
+  "generated_at": "2026-11-18T19:16:26Z",
   "window": [
-    "2026-11-17",
-    "2026-11-30"
+    "2026-11-18",
+    "2026-12-01"
   ],
-  "total_sessions": 304,
+  "total_sessions": 305,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -31,14 +31,14 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 23,
+      "sessions": 26,
       "error": null
     },
     {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 25,
+      "sessions": 26,
       "error": null
     },
     {
@@ -80,7 +80,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
@@ -94,7 +94,7 @@
       "id": "hartland",
       "name": "Hartland Ice House",
       "source": "finnly",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 9,
+      "sessions": 8,
       "error": null
     },
     {
@@ -124,7 +124,7 @@
       "source": "static_weekly",
       "sessions": 6,
       "error": null,
-      "warning": "couldn't check the rink page today (got 'Attention Required! | Cloudflare', 5565 bytes); posted the usual weekly times"
+      "warning": "couldn't check the rink page today (got 'Just a moment...', 45042 bytes); posted the usual weekly times"
     },
     {
       "id": "jackson",
@@ -151,7 +151,7 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 30,
+      "sessions": 29,
       "error": null
     },
     {
@@ -179,7 +179,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 13,
+      "sessions": 12,
       "error": null
     },
     {
@@ -193,7 +193,7 @@
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 22,
+      "sessions": 21,
       "error": null
     },
     {
@@ -235,7 +235,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     }
   ]
