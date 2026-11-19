@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-18T19:16:26Z",
+  "generated_at": "2026-11-19T19:24:12Z",
   "window": [
-    "2026-11-18",
-    "2026-12-01"
+    "2026-11-19",
+    "2026-12-02"
   ],
-  "total_sessions": 305,
+  "total_sessions": 303,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 14,
+      "sessions": 15,
       "error": null
     },
     {
@@ -31,14 +31,14 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 26,
+      "sessions": 27,
       "error": null
     },
     {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 26,
+      "sessions": 27,
       "error": null
     },
     {
@@ -80,21 +80,21 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 8,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "hartland",
       "name": "Hartland Ice House",
       "source": "finnly",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 8,
+      "sessions": 7,
       "error": null
     },
     {
@@ -130,7 +130,7 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
@@ -151,7 +151,7 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 29,
+      "sessions": 31,
       "error": null
     },
     {
@@ -165,7 +165,7 @@
       "id": "st-clair-shores",
       "name": "St Clair Shores Civic Arena",
       "source": "scs_pdf",
-      "sessions": 2,
+      "sessions": 1,
       "error": null
     },
     {
@@ -179,7 +179,7 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 12,
+      "sessions": 11,
       "error": null
     },
     {
@@ -214,28 +214,28 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 3,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     }
   ]
