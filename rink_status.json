@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-20T18:59:54Z",
+  "generated_at": "2026-11-21T17:55:02Z",
   "window": [
-    "2026-11-20",
-    "2026-12-03"
+    "2026-11-21",
+    "2026-12-04"
   ],
-  "total_sessions": 295,
+  "total_sessions": 286,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 16,
+      "sessions": 15,
       "error": null
     },
     {
@@ -38,7 +38,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 27,
+      "sessions": 24,
       "error": null
     },
     {
@@ -115,22 +115,21 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 6,
-      "error": null,
-      "warning": "couldn't check the rink page today (got 'Attention Required! | Cloudflare', 5564 bytes); posted the usual weekly times"
+      "sessions": 0,
+      "error": "RuntimeError: rink page ('Facilities \u2022 Yack Arena') no longer matches 'Tuesday,?\\\\s*Wednesday,?\\\\s*and\\\\s*Thursday\\\\s*Mornings\\\\s*9\\\\s*am\\\\s*to\\\\s*10:50\\\\s*am' \u2014 schedule may have changed; update rinks.json"
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -151,14 +150,14 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 31,
+      "sessions": 30,
       "error": null
     },
     {
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 18,
+      "sessions": 19,
       "error": null
     },
     {
@@ -186,7 +185,7 @@
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 13,
+      "sessions": 14,
       "error": null
     },
     {
@@ -200,7 +199,7 @@
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "frontline",
-      "sessions": 14,
+      "sessions": 13,
       "error": null
     },
     {
@@ -214,7 +213,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 1,
+      "sessions": 2,
       "error": null
     },
     {
@@ -235,7 +234,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 6,
       "error": null
     }
   ]
