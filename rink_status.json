@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-21T17:55:02Z",
+  "generated_at": "2026-11-22T18:17:58Z",
   "window": [
-    "2026-11-21",
-    "2026-12-04"
+    "2026-11-22",
+    "2026-12-05"
   ],
-  "total_sessions": 286,
+  "total_sessions": 287,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 15,
+      "sessions": 13,
       "error": null
     },
     {
@@ -31,7 +31,7 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 27,
+      "sessions": 26,
       "error": null
     },
     {
@@ -52,7 +52,7 @@
       "id": "novi",
       "name": "Novi Ice Arena",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     },
     {
@@ -157,7 +157,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 19,
+      "sessions": 21,
       "error": null
     },
     {
@@ -171,14 +171,14 @@
       "id": "ottawa-park",
       "name": "Ottawa Park Ice Rink \u2013 Toledo, OH",
       "source": "daysmart",
-      "sessions": 0,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 11,
+      "sessions": 10,
       "error": null
     },
     {
@@ -192,7 +192,7 @@
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 17,
+      "sessions": 16,
       "error": null
     },
     {
@@ -227,14 +227,14 @@
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 4,
+      "sessions": 5,
       "error": null
     },
     {
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 8,
       "error": null
     }
   ]
