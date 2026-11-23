@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-22T18:17:58Z",
+  "generated_at": "2026-11-23T22:30:07Z",
   "window": [
-    "2026-11-22",
-    "2026-12-05"
+    "2026-11-23",
+    "2026-12-06"
   ],
-  "total_sessions": 287,
+  "total_sessions": 283,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 13,
+      "sessions": 9,
       "error": null
     },
     {
@@ -31,14 +31,14 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 26,
+      "sessions": 25,
       "error": null
     },
     {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 26,
       "error": null
     },
     {
@@ -129,14 +129,14 @@
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     },
     {
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
@@ -150,7 +150,7 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 30,
+      "sessions": 29,
       "error": null
     },
     {
@@ -185,14 +185,14 @@
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 14,
+      "sessions": 12,
       "error": null
     },
     {
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 16,
+      "sessions": 17,
       "error": null
     },
     {
@@ -213,7 +213,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 2,
+      "sessions": 4,
       "error": null
     },
     {
@@ -227,7 +227,7 @@
       "id": "biggby-east-lansing",
       "name": "Biggby Ice Cube \u2013 East Lansing",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
