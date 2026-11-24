@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-23T22:30:07Z",
+  "generated_at": "2026-11-24T21:01:13Z",
   "window": [
-    "2026-11-23",
-    "2026-12-06"
+    "2026-11-24",
+    "2026-12-07"
   ],
-  "total_sessions": 283,
+  "total_sessions": 287,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
@@ -38,7 +38,7 @@
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 26,
+      "sessions": 25,
       "error": null
     },
     {
@@ -80,7 +80,7 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 5,
+      "sessions": 4,
       "error": null
     },
     {
@@ -115,21 +115,22 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 4,
+      "sessions": 3,
       "error": null
     },
     {
       "id": "wyandotte",
       "name": "Yack Arena \u2013 Wyandotte",
       "source": "static_weekly",
-      "sessions": 0,
-      "error": "RuntimeError: rink page ('Facilities \u2022 Yack Arena') no longer matches 'Tuesday,?\\\\s*Wednesday,?\\\\s*and\\\\s*Thursday\\\\s*Mornings\\\\s*9\\\\s*am\\\\s*to\\\\s*10:50\\\\s*am' \u2014 schedule may have changed; update rinks.json"
+      "sessions": 6,
+      "error": null,
+      "warning": "couldn't check the rink page today (got 'Just a moment...', 45042 bytes); posted the usual weekly times"
     },
     {
       "id": "jackson",
       "name": "Jackson Optimist Ice Arena \u2013 Jackson",
       "source": "jackson_vision",
-      "sessions": 4,
+      "sessions": 3,
       "error": null
     },
     {
@@ -157,7 +158,7 @@
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 21,
+      "sessions": 22,
       "error": null
     },
     {
@@ -178,21 +179,21 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 10,
+      "sessions": 9,
       "error": null
     },
     {
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 12,
+      "sessions": 14,
       "error": null
     },
     {
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 17,
+      "sessions": 20,
       "error": null
     },
     {
@@ -206,14 +207,14 @@
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 10,
+      "sessions": 11,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 4,
+      "sessions": 0,
       "error": null
     },
     {
