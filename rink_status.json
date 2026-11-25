@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-24T21:01:13Z",
+  "generated_at": "2026-11-25T20:24:40Z",
   "window": [
-    "2026-11-24",
-    "2026-12-07"
+    "2026-11-25",
+    "2026-12-08"
   ],
-  "total_sessions": 287,
+  "total_sessions": 289,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 9,
+      "sessions": 12,
       "error": null
     },
     {
@@ -31,14 +31,14 @@
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 25,
+      "sessions": 27,
       "error": null
     },
     {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 25,
+      "sessions": 24,
       "error": null
     },
     {
@@ -80,14 +80,14 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 4,
+      "sessions": 7,
       "error": null
     },
     {
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 7,
+      "sessions": 6,
       "error": null
     },
     {
@@ -101,7 +101,7 @@
       "id": "garden-city",
       "name": "Garden City Civic Arena",
       "source": "ice_finder",
-      "sessions": 3,
+      "sessions": 2,
       "error": null
     },
     {
@@ -115,7 +115,7 @@
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 3,
+      "sessions": 7,
       "error": null
     },
     {
@@ -151,7 +151,7 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 29,
+      "sessions": 28,
       "error": null
     },
     {
@@ -179,21 +179,21 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 9,
+      "sessions": 8,
       "error": null
     },
     {
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 14,
+      "sessions": 12,
       "error": null
     },
     {
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 20,
+      "sessions": 17,
       "error": null
     },
     {
@@ -214,7 +214,7 @@
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 0,
+      "sessions": 1,
       "error": null
     },
     {
@@ -235,7 +235,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 8,
+      "sessions": 7,
       "error": null
     }
   ]
