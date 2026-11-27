@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-26T20:00:53Z",
+  "generated_at": "2026-11-27T19:50:25Z",
   "window": [
-    "2026-11-26",
-    "2026-12-09"
+    "2026-11-27",
+    "2026-12-10"
   ],
-  "total_sessions": 291,
+  "total_sessions": 314,
   "rinks": [
     {
       "id": "biggby-ann-arbor",
       "name": "Biggby Ice Cube \u2013 Ann Arbor",
       "source": "bond",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
@@ -24,21 +24,21 @@
       "id": "buhr-park",
       "name": "Buhr Park Ice Arena \u2013 Ann Arbor",
       "source": "static_weekly",
-      "sessions": 17,
+      "sessions": 18,
       "error": null
     },
     {
       "id": "biggby-chelsea",
       "name": "Biggby Ice Cube \u2013 Chelsea",
       "source": "bond",
-      "sessions": 27,
+      "sessions": 30,
       "error": null
     },
     {
       "id": "biggby-brighton",
       "name": "Biggby Ice Cube \u2013 Brighton",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 27,
       "error": null
     },
     {
@@ -80,14 +80,14 @@
       "id": "taylor",
       "name": "Taylor Sportsplex",
       "source": "daysmart",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
       "id": "suburban-farmington-hills",
       "name": "Suburban Ice \u2013 Farmington Hills",
       "source": "ice_finder",
-      "sessions": 6,
+      "sessions": 5,
       "error": null
     },
     {
@@ -101,21 +101,21 @@
       "id": "garden-city",
       "name": "Garden City Civic Arena",
       "source": "ice_finder",
-      "sessions": 2,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "southgate",
       "name": "Southgate Civic Arena",
       "source": "daysmart",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
       "id": "allen-park",
       "name": "Frank J. Lada Civic Arena \u2013 Allen Park",
       "source": "allen_park",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
@@ -124,7 +124,7 @@
       "source": "static_weekly",
       "sessions": 6,
       "error": null,
-      "warning": "couldn't check the rink page today (got 'Attention Required! | Cloudflare', 5561 bytes); posted the usual weekly times"
+      "warning": "couldn't check the rink page today (got 'Attention Required! | Cloudflare', 5564 bytes); posted the usual weekly times"
     },
     {
       "id": "jackson",
@@ -137,7 +137,7 @@
       "id": "trenton",
       "name": "Kennedy Recreation Center \u2013 Trenton",
       "source": "daysmart",
-      "sessions": 9,
+      "sessions": 11,
       "error": null
     },
     {
@@ -151,14 +151,14 @@
       "id": "the-barn-fenton",
       "name": "The Barn \u2013 Fenton",
       "source": "allstar",
-      "sessions": 28,
+      "sessions": 30,
       "error": null
     },
     {
       "id": "hazel-park",
       "name": "Hazel Park Ice Arena",
       "source": "bond",
-      "sessions": 24,
+      "sessions": 26,
       "error": null
     },
     {
@@ -179,49 +179,49 @@
       "id": "royal-oak",
       "name": "John Lindell Ice Arena \u2013 Royal Oak",
       "source": "ics",
-      "sessions": 7,
+      "sessions": 8,
       "error": null
     },
     {
       "id": "810-flint",
       "name": "810 Sports Complex \u2013 Flint",
       "source": "wix_events",
-      "sessions": 14,
+      "sessions": 15,
       "error": null
     },
     {
       "id": "crystal-fieldhouse",
       "name": "Crystal Fieldhouse \u2013 Burton",
       "source": "frontline",
-      "sessions": 17,
+      "sessions": 18,
       "error": null
     },
     {
       "id": "troy",
       "name": "Buffalo Wild Wings Arena \u2013 Troy",
       "source": "frontline",
-      "sessions": 12,
+      "sessions": 13,
       "error": null
     },
     {
       "id": "tam-o-shanter",
       "name": "Tam-O-Shanter Ice Rink \u2013 Sylvania, OH",
       "source": "daysmart",
-      "sessions": 10,
+      "sessions": 11,
       "error": null
     },
     {
       "id": "big-boy-fraser",
       "name": "Big Boy Arena \u2013 Fraser",
       "source": "ezfacility",
-      "sessions": 0,
+      "sessions": 1,
       "error": null
     },
     {
       "id": "suburban-rochester",
       "name": "Suburban Ice Rochester",
       "source": "ice_finder",
-      "sessions": 5,
+      "sessions": 6,
       "error": null
     },
     {
@@ -235,7 +235,7 @@
       "id": "suburban-macomb",
       "name": "Suburban Ice Macomb",
       "source": "ice_finder",
-      "sessions": 9,
+      "sessions": 10,
       "error": null
     }
   ]
